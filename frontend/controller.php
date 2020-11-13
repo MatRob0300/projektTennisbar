@@ -8,6 +8,9 @@ class Controller{
         $this->$aktion();
         $this->generatePage($aktion);
     }
+    public function startseite(){
+      
+    }
 
 
 
