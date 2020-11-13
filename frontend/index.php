@@ -5,7 +5,7 @@ require_once '../entities/teilnehmer.php';
 require_once 'controller.php';
 
 
-$aktion = isset($_GET['aktion'])?$_GET['aktion']:'hauptseite';
+$aktion = isset($_GET['aktion'])?$_GET['aktion']:'startseite';
 
 $controller = new Controller();
 
