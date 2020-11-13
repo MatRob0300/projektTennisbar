@@ -6,7 +6,7 @@ header {
   margin: 0px 0px 0px 0px;
   background-color: rgb(25, 25, 25);
   width: 100%;
-  height: 500px;
+  height: 800px;
 }
   .obersteLeiste {
   width: 100%;
@@ -44,6 +44,66 @@ nav a{
   color: white;
   margin: 0px 20px 0px 0px;
 }
+
+
+/* main abschnitt */
 main {
   height: 5000px;
+}
+.abschnitt1 {
+  height: 200px;
+}
+.abschnitt1 h1{
+  float: left;
+  margin: 50px 0px 0px 50px;
+}
+.suchleiste {
+  float: right;
+  margin: 50px 100px 0px 0px;
+}
+.suchleiste input {
+  width: 350px;
+  height: 30px;
+  margin: 0px 50px 0px 0px;
+  border: 0.5px solid black;
+  border-radius: 15px;
+}
+.suchleiste button {
+  width: 120px;
+  height: 30px;
+  border-radius: 5px;
+}
+article.infobox section {
+  position: absolute;
+  display: block;
+  float: left;
+  left: 100px;
+  margin: 0px 0px 0px 0px;
+}
+article.infobox section:nth-child(2) {
+  left: 200px;
+}
+
+article.infobox section h2 {
+  font-family: Verdana;
+  font-size: 15px;
+  margin: 0;
+  background-color: var(--main-blue);
+  border: solid black;
+  border-width: 1px 1px 0 0;
+  z-index: 1;
+
+}
+article.infobox section:nth-child(2) h2 {
+
+}
+.info {
+  height: 300px;
+}
+.map {
+  position: absolute;
+  left: 200px;
+  height: 300px;
+  width: 1000px;
+
 }

@@ -9,7 +9,7 @@ class Controller{
         $this->generatePage($aktion);
     }
     public function startseite(){
-      
+
     }
 
 
@@ -17,7 +17,7 @@ class Controller{
 
     private function generatePage($template){
         extract($this->context);
-        require_once 'views/'.$template.".tpl.html";
+        require_once 'views/'.$template.".tpl.php";
 
     }
 }
