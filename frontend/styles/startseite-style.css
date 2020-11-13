@@ -50,6 +50,7 @@ nav a{
 main {
   height: 5000px;
 }
+/* abschnitt1 */
 .abschnitt1 {
   height: 200px;
 }
@@ -73,37 +74,47 @@ main {
   height: 30px;
   border-radius: 5px;
 }
-article.infobox section {
-  position: absolute;
-  display: block;
-  float: left;
-  left: 100px;
-  margin: 0px 0px 0px 0px;
-}
-article.infobox section:nth-child(2) {
-  left: 200px;
-}
-
-article.infobox section h2 {
-  font-family: Verdana;
-  font-size: 15px;
-  margin: 0;
-  background-color: var(--main-blue);
-  border: solid black;
-  border-width: 1px 1px 0 0;
-  z-index: 1;
-
-}
-article.infobox section:nth-child(2) h2 {
-
+/* abschnitt2 */
+#ko {
+  margin: 0px 0px 0px 200px;
+  height: 300px;
 }
 .info {
-  height: 300px;
+  width: 400px;
+}
+.tab {
+  width: 400px;
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+.tab button {
+  width: 200px;
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+.tab button:hover {
+  background-color: #ddd;
+}
+.tab button.active {
+  background-color: #ccc;
+}
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
 }
 .map {
   position: absolute;
   left: 200px;
   height: 300px;
   width: 1000px;
-
 }
+/* abschnitt3 */

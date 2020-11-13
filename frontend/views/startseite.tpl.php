@@ -42,28 +42,36 @@
     </div>
   </div>
   <div class="abschnitt2">
-    <div class="info">
-        <article class="infobox">
-          <section id="kontakt">
-            <h2>Kontakt</h2>
-            <div id="inhalt_k">
-              <ul>
-                <li>Schwimmbadstraße 1, 39010 Andrian, Südtirol</li>
-                <li>Tel. +39 123456789</li>
-              </ul>
-            </div>
-          </section>
-          <section id="oeffnungszeiten">
-            <h2>Öffnungszeiten</h2>
-            <div id="inhalt_o">
-
-            </div>
-          </section>
-        </article>
+    <h2>Überschrift</h2>
+    <p>Hier gibt es noch einen Text!</p>
+    <div id="ko">
+      <div class="info">
+        <div class="tab">
+          <button class="tablinks" onclick="openInfo(event, 'Kontakt')">Kontakt</button>
+          <button class="tablinks" onclick="openInfo(event, 'Öffnungszeiten')">Öffnungszeiten</button>
+        </div>
+        <div id="Kontakt" class="tabcontent">
+          <ul>
+          <li>Schwimmbadstraße 1, 39010 Andrian, Südtirol</li>
+          <li>Tel. +39 123456789</li>
+          </ul>
+        </div>
+        <div id="Öffnungszeiten" class="tabcontent">
+          <ul>
+          <li>Montag: 10:00 - 18:00Uhr</li>
+          <li>Dienstag: 10:00 - 18:00Uhr</li>
+          <li>Mittwoch: 10:00 - 18:00Uhr</li>
+          <li>Donnerstag: 10:00 - 18:00Uhr</li>
+          </ul>
+        </div>
+      </div>
     </div>
-    <div class="map" id="mapid">
+      <div class="map" id="mapid">
 
-    </div>
+      </div>
+  </div>
+  <div class="abschnitt3">
+    
   </div>
 </main>
 
@@ -80,6 +88,21 @@
 
     //map.locate({setView: true, maxZoom: 16});
 
+</script>
+<script>
+  function openInfo(evt, infoName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(infoName).style.display = "block";
+    evt.currentTarget.className += " active";
+  }
 </script>
 
   </body>
