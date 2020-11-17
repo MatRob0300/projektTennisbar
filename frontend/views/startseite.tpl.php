@@ -34,15 +34,15 @@
 </header>
 
 <main>
-  <div class="abschnitt1">
+  <div class="a1">
     <h1>Subscribe to our newsletter</h1>
     <div class="suchleiste">
       <input type="searchbox" />
       <button type="button">SUCHEN</button>
     </div>
   </div>
-  <div class="abschnitt2">
-  <!--  <h2>Überschrift</h2>
+  <div class="a2">
+    <h2>Überschrift</h2>
     <p>Hier gibt es noch einen Text!</p>
       <div class="info">
         <div class="tab">
@@ -57,18 +57,17 @@
         </div>
         <div id="Öffnungszeiten" class="tabcontent">
           <ul>
-          <li>Montag: 10:00 - 18:00Uhr</li>
-          <li>Dienstag: 10:00 - 18:00Uhr</li>
-          <li>Mittwoch: 10:00 - 18:00Uhr</li>
-          <li>Donnerstag: 10:00 - 18:00Uhr</li>
+            <li>Montag: 10:00 - 18:00Uhr</li>
+            <li>Dienstag: 10:00 - 18:00Uhr</li>
+            <li>Mittwoch: 10:00 - 18:00Uhr</li>
+            <li>Donnerstag: 10:00 - 18:00Uhr</li>
           </ul>
         </div>
       </div>
-      <div class="wo">
-        <div class="map" id="mapid" style="height: 300px width: 1000px"></div>
-      </div>-->
+      <div class="map" id="mapid"></div>
+
   </div>
-  <div class="abschnitt3">
+  <div class="a3">
     <!--<div class="flex-container">
       <div>1</div>
       <div>2</div>

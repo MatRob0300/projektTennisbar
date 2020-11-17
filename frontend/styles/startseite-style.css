@@ -51,16 +51,16 @@ main {
   height: 5000px;
 }
 /* abschnitt1 */
-.abschnitt1 {
+.a1 {
   height: 200px;
 }
-.abschnitt2 {
-  height: 200px;
+.a2 {
+  height: 600px;
 }
-.abschnitt3 {
+.a3 {
   height: 300px;
 }
-.abschnitt1 h1{
+.a1 h1{
   float: left;
   margin: 50px 0px 0px 50px;
 }
@@ -117,7 +117,8 @@ main {
   border-top: none;
 }
 .map {
-
+  height: 300px;
+  width: 1000px;
 }
 /* abschnitt3 */
 
