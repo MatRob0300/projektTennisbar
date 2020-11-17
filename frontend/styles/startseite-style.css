@@ -54,6 +54,12 @@ main {
 .abschnitt1 {
   height: 200px;
 }
+.abschnitt2 {
+  height: 200px;
+}
+.abschnitt3 {
+  height: 300px;
+}
 .abschnitt1 h1{
   float: left;
   margin: 50px 0px 0px 50px;
@@ -75,12 +81,11 @@ main {
   border-radius: 5px;
 }
 /* abschnitt2 */
-#ko {
-  margin: 0px 0px 0px 200px;
-  height: 300px;
-}
+
 .info {
   width: 400px;
+  margin: 0px 0px 0px 200px;
+  height: 300px;
 }
 .tab {
   width: 400px;
@@ -112,9 +117,19 @@ main {
   border-top: none;
 }
 .map {
-  position: absolute;
-  left: 200px;
-  height: 300px;
-  width: 1000px;
+
 }
 /* abschnitt3 */
+
+
+.flex-container {
+  display: flex;
+  background-color: DodgerBlue;
+}
+
+.flex-container > div {
+  background-color: #f1f1f1;
+  margin: 10px;
+  padding: 20px;
+  font-size: 30px;
+}

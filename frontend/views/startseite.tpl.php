@@ -42,9 +42,8 @@
     </div>
   </div>
   <div class="abschnitt2">
-    <h2>Überschrift</h2>
+  <!--  <h2>Überschrift</h2>
     <p>Hier gibt es noch einen Text!</p>
-    <div id="ko">
       <div class="info">
         <div class="tab">
           <button class="tablinks" onclick="openInfo(event, 'Kontakt')">Kontakt</button>
@@ -65,13 +64,16 @@
           </ul>
         </div>
       </div>
-    </div>
-      <div class="map" id="mapid">
-
-      </div>
+      <div class="wo">
+        <div class="map" id="mapid" style="height: 300px width: 1000px"></div>
+      </div>-->
   </div>
   <div class="abschnitt3">
-    
+    <!--<div class="flex-container">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>-->
   </div>
 </main>
 
