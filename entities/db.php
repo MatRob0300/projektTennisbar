@@ -13,8 +13,8 @@ class DB {
 
        if (self::$db == NULL){
         try{
-         //self::$db = new PDO('mysql:host='.D_HOST.';dbname='.D_NAME.';charset=UTF8',D_USER,D_PASSWORD);
-         //self::$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+         self::$db = new PDO('mysql:host='.localhost.';dbname='.db_tennisbarAC.';charset=UTF8',root);
+         self::$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         }
         catch (PDOException $e){
             echo $e->getMessage();

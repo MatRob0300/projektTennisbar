@@ -1,12 +1,14 @@
 <?php
 
 
-class Teilnehmer{
+class Benutzer{
 
 protected $id = NULL;
 protected $vorname = "";
 protected $nachname = "";
 protected $email = "";
+protected $passwort = "";
+protected $geburtsdatum = "";
 
 public function __construct($daten = array())
 {
@@ -25,7 +27,7 @@ public function __construct($daten = array())
 }
 public function  __toString()
 {
-    return 'Id:'. $this->id .', Vorname: '.$this->vorname.', Nachname: '.$this->nachname.', Email: '.$this->email;
+    return 'Id:'. $this->id .', Vorname: '.$this->vorname.', Nachname: '.$this->nachname.', Email: '.$this->email.', Passwort: '.$this->passwort.', Geburtsdatum: '.$this->geburtsdatum;
 }
 public function toArray($mitId = true)
 {
@@ -72,11 +74,23 @@ public function setEmail($email){
 public function getEmail(){
   return $this->email ;
 }
+public function setPasswort($passwort){
+   $this->passwort = $passwort;
+}
+public function getPasswort(){
+  return $this->passwort ;
+}
+public function setGeburtsdatum($geburtsdatum){
+   $this->geburtsdatum = $geburtsdatum;
+}
+public function getGeburtsdatum(){
+  return $this->geburtsdatum ;
+}
 
 
 public function loesche()
 {
-    $sql = 'DELETE FROM f_teilnehmer WHERE id=?';
+    $sql = 'DELETE FROM benutzer WHERE id=?';
     $abfrage = DB::getDB()->prepare($sql);
     $abfrage->execute( array($this->getId()) );
     // Objekt existiert nicht mehr in der DB, also muss die ID zurückgesetzt werden
@@ -88,8 +102,8 @@ public function loesche()
 private function _insert()
 {
 
-    $sql = 'INSERT INTO f_teilnehmer (vorname, nachname, email)'
-         . 'VALUES (:vorname, :nachname, :email)';
+    $sql = 'INSERT INTO benutzer (vorname, nachname, email, passwort, geburtsdatum)'
+         . 'VALUES (:vorname, :nachname, :email, :passwort, :geburtsdatum)';
 
     $abfrage = DB::getDB()->prepare($sql);
     $abfrage->execute($this->toArray(false));
@@ -99,81 +113,62 @@ private function _insert()
 
 private function _update()
 {
-    $sql = 'UPDATE f_teilnehmer SET vorname=?, nachname=?, email=?'
+    $sql = 'UPDATE benutzer SET vorname=?, nachname=?, email=?, passwort=?, geburtsdatum=?'
         . 'WHERE id=?';
     $abfrage =  DB::getDB()->prepare($sql);
-    $abfrage->execute(array($this->getVorname(), $this->getNachname(),$this->getEmail(),$this->getId()));
+    $abfrage->execute(array($this->getVorname(), $this->getNachname(),$this->getEmail(),$this->getPasswort(),$this->getGeburtsdatum(),$this->getId()));
 }
 /* ***** Public Methoden ***** */
 public static function findeAlle()
 {
-    $sql = 'SELECT * FROM f_teilnehmer';
+    $sql = 'SELECT * FROM benutzer';
     $abfrage = DB::getDB()->query($sql);
-    $abfrage->setFetchMode(PDO::FETCH_CLASS, 'Teilnehmer');
+    $abfrage->setFetchMode(PDO::FETCH_CLASS, 'Benutzer');
     return $abfrage->fetchAll();
 }
 
 public static function finde($id){
-  $sql = 'SELECT * FROM f_teilnehmer WHERE id=?';
+  $sql = 'SELECT * FROM benutzer WHERE id=?';
   $abfrage = DB::getDB()->prepare($sql);
   $abfrage->execute(array($id));
-  $abfrage->setFetchMode(PDO::FETCH_CLASS, 'Teilnehmer');
+  $abfrage->setFetchMode(PDO::FETCH_CLASS, 'Benutzer');
   return $abfrage->fetch();
 }
 
-public static function findeNachKurs(Kurs $kurs)
+/*public static function findeNachKurs(Kurs $kurs)
 {
-    $sql = 'SELECT f_teilnehmer.* FROM f_teilnehmer '
-         . 'JOIN f_nimmt_teil ON f_teilnehmer.id=f_nimmt_teil.teilnehmer_id '
+    $sql = 'SELECT benutzer.* FROM benutzer '
+         . 'JOIN f_nimmt_teil ON benutzer.id=f_nimmt_teil.benutzer '
          . 'WHERE f_nimmt_teil.kurs_id=?';
     $abfrage = DB::getDB()->prepare($sql);
     $abfrage->execute( array($kurs->getId()));
-    $abfrage->setFetchMode(PDO::FETCH_CLASS, 'Teilnehmer');
+    $abfrage->setFetchMode(PDO::FETCH_CLASS, 'Benutzer');
     return $abfrage->fetchAll();
-}
+}*/
 public static function findeNachEmail($email)
 {
-    $sql = 'SELECT f_teilnehmer.* FROM f_teilnehmer '
+    $sql = 'SELECT benutzer.* FROM benutzer '
          . 'WHERE email like ?';
          $abfrage = DB::getDB()->prepare($sql);
          $abfrage->execute(array($email));
-         $abfrage->setFetchMode(PDO::FETCH_CLASS, 'Teilnehmer');
+         $abfrage->setFetchMode(PDO::FETCH_CLASS, 'Benutzer');
          return $abfrage->fetch();
 }
-public static function findeNachFortbildung(Fortbildung $fortbildung)
+/*public static function findeNachFortbildung(Fortbildung $fortbildung)
 {
-    $sql = 'SELECT f_teilnehmer.* FROM f_teilnehmer '
-         . 'JOIN f_nimmt_teil ON f_teilnehmer.id=f_nimmt_teil.teilnehmer_id '
+    $sql = 'SELECT benutzer.* FROM benutzer '
+         . 'JOIN f_nimmt_teil ON benutzer.id=f_nimmt_teil.benutzer '
          . 'WHERE f_nimmt_teil.fortbildung_id=?';
     $abfrage = DB::getDB()->prepare($sql);
     $abfrage->execute( array($fortbildung->getId()) );
-    $abfrage->setFetchMode(PDO::FETCH_CLASS, 'Teilnehmer');
+    $abfrage->setFetchMode(PDO::FETCH_CLASS, 'Benutzer');
     return $abfrage->fetchAll();
-}
+}*/
 
 public function getVorUndNachname(){
   return $this->getVorname().' '.$this->getNachname();
 }
-public function getTermine(){
-    return Kurs::findeNachBenutzer($this);
-}
 
-public function nimmtAnKurseTeil(){
-  if(empty($this->getTermine())){
-      return false;
-    }else {
-      return true;
-    }
-}
-public function nimmtAnKursTeilInFortbildung($fortbildungid){
-  $fortbildung = Fortbildung::finde($fortbildungid);
-  $term = Kurs::findeNachBenutzerUndFortbildung($this, $fortbildung);
-  if($term->getKurs_id() == NULL){
-      return false;
-    }else {
-      return true;//1==true
-    }
-}
 
 }
 
