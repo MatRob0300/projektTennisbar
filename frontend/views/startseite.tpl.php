@@ -2,7 +2,8 @@
 <html lang="de">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="styles/startseite-style.css"/>
+    <link rel="stylesheet" type="text/css" href="styles/main-styles.css"/>
+    <link rel="stylesheet" type="text/css" href="styles/startseite-styles.css"/>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
               integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
               crossorigin=""/>
@@ -27,7 +28,7 @@
     <nav>
       <a href="#">Startseite</a>
       <a href="#">Bar</a>
-      <a href="#">Tennisplatz</a>
+      <a href="?aktion=platzreservierung">Tennisplatz</a>
       <a href="#">Über uns</a>
     </nav>
   </div>

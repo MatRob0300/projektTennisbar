@@ -11,6 +11,9 @@ class Controller{
     public function startseite(){
 
     }
+    public function platzreservierung(){
+
+    }
 
 
 
