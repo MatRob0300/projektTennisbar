@@ -9,6 +9,7 @@ protected $nachname = "";
 protected $email = "";
 protected $passwort = "";
 protected $geburtsdatum = "";
+protected $ortid = 0;
 
 public function __construct($daten = array())
 {
@@ -27,7 +28,7 @@ public function __construct($daten = array())
 }
 public function  __toString()
 {
-    return 'Id:'. $this->id .', Vorname: '.$this->vorname.', Nachname: '.$this->nachname.', Email: '.$this->email.', Passwort: '.$this->passwort.', Geburtsdatum: '.$this->geburtsdatum;
+    return 'Id:'. $this->id .', Vorname: '.$this->vorname.', Nachname: '.$this->nachname.', Email: '.$this->email.', Passwort: '.$this->passwort.', Geburtsdatum: '.$this->geburtsdatum.', Ortid: '.$this->ortid;
 }
 public function toArray($mitId = true)
 {
@@ -86,6 +87,12 @@ public function setGeburtsdatum($geburtsdatum){
 public function getGeburtsdatum(){
   return $this->geburtsdatum ;
 }
+public function setOrtid($ortid){
+   $this->ortid = $ortid;
+}
+public function getOrtid(){
+  return $this->ortid ;
+}
 
 
 public function loesche()
@@ -102,8 +109,8 @@ public function loesche()
 private function _insert()
 {
 
-    $sql = 'INSERT INTO benutzer (vorname, nachname, email, passwort, geburtsdatum)'
-         . 'VALUES (:vorname, :nachname, :email, :passwort, :geburtsdatum)';
+    $sql = 'INSERT INTO benutzer (vorname, nachname, email, passwort, geburtsdatum, ortid)'
+         . 'VALUES (:vorname, :nachname, :email, :passwort, :geburtsdatum, :ortid)';
 
     $abfrage = DB::getDB()->prepare($sql);
     $abfrage->execute($this->toArray(false));
@@ -113,10 +120,10 @@ private function _insert()
 
 private function _update()
 {
-    $sql = 'UPDATE benutzer SET vorname=?, nachname=?, email=?, passwort=?, geburtsdatum=?'
+    $sql = 'UPDATE benutzer SET vorname=?, nachname=?, email=?, passwort=?, geburtsdatum=?, ortid=?'
         . 'WHERE id=?';
     $abfrage =  DB::getDB()->prepare($sql);
-    $abfrage->execute(array($this->getVorname(), $this->getNachname(),$this->getEmail(),$this->getPasswort(),$this->getGeburtsdatum(),$this->getId()));
+    $abfrage->execute(array($this->getVorname(), $this->getNachname(),$this->getEmail(),$this->getPasswort(),$this->getGeburtsdatum(),$this->getOrtid(),$this->getId()));
 }
 /* ***** Public Methoden ***** */
 public static function findeAlle()
@@ -135,16 +142,6 @@ public static function finde($id){
   return $abfrage->fetch();
 }
 
-/*public static function findeNachKurs(Kurs $kurs)
-{
-    $sql = 'SELECT benutzer.* FROM benutzer '
-         . 'JOIN f_nimmt_teil ON benutzer.id=f_nimmt_teil.benutzer '
-         . 'WHERE f_nimmt_teil.kurs_id=?';
-    $abfrage = DB::getDB()->prepare($sql);
-    $abfrage->execute( array($kurs->getId()));
-    $abfrage->setFetchMode(PDO::FETCH_CLASS, 'Benutzer');
-    return $abfrage->fetchAll();
-}*/
 public static function findeNachEmail($email)
 {
     $sql = 'SELECT benutzer.* FROM benutzer '
@@ -154,16 +151,6 @@ public static function findeNachEmail($email)
          $abfrage->setFetchMode(PDO::FETCH_CLASS, 'Benutzer');
          return $abfrage->fetch();
 }
-/*public static function findeNachFortbildung(Fortbildung $fortbildung)
-{
-    $sql = 'SELECT benutzer.* FROM benutzer '
-         . 'JOIN f_nimmt_teil ON benutzer.id=f_nimmt_teil.benutzer '
-         . 'WHERE f_nimmt_teil.fortbildung_id=?';
-    $abfrage = DB::getDB()->prepare($sql);
-    $abfrage->execute( array($fortbildung->getId()) );
-    $abfrage->setFetchMode(PDO::FETCH_CLASS, 'Benutzer');
-    return $abfrage->fetchAll();
-}*/
 
 public function getVorUndNachname(){
   return $this->getVorname().' '.$this->getNachname();
