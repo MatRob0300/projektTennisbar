@@ -9,7 +9,11 @@ protected $nachname = "";
 protected $email = "";
 protected $passwort = "";
 protected $geburtsdatum = "";
-protected $ortid = 0;
+protected $ort = "";
+protected $plz = "";
+protected $strasse = "";
+protected $strassenr = "";
+protected $regristiert = "";
 
 public function __construct($daten = array())
 {
@@ -87,11 +91,35 @@ public function setGeburtsdatum($geburtsdatum){
 public function getGeburtsdatum(){
   return $this->geburtsdatum ;
 }
-public function setOrtid($ortid){
-   $this->ortid = $ortid;
+public function setOrt($ort){
+   $this->ortid = $ort;
 }
-public function getOrtid(){
-  return $this->ortid ;
+public function getOrt(){
+  return $this->ort;
+}
+public function setPlz($plz){
+   $this->plz = $plz;
+}
+public function getPlz(){
+  return $this->plz;
+}
+public function setStrasse($strasse){
+   $this->strasse = $strasse;
+}
+public function getStrasse(){
+  return $this->strasse ;
+}
+public function setStrassennr($strassennr){
+   $this->strassennr = $strassennr;
+}
+public function getStrassennr(){
+  return $this->strassennr ;
+}
+public function setRegristiert($regristiert){
+   $this->regristiert = $regristiert;
+}
+public function getRegristriert(){
+  return $this->regristiert;
 }
 
 

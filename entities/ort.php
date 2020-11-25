@@ -1,7 +1,7 @@
 <?php
 
 
-class Reservierung{
+class Ort{
 
 protected $id = NULL;
 protected $gemeinde = "";
@@ -27,7 +27,7 @@ public function __construct($daten = array())
 }
 public function  __toString()
 {
-    return 'Id:'. $this->id .', Gemeinde: '.$this->gemeinde.', Plz: '.$this->plz.', Strasse: '.$this->strasse.', Strassennummer: '.$this->strassennummer', Von: '.$this->von.', Bis: '.$this->bis;
+    return 'Id:'. $this->id .', Gemeinde: '.$this->gemeinde.', Plz: '.$this->plz.', Strasse: '.$this->strasse.', Strassennummer: '.$this->strassennummer.', Von: '.$this->von.', Bis: '.$this->bis;
 }
 public function toArray($mitId = true)
 {
