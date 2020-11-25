@@ -9,6 +9,7 @@ protected $nachname = "";
 protected $email = "";
 protected $passwort = "";
 protected $geburtsdatum = "";
+protected $telefonnummer = "";
 protected $ort = "";
 protected $plz = "";
 protected $strasse = "";
@@ -90,6 +91,12 @@ public function setGeburtsdatum($geburtsdatum){
 }
 public function getGeburtsdatum(){
   return $this->geburtsdatum ;
+}
+public function setTelefonnummer($telefonnummer){
+   $this->telefonnummer = $telefonnummer;
+}
+public function getTelefonnummer(){
+  return $this->telefonnummer ;
 }
 public function setOrt($ort){
    $this->ortid = $ort;
