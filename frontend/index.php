@@ -2,10 +2,8 @@
 
 require_once '../entities/db.php';
 require_once '../entities/benutzer.php';
-require_once '../entities/ort.php';
 require_once '../entities/kommentar.php';
 require_once '../entities/reservierung.php';
-require_once '../entities/benutzer_hat_reservierung.php';
 require_once 'controller.php';
 
 

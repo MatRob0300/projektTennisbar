@@ -14,6 +14,9 @@ class Controller{
     public function platzreservierung(){
 
     }
+    public function wetterbericht(){
+
+    }
 
 
 

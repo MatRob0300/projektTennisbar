@@ -1,0 +1,30 @@
+header {
+  margin: 0px 0px 0px 0px;
+  background-color: rgb(25, 25, 25);
+  width: 100%;
+  height: 650px;
+}
+main {
+  background-color: rgb(50, 50, 50);
+  float: left;
+  width: 75%;
+  height: 600px;
+}
+aside {
+  background-color: green;
+  float: right;
+  width: 25%;
+  height: 600px;
+}
+aside li {
+  list-style-type: none;
+}
+footer {
+  background-color: black;
+  width: 100%;
+  height: 200px;
+}
+#wetter {
+  margin: 50px 0px 0px 100px;
+  width: 680px;
+}
