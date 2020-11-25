@@ -8,6 +8,26 @@ header {
   width: 100%;
   height: 800px;
 }
+header .headertext {
+  position: absolute;
+  top: 35%;
+  left: 40%;
+}
+.headertext h1 {
+  margin: 0px 0px 0px 0px;
+  font-size: 100px;
+  color: white;
+}
+.headertext h2 {
+  margin: 5px 0px 0px 25px;
+  font-size: 25px;
+  color: white;
+}
+.headertext button {
+  margin: 10px 0px 0px 75px;
+  width: 150px;
+  height: 35px;
+}
 /* abschnitt1 */
 .a1 {
   height: 200px;

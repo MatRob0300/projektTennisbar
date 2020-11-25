@@ -16,7 +16,7 @@
   </head>
   <body>
 
-<header>
+
   <div class="obersteLeiste">
     <div class="logo">
       <img src="images/cheersLogo.png" alt="Cheers-Logo">
@@ -33,7 +33,13 @@
       <a href="#">Über uns</a>
     </nav>
   </div>
-</header>
+  <header>
+    <div class="headertext">
+      <h1>Cheers</h1>
+      <h2>Burger - Bar - Lounge</h2>
+      <button type="button" name="button">Platzreservierung</button>
+    </div>
+  </header>
 
 <main>
   <div class="a1">
