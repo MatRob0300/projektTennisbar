@@ -43,7 +43,7 @@
     <div class="headertext">
       <h1>Cheers</h1>
       <h2>Burger - Bar - Lounge</h2>
-      <button type="button" name="button">Platzreservierung</button>
+      <button type="button" name="button">Tennisplatz</button>
     </div>
   </header>
 
@@ -87,7 +87,7 @@
 
   </div>
   <div class="a3">
-    
+
   </div>
 
 </main>
