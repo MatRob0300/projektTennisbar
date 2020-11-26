@@ -8,21 +8,31 @@
   </head>
   <body>
 
+    <div class="obersteLeiste">
+      <div class="logo">
+        <a href="?aktion=startseite"><img src="images/cheersLogo.png" alt="cheers-logo" title="Startseite"></a>
+      </div>
+      <div class="titelUntertitel">
+        <h1>Cheers</h1>
+        <h2>Tennisbar Andrian</h2>
+      </div>
+      <div class="reglog">
+        <a href="#"><img src="images/profilIcon.png" alt="profil-icon" title="Anmelden"></a>
+      </div>
+      <nav>
+        <a href="?aktion=startseite">Startseite</a>
+        <a href="#">Bar</a>
+        <a href="?aktion=wetterbericht">Wetter</a>
+        <a href="?aktion=platzreservierung">Tennisplatz</a>
+        <a href="#">Über uns</a>
+      </nav>
+
+
+
+    </div>
     <header>
-      <div class="obersteLeiste">
-        <div class="logo">
-          <img src="images/cheersLogo.png" alt="Cheers-Logo">
-        </div>
-        <div class="titelUntertitel">
-          <h1>Cheers</h1>
-          <h2>Tennisbar Andrian</h2>
-        </div>
-        <nav>
-          <a href="?aktion=startseite">Startseite</a>
-          <a href="#">Bar</a>
-          <a href="#">Tennisplatz</a>
-          <a href="#">Über uns</a>
-        </nav>
+      <div class="headertext">
+        <h1>Platzreservierung</h1>
       </div>
     </header>
     <main></main>

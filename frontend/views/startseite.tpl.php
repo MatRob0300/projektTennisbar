@@ -19,19 +19,25 @@
 
   <div class="obersteLeiste">
     <div class="logo">
-      <img src="images/cheersLogo.png" alt="Cheers-Logo">
+      <a href="?aktion=startseite"><img src="images/cheersLogo.png" alt="cheers-logo" title="Startseite"></a>
     </div>
     <div class="titelUntertitel">
       <h1>Cheers</h1>
       <h2>Tennisbar Andrian</h2>
     </div>
+    <div class="reglog">
+      <a href="#"><img src="images/profilIcon.png" alt="profil-icon" title="Anmelden"></a>
+    </div>
     <nav>
-      <a href="#">Startseite</a>
+      <a href="?aktion=startseite">Startseite</a>
       <a href="#">Bar</a>
       <a href="?aktion=wetterbericht">Wetter</a>
       <a href="?aktion=platzreservierung">Tennisplatz</a>
       <a href="#">Über uns</a>
     </nav>
+
+
+
   </div>
   <header>
     <div class="headertext">
@@ -43,27 +49,32 @@
 
 <main>
   <div class="a1">
-    <h1>Subscribe to our newsletter</h1>
+    <h1>There is random Text!</h1>
     <div class="suchleiste">
       <input type="searchbox" />
       <button type="button">SUCHEN</button>
     </div>
   </div>
   <div class="a2">
-    <h2>Überschrift</h2>
-    <p>Hier gibt es noch einen Text!</p>
+    <div id="beschA2">
+      <h2>Überschrift</h2>
+      <p>One advanced diverted domestic sex repeated bringing you old.
+        Possible procured her trifling laughter thoughts property she met way.
+        Companions shy had solicitude favourable own. Which could saw guest man now heard but.
+        Lasted my coming uneasy marked so should. Gravity letters it amongst herself dearest an windows by.</p>
+    </div>
       <div class="info">
         <div class="tab">
-          <button class="tablinks" onclick="openInfo(event, 'Kontakt')">Kontakt</button>
-          <button class="tablinks" onclick="openInfo(event, 'Öffnungszeiten')">Öffnungszeiten</button>
+          <button class="tablinks" onclick="openInfo(event, 'oeffnungszeiten')" id="defaultOpen">Öffnungszeiten</button>
+          <button class="tablinks" onclick="openInfo(event, 'kontakt')">Kontakt</button>
         </div>
-        <div id="Kontakt" class="tabcontent">
+        <div id="kontakt" class="tabcontent">
           <ul>
           <li>Schwimmbadstraße 1, 39010 Andrian, Südtirol</li>
           <li>Tel. +39 123456789</li>
           </ul>
         </div>
-        <div id="Öffnungszeiten" class="tabcontent">
+        <div id="oeffnungszeiten" class="tabcontent">
           <ul>
             <li>Montag: 10:00 - 18:00Uhr</li>
             <li>Dienstag: 10:00 - 18:00Uhr</li>
@@ -72,16 +83,13 @@
           </ul>
         </div>
       </div>
-      <div class="map" id="mapid"></div>
+      <!--<div class="map" id="mapid"></div>-->
 
   </div>
   <div class="a3">
-    <!--<div class="flex-container">
-      <div>1</div>
-      <div>2</div>
-      <div>3</div>
-    </div>-->
+    
   </div>
+
 </main>
 
 <footer></footer>
@@ -99,6 +107,7 @@
 
 </script>
 <script>
+document.getElementById("defaultOpen").click();
   function openInfo(evt, infoName) {
     var i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("tabcontent");
