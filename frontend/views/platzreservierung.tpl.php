@@ -26,9 +26,6 @@
         <a href="?aktion=platzreservierung">Tennisplatz</a>
         <a href="#">Über uns</a>
       </nav>
-
-
-
     </div>
     <header>
       <div class="headertext">
@@ -38,37 +35,45 @@
     <main></main>
     <aside>
       <div class="side-box">
-        <h2>Suche</h2>
+        <div class="side-box-header">
+          <h2>Suche</h2>
+        </div>
         <div class="suchleiste">
           <input type="searchbox" />
           <button type="button">SUCHEN</button>
         </div>
       </div>
       <div class="side-box">
-        <h2>Infos</h2>
-        <ul>
-          <li>
+        <div class="side-box-header">
+          <h2>Info</h2>
+        </div>
+        <div class="info">
+          <div class="texticon">
             <h1>&#9742;</h1>
-            <div id="textinfo">
-              <h2>Telefon</h2>
-              <p>+39 123456789</p>
-            </div>
-          </li>
-          <li>
+          </div>
+          <div class="textinfo">
+            <h2>Telefon</h2>
+            <p>+39 123456789</p>
+          </div>
+        </div>
+        <div class="info">
+          <div class="texticon">
             <h1>&#9993;</h1>
-            <div id="textinfo">
-              <h2>E-Mail</h2>
-              <p>max.mustermann@info.com</p>
-            </div>
-          </li>
-          <li>
+          </div>
+          <div class="textinfo">
+            <h2>E-Mail</h2>
+            <p>max.mustermann@info.com</p>
+          </div>
+        </div>
+        <div class="info">
+          <div class="texticon">
             <h1>&#9730;</h1>
-            <div id="textinfo">
-              <h2>Wetter</h2>
-              <p><a href="#"/>zum Wetterbericht</p>
-            </div>
-          </li>
-        </ul>
+          </div>
+          <div class="textinfo">
+            <h2>Wetter</h2>
+            <a href="?aktion=wetterbericht">zum Wetter</a>
+          </div>
+        </div>
       </div>
     </aside>
     <footer></footer>

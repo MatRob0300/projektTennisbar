@@ -2,7 +2,17 @@ header {
   margin: 0px 0px 0px 0px;
   background-color: rgb(25, 25, 25);
   width: 100%;
-  height: 650px;
+  height: 600px;
+}
+header .headertext {
+  position: absolute;
+  top: 32%;
+  left: 42%;
+}
+.headertext h1 {
+  margin: 0px 0px 0px 0px;
+  font-size: 100px;
+  color: white;
 }
 main {
   background-color: rgb(50, 50, 50);
@@ -11,14 +21,92 @@ main {
   height: 600px;
 }
 aside {
-  background-color: green;
+  background-color: white;
   float: right;
   width: 25%;
-  height: 600px;
+  height: 700px;
 }
-aside li {
-  list-style-type: none;
+.side-box {
+  height: auto;
 }
+.side-box-header {
+  margin: 40px 25px 20px 25px;
+  padding: 0px 0px 10px 0px;
+  border-bottom: 1.5px solid rgb(200, 200, 200);
+}
+.side-box-header h2 {
+  font-size: 25px;
+  font-weight: bold;
+  color: #333333;
+}
+.suchleiste {
+  margin: 40px 25px 20px 25px;
+  padding: 0px 0px 0px 0px;
+}
+.suchleiste input {
+  margin: 0px 10px 0px 10px;
+  width: 280px;
+  height: 25px;
+  border-radius: 25px;
+}
+.suchleiste button {
+  width: 100px;
+  height: 30px;
+  border-radius: 5px;
+}
+.info {
+  margin: 50px 25px 20px 30px;
+  padding: 5px 0px 5px 0px;
+  border-left: 1.5px solid rgb(200, 200, 200);
+  border-top: 1.5px solid rgb(200, 200, 200);
+}
+.texticon {
+  margin: 0px 20px 0px 30px;
+  height: 50px;
+  float: left;
+}
+.texticon h1 {
+  margin: 0px 0px 0px 0px;
+  font-size: 35px;
+}
+.textinfo {
+  margin: 10px 20px 0px 80px;
+  height: 50px;
+}
+.textinfo h2 {
+  margin: 0px 0px 0px 0px;
+  padding: 0px;
+  font-size: 20px;
+}
+.textinfo p {
+  margin: 0px 0px 0px 0px;
+  padding: 0px;
+  font-size: 15px;
+}
+.textinfo a {
+  margin: 15px 0px 0px 0px;
+  padding: 0px;
+  text-decoration: none;
+  font-size: 15px;
+
+}
+#karte{
+  width: 800px;
+  height: 400px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 footer {
   background-color: black;
   width: 100%;

@@ -86,10 +86,24 @@
       <!--<div class="map" id="mapid"></div>-->
 
   </div>
+  <!--<div class="a3">
+      <div class="flex-container1">
+        <div class="grossbild">
+          <a href="#"><img src="images/profilIcon.png" alt="profil-icon" title="Anmelden"></a>
+        </div>
+      </div>
+      <div class="flex-container2">
+        <div class="kleinBild">
+          <a href="#"><img src="images/profilIcon.png" alt="profil-icon" title="Anmelden"></a>
+        </div>
+        <div class="kleinBild">
+          <a href="#"><img src="images/profilIcon.png" alt="profil-icon" title="Anmelden"></a>
+        </div>
+      </div>
+  </div>-->
   <div class="a3">
 
   </div>
-
 </main>
 
 <footer></footer>
