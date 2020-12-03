@@ -35,7 +35,7 @@ aside {
 .side-box-header {
   margin: 40px 25px 20px 25px;
   padding: 0px 0px 10px 0px;
-  border-bottom: 1.5px solid rgb(200, 200, 200);
+  border-bottom: 1.5px dotted rgb(200, 200, 200);
 }
 .side-box-header h2 {
   font-size: 25px;
