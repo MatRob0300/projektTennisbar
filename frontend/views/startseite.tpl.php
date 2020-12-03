@@ -86,23 +86,28 @@
       <!--<div class="map" id="mapid"></div>-->
 
   </div>
-  <!--<div class="a3">
-      <div class="flex-container1">
-        <div class="grossbild">
-          <a href="#"><img src="images/profilIcon.png" alt="profil-icon" title="Anmelden"></a>
-        </div>
-      </div>
-      <div class="flex-container2">
-        <div class="kleinBild">
-          <a href="#"><img src="images/profilIcon.png" alt="profil-icon" title="Anmelden"></a>
-        </div>
-        <div class="kleinBild">
-          <a href="#"><img src="images/profilIcon.png" alt="profil-icon" title="Anmelden"></a>
-        </div>
-      </div>
-  </div>-->
   <div class="a3">
+    <table>
+      <tr>
+        <td rowspan="2" class="gross">
+          <a href="?aktion=platzreservierung"><img src="images/bildplatzhalter.png" alt="cheers-logo" title="Tennisplatz"></a>
+        </td>
+        <td class="klein">
+          <a href="?aktion=startseite"><img src="images/bildplatzhalter.png" alt="cheers-logo" title="Bar"></a>
+        </td>
+      </tr>
+      <tr>
+        <td class="klein">
+          <a href="?aktion=wetterbericht"><img src="images/bildplatzhalter.png" alt="cheers-logo" title="Wetter"></a>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <div class="a4">
+    <h1></h1>
+    <div class="">
 
+    </div>
   </div>
 </main>
 
