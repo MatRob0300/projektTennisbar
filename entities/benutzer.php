@@ -14,7 +14,7 @@ protected $ort = "";
 protected $plz = "";
 protected $strasse = "";
 protected $strassenr = "";
-protected $regristiert = "";
+protected $registriert = "";
 
 public function __construct($daten = array())
 {
@@ -33,7 +33,8 @@ public function __construct($daten = array())
 }
 public function  __toString()
 {
-    return 'Id:'. $this->id .', Vorname: '.$this->vorname.', Nachname: '.$this->nachname.', Email: '.$this->email.', Passwort: '.$this->passwort.', Geburtsdatum: '.$this->geburtsdatum.', Ortid: '.$this->ortid;
+    return 'Id:'. $this->id .', Vorname: '.$this->vorname.', Nachname: '.$this->nachname.', Email: '.$this->email.', Passwort: '.$this->passwort.', Geburtsdatum: '.$this->geburtsdatum.', Telefonnummer: '.$this->telefonnummer.', Ort: '.$this->ort.', Plz: '.$this->plz.', Strasse: '.$this->strasse
+    .', Strassennr: '.$this->strassennr.', Registriert: '.$this->registriert;
 }
 public function toArray($mitId = true)
 {
@@ -122,11 +123,11 @@ public function setStrassennr($strassennr){
 public function getStrassennr(){
   return $this->strassennr ;
 }
-public function setRegristiert($regristiert){
-   $this->regristiert = $regristiert;
+public function setRegistriert($registriert){
+   $this->registriert = $registriert;
 }
-public function getRegristriert(){
-  return $this->regristiert;
+public function getRegistriert(){
+  return $this->registriert;
 }
 
 
@@ -144,8 +145,8 @@ public function loesche()
 private function _insert()
 {
 
-    $sql = 'INSERT INTO benutzer (vorname, nachname, email, passwort, geburtsdatum, ortid)'
-         . 'VALUES (:vorname, :nachname, :email, :passwort, :geburtsdatum, :ortid)';
+    $sql = 'INSERT INTO benutzer (vorname, nachname, email, passwort, geburtsdatum, telefonnummer, ort, plz, strasse, strassennr, registriert)'
+         . 'VALUES (:vorname, :nachname, :email, :passwort, :geburtsdatum, :telefonnummer, :ort, :plz, :strasse, :strassennr, :registriert)';
 
     $abfrage = DB::getDB()->prepare($sql);
     $abfrage->execute($this->toArray(false));
@@ -155,10 +156,11 @@ private function _insert()
 
 private function _update()
 {
-    $sql = 'UPDATE benutzer SET vorname=?, nachname=?, email=?, passwort=?, geburtsdatum=?, ortid=?'
+    $sql = 'UPDATE benutzer SET vorname=?, nachname=?, email=?, passwort=?, geburtsdatum=?, telefonnummer=?, ort=?, plz=?, strasse=?, strassennr=?, registriert=?'
         . 'WHERE id=?';
     $abfrage =  DB::getDB()->prepare($sql);
-    $abfrage->execute(array($this->getVorname(), $this->getNachname(),$this->getEmail(),$this->getPasswort(),$this->getGeburtsdatum(),$this->getOrtid(),$this->getId()));
+    $abfrage->execute(array($this->getVorname(), $this->getNachname(),$this->getEmail(),$this->getPasswort(),$this->getGeburtsdatum(),$this->getTelefonnummer(),
+    $this->getOrt(),$this->getPlz(),$this->getStrasse(),$this->getStrassennr(),$this->getRegistriert(),$this->getId()));
 }
 /* ***** Public Methoden ***** */
 public static function findeAlle()

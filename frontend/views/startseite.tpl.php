@@ -31,7 +31,6 @@
     <nav>
       <a href="?aktion=startseite">Startseite</a>
       <a href="#">Bar</a>
-      <a href="?aktion=wetterbericht">Wetter</a>
       <a href="?aktion=platzreservierung">Tennisplatz</a>
       <a href="#">Über uns</a>
     </nav>
@@ -93,12 +92,12 @@
           <a href="?aktion=platzreservierung"><img src="images/bildplatzhalter.png" alt="cheers-logo" title="Tennisplatz"></a>
         </td>
         <td class="klein">
-          <a href="?aktion=startseite"><img src="images/bildplatzhalter.png" alt="cheers-logo" title="Bar"></a>
+          <a href="?aktion=#"><img src="images/bildplatzhalter.png" alt="cheers-logo" title="Bar"></a>
         </td>
       </tr>
       <tr>
         <td class="klein">
-          <a href="?aktion=wetterbericht"><img src="images/bildplatzhalter.png" alt="cheers-logo" title="Wetter"></a>
+          <a href="?aktion=#"><img src="images/bildplatzhalter.png" alt="cheers-logo" title="Wetter"></a>
         </td>
       </tr>
     </table>

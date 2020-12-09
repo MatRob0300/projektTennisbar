@@ -22,7 +22,6 @@
       <nav>
         <a href="?aktion=startseite">Startseite</a>
         <a href="#">Bar</a>
-        <a href="?aktion=wetterbericht">Wetter</a>
         <a href="?aktion=platzreservierung">Tennisplatz</a>
         <a href="#">Über uns</a>
       </nav>
@@ -63,15 +62,6 @@
           <div class="textinfo">
             <h2>E-Mail</h2>
             <p>max.mustermann@info.com</p>
-          </div>
-        </div>
-        <div class="info">
-          <div class="texticon">
-            <h1>&#9730;</h1>
-          </div>
-          <div class="textinfo">
-            <h2>Wetter</h2>
-            <a href="?aktion=wetterbericht">zum Wetter</a>
           </div>
         </div>
       </div>

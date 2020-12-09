@@ -10,6 +10,7 @@ protected $msanzahl = "";
 protected $datum = "";
 protected $von = "";
 protected $bis = "";
+protected $benutzerid = "";
 
 public function __construct($daten = array())
 {
@@ -28,7 +29,7 @@ public function __construct($daten = array())
 }
 public function  __toString()
 {
-    return 'Id:'. $this->id .', Platznummer: '.$this->platznummer.', Spieleranzahl: '.$this->spieleranzahl.', Msanzahl: '.$this->msanzahl.', Datum: '.$this->datum.', Von: '.$this->von.', Bis: '.$this->bis;
+    return 'Id:'. $this->id .', Platznummer: '.$this->platznummer.', Spieleranzahl: '.$this->spieleranzahl.', Msanzahl: '.$this->msanzahl.', Datum: '.$this->datum.', Von: '.$this->von.', Bis: '.$this->bis.' Benutzerid: '.$this->benutzerid;
 }
 public function toArray($mitId = true)
 {
@@ -93,6 +94,12 @@ public function setBis($bis){
 public function getBis(){
   return $this->bis ;
 }
+public function setBenutzerid(){
+  $this->benutzerid = $benutzerid;
+}
+public function getBenutzerid(){
+  return $this->benutzerid;
+}
 
 public function loesche()
 {
@@ -108,8 +115,8 @@ public function loesche()
 private function _insert()
 {
 
-    $sql = 'INSERT INTO reservierung (platznummer, spieleranzahl, msanzahl, datum, von, bis)'
-         . 'VALUES (:platznummer, :spieleranzahl, :msanzahl, :datum, :von, :bis)';
+    $sql = 'INSERT INTO reservierung (platznummer, spieleranzahl, msanzahl, datum, von, bis, benutzerid)'
+         . 'VALUES (:platznummer, :spieleranzahl, :msanzahl, :datum, :von, :bis, :benutzerid)';
 
     $abfrage = DB::getDB()->prepare($sql);
     $abfrage->execute($this->toArray(false));
@@ -119,10 +126,10 @@ private function _insert()
 
 private function _update()
 {
-    $sql = 'UPDATE reservierung SET platznummer=?, spieleranzahl=?, msanzahl=?, datum=?, von=?, bis=?'
+    $sql = 'UPDATE reservierung SET platznummer=?, spieleranzahl=?, msanzahl=?, datum=?, von=?, bis=?, benutzerid=?'
         . 'WHERE id=?';
     $abfrage =  DB::getDB()->prepare($sql);
-    $abfrage->execute(array($this->getPlatznummer(), $this->getSpieleranzahl(),$this->getMsanzahl(),$this->getDatum(),$this->getVon(),$this->getBis(),$this->getId()));
+    $abfrage->execute(array($this->getPlatznummer(), $this->getSpieleranzahl(),$this->getMsanzahl(),$this->getDatum(),$this->getVon(),$this->getBis(),$this->getBenutzerid(),$this->getId()));
 }
 /* ***** Public Methoden ***** */
 public static function findeAlle()

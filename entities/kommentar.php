@@ -4,11 +4,10 @@
 class Kommentar{
 
 protected $id = NULL;
-protected $schreibername = "";
 protected $text = "";
 protected $datum = "";
 protected $bewertung = "";
-protected $uhrzeit = "";
+protected $benutzerid = "";
 
 public function __construct($daten = array())
 {
@@ -27,7 +26,7 @@ public function __construct($daten = array())
 }
 public function  __toString()
 {
-    return 'Id:'. $this->id .', Schreibername: '.$this->schreibername.', Text: '.$this->text.', Bewertung: '.$this->bewertung.', Datum: '.$this->datum.', Uhrzeit: '.$this->uhrzeit;
+    return 'Id:'. $this->id .', Text: '.$this->text.', Bewertung: '.$this->bewertung.', Datum: '.$this->datum.', Benutzerid: '.$this->benutzerid;
 }
 public function toArray($mitId = true)
 {
@@ -56,12 +55,6 @@ public function setId($id){
 public function getId(){
   return $this->id;
 }
-public function setSchreibername($schreibername){
-   $this->schreibername = $schreibername;
-}
-public function getSchreibername(){
-  return $this->schreibername;
-}
 public function setText($text){
    $this->text = $text;
 }
@@ -80,12 +73,13 @@ public function setDatum($datum){
 public function getDatum(){
   return $this->datum ;
 }
-public function setUhrzeit($uhrzeit){
-   $this->uhrzeit = $uhrzeit;
+public function setBenutzerid($benutzerid){
+   $this->benutzerid = $benutzerid;
 }
-public function getUhrzeit(){
-  return $this->uhrzeit ;
+public function getBenutzerid(){
+  return $this->benutzerid ;
 }
+
 
 public function loesche()
 {
@@ -101,8 +95,8 @@ public function loesche()
 private function _insert()
 {
 
-    $sql = 'INSERT INTO kommentar (schreibername, text, bewertung, datum, uhrzeit)'
-         . 'VALUES (:schreibername, :text, :bewertung, :datum, :uhrzeit)';
+    $sql = 'INSERT INTO kommentar (text, bewertung, datum, benutzerid)'
+         . 'VALUES (:text, :bewertung, :datum, :benutzerid)';
 
     $abfrage = DB::getDB()->prepare($sql);
     $abfrage->execute($this->toArray(false));
@@ -112,10 +106,10 @@ private function _insert()
 
 private function _update()
 {
-    $sql = 'UPDATE kommentar SET schreibername=?, text=?, bewertung=?, datum=?, uhrzeit=?'
+    $sql = 'UPDATE kommentar SET text=?, bewertung=?, datum=?, benutzerid=?'
         . 'WHERE id=?';
     $abfrage =  DB::getDB()->prepare($sql);
-    $abfrage->execute(array($this->getSchreibername(), $this->getText(),$this->getBewertung(),$this->getDatum(),$this->getUhrzeit(),$this->getId()));
+    $abfrage->execute(array($this->getText(),$this->getBewertung(),$this->getDatum(),$this->getBenutzerid(),$this->getId()));
 }
 /* ***** Public Methoden ***** */
 public static function findeAlle()
