@@ -5,14 +5,17 @@ header {
   height: 600px;
 }
 header .headertext {
-  position: absolute;
-  top: 32%;
-  left: 42%;
+  text-align: center;
+  line-height: 650px;
+  height: 100%;
 }
 .headertext h1 {
   margin: 0px 0px 0px 0px;
   font-size: 100px;
   color: white;
+  line-height: 1.5;
+  display: inline-block;
+  vertical-align: middle;
 }
 aside {
   background-color: white;
@@ -85,17 +88,95 @@ aside {
 }
 /* main */
 main {
+  float: left;
+  width: 74%;
+  height: 700px;
+  background: linear-gradient(rgb(250;250;250), rgb(240;240;240));
+  font-family: sans-serif;
+  border-right: 1px solid rgb(200, 200, 200);;
+}
+main h1 {
+  color: #263859;
+  font-size: 50px;
+  margin: 50px 0px 0px 100px;
+}
+.container {
+  padding-top: 100px;
   display: flex;
   justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  float: left;
-  width: 75%;
-  height: 700px;
-  background: linear-gradient(rgb(47,150,163), rgb(48,62,143));
-  font-family: sans-serif;
-  color: white;
+  height: auto;
 }
+.flex-container div:nth-child(1) {
+  background-color: #f1f1f1;
+  width: 50%;
+  margin: 10px;
+  font-size: 30px;
+  border-radius: 25px;
+}
+.flex-container div:nth-child(2) {
+  background-color: #f1f1f1;
+  width: 25%;
+  height: 50%;
+  margin: 10px;
+  font-size: 30px;
+  border-radius: 25px;
+}
+.container *{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.today, .tomorrow{
+  height: 100%;
+  background-color: #263859;
+}
+.temp {
+  text-align: center;
+  margin-bottom: 10px;
+}
+.temp #temp-unit {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.5rem;
+  color: #ffffff;
+}
+.temp #temp-value {
+  font-family: 'Lato', sans-serif;
+  font-size: 2rem;
+  color: #ffffff;
+}
+.climate {
+  font-family: 'Lato', sans-serif;
+  font-size: 2.5rem;
+  color: #ffffff;
+  text-align: center;
+}
+.location {
+  font-family: 'Lato', sans-serif;
+  font-size: 2.5rem;
+  color: #ffffff;
+  text-align: center
+}
+#temp-icon {
+  margin: 1rem;
+  width: 40%;
+  height: auto;
+}
+.today, .tomorrow{
+  padding: 20px;
+  margin-top: 10px;
+  background-color: #6b778d;
+  border-radius: 20px;
+  width: 40%;
+  height: 75%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 10px 10px 20px 10px rgba(112, 102, 102, 0.2);
+}
+
+
+
+
 
 
 

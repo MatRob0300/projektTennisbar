@@ -17,6 +17,9 @@ class Controller{
     public function wetterbericht(){
 
     }
+    public function bar(){
+      
+    }
 
 
 
