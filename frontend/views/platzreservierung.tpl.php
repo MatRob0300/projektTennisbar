@@ -49,7 +49,7 @@
         </div>
         <div class="info">
           <div class="texticon">
-            <h1>&#9742;</h1>
+            <img src="images/telefon-icon.png" alt="telefon-icon">
           </div>
           <div class="textinfo">
             <h2>Telefon</h2>
@@ -58,11 +58,20 @@
         </div>
         <div class="info">
           <div class="texticon">
-            <h1>&#9993;</h1>
+            <img src="images/email-icon.png" alt="email-icon">
           </div>
           <div class="textinfo">
             <h2>E-Mail</h2>
             <p>max.mustermann@info.com</p>
+          </div>
+        </div>
+        <div class="info">
+          <div class="texticon">
+            <img src="images/wetter-icon.png" alt="wetter-icon">
+          </div>
+          <div class="textinfo">
+            <h2>Wetter</h2>
+            <p>zum Wetter</p>
           </div>
         </div>
       </div>
