@@ -8,6 +8,7 @@ body {
   background-color: rgba(0, 0, 0, 0.9);
   height: 100px;
   position: fixed;
+  z-index: 2;
 }
 .logo {
   float: left;

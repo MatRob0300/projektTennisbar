@@ -1,6 +1,8 @@
 /* main abschnitt */
 main {
-  height: 5000px;
+  margin: 0;
+  padding: 0;
+  height: auto;
 }
 header {
   margin: 0px 0px 0px 0px;
@@ -61,7 +63,8 @@ header .headertext {
 /* abschnitt2 */
 .a2 {
   margin: 15px 20px 15px 20px;
-  height: 600px;
+  padding-bottom: 50px;
+  height: auto;
   border-bottom: 1.5px solid rgba(200, 200, 200);
 }
 #beschA2 {
@@ -76,18 +79,17 @@ header .headertext {
   font-size: 20px;
 }
 .info {
-  width: 600px;
-  margin: 100px 0px 0px 200px;
-  height: 300px;
+  height: auto;
+  margin: 100px 15% 100px 15%;
 }
 .tab {
-  width: 600px;
+  width: 75%;
   overflow: hidden;
   border: 1px solid #ccc;
   background-color: #f1f1f1;
 }
 .tab button {
-  width: 300px;
+  width: 50%;
   background-color: inherit;
   float: left;
   border: none;
@@ -127,41 +129,52 @@ header .headertext {
   to {opacity: 1;}
 }
 .map {
-  height: 300px;
-  width: 1000px;
+  margin: 0px 10% 0px 10%;
+  height: 200px;
+  width: 80%;
+  z-index: 0;
 }
 
 /* abschnitt3 */
 .a3 {
   margin: 0px 20px 0px 20px;
-  padding: 10px 10% 20px 10%;
-  height: 65vh;
+  height: auto;
   border-bottom: 1.5px solid rgba(200, 200, 200);
 }
-table, td {
+.header-a3{
 
 }
-table {
- width: 80%;
- height: 100%;
+.flex-container {
+  margin: 0px 10% 0px 10%;
+  padding: 0px 0px 0px 20px;
+  display: flex;
+  flex-wrap: wrap;
 }
-td.gross {
-  padding: 10px;
-  width: 40%;
+.flex-container > div {
+  background-color: #f1f1f1;
+  width: 48%;
+  height: 250px;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+  border-radius: 25px;
 }
-td.klein {
-  padding: 10px;
-  width: 20%;
-}
-td img {
-  width: 100%;
-  height: 100%;
-}
-/* abschnitt 4 */
+.more-button {
 
-.a4 {
-  margin: 0px 20px 0px 20px;
-  padding: 10px 10% 20px 10%;
-  height: 65vh;
-  border-bottom: 1.5px solid rgba(200, 200, 200);
+}
+.more-button button {
+  width: 150px;
+  height: 35px;
+  border-radius: 5px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* footer */
+
+footer {
+  height: 200px;
 }

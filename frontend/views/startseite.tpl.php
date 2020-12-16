@@ -48,6 +48,7 @@
   </header>
 
 <main>
+
   <div class="a1">
     <h1>There is random Text!</h1>
     <div class="suchleiste">
@@ -55,6 +56,7 @@
       <button type="button">SUCHEN</button>
     </div>
   </div>
+
   <div class="a2">
     <div id="beschA2">
       <h2>Überschrift</h2>
@@ -63,52 +65,50 @@
         Companions shy had solicitude favourable own. Which could saw guest man now heard but.
         Lasted my coming uneasy marked so should. Gravity letters it amongst herself dearest an windows by.</p>
     </div>
-      <div class="info">
-        <div class="tab">
-          <button class="tablinks" onclick="openInfo(event, 'oeffnungszeiten')" id="defaultOpen">Öffnungszeiten</button>
-          <button class="tablinks" onclick="openInfo(event, 'kontakt')">Kontakt</button>
-        </div>
-        <div id="kontakt" class="tabcontent">
-          <ul>
+
+    <div class="info">
+
+      <div class="tab">
+        <button class="tablinks" onclick="openInfo(event, 'oeffnungszeiten')" id="defaultOpen">Öffnungszeiten</button>
+        <button class="tablinks" onclick="openInfo(event, 'kontakt')">Kontakt</button>
+      </div>
+
+      <div id="kontakt" class="tabcontent">
+        <ul>
           <li>Schwimmbadstraße 1, 39010 Andrian, Südtirol</li>
           <li>Tel. +39 123456789</li>
-          </ul>
-        </div>
-        <div id="oeffnungszeiten" class="tabcontent">
-          <ul>
-            <li>Montag: 10:00 - 18:00Uhr</li>
-            <li>Dienstag: 10:00 - 18:00Uhr</li>
-            <li>Mittwoch: 10:00 - 18:00Uhr</li>
-            <li>Donnerstag: 10:00 - 18:00Uhr</li>
-          </ul>
-        </div>
+        </ul>
       </div>
-      <!--<div class="map" id="mapid"></div>-->
+
+      <div id="oeffnungszeiten" class="tabcontent">
+        <ul>
+          <li>Montag: 10:00 - 18:00Uhr</li>
+          <li>Dienstag: 10:00 - 18:00Uhr</li>
+          <li>Mittwoch: 10:00 - 18:00Uhr</li>
+          <li>Donnerstag: 10:00 - 18:00Uhr</li>
+        </ul>
+      </div>
+    </div>
+
+     <div class="map" id="mapid"></div>
 
   </div>
+
   <div class="a3">
-    <table>
-      <tr>
-        <td rowspan="2" class="gross">
-          <a href="?aktion=platzreservierung"><img src="images/bildplatzhalter.png" alt="cheers-logo" title="Tennisplatz"></a>
-        </td>
-        <td class="klein">
-          <a href="?aktion=#"><img src="images/bildplatzhalter.png" alt="cheers-logo" title="Bar"></a>
-        </td>
-      </tr>
-      <tr>
-        <td class="klein">
-          <a href="?aktion=#"><img src="images/bildplatzhalter.png" alt="cheers-logo" title="Wetter"></a>
-        </td>
-      </tr>
-    </table>
-  </div>
-  <div class="a4">
-    <h1></h1>
-    <div class="">
-
+    <div class="header-a3">
+      <h1>dsfsdfdfds</h1>
+    </div>
+    <div class="flex-container">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+    </div>
+    <div class="more-button">
+      <button type="button" name="erweitern">erweitern</button>
     </div>
   </div>
+
 </main>
 
 <footer></footer>
@@ -119,8 +119,8 @@
   attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
   }).addTo(map);
 
-  L.marker([46.521202,11.2272281]).addTo(map)
-  .bindPopup("Hier sind wir!").openPopup();
+  L.marker([46.521202,11.2272281]).addTo(map);
+  //.bindPopup("Hier sind wir!").openPopup();
 
     //map.locate({setView: true, maxZoom: 16});
 

@@ -71,7 +71,7 @@
           </div>
           <div class="textinfo">
             <h2>Wetter</h2>
-            <p>zum Wetter</p>
+            <a href="?aktion=wetterbericht">zum Wetter</a>
           </div>
         </div>
       </div>
