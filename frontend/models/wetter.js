@@ -15,4 +15,5 @@
        document.getElementById("temp-value").innerHTML = maxtemp;
      console.log('Checkout this JSON! ', out);
    })
-   .catch(err => { throw err });*/
+   .catch(err => { throw err });
+   */
