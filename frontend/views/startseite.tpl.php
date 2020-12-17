@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="styles/main-styles.css"/>
     <link rel="stylesheet" type="text/css" href="styles/startseite-styles.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
               integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
               crossorigin=""/>
@@ -95,52 +96,80 @@
   </div>
 
   <div class="a3">
+
     <div class="header-a3">
       <h1>dsfsdfdfds</h1>
     </div>
+
     <div class="flex-container">
-      <div>1</div>
-      <div>2</div>
-      <div>3</div>
-      <div>4</div>
+
+      <div>
+        <div class="k-container">
+          <div class="k-profilIcon">
+            <img src="images/bildplatzhalter.png" alt="profilIcon">
+          </div>
+          <div class="k-info">
+            <h1>#r.matha</h1>
+            <h2> Erstellt am: 17/12/2020 , 10:59Uhr</h2>
+          </div>
+        </div>
+
+        <div class="k-inhalt">
+          <div class="k-bewertung">
+            <span class="fa fa-star checked"></span> <!-- checked füllt die sterne-->
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+          </div>
+          <div class="k-text">
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+              Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+              when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="k-container">
+          <div class="k-profilIcon">
+            <img src="images/bildplatzhalter.png" alt="profilIcon">
+          </div>
+          <div class="k-info">
+            <h1>#r.matha</h1>
+            <h2> Erstellt am: 17/12/2020 , 10:59Uhr</h2>
+          </div>
+        </div>
+
+        <div class="k-inhalt">
+          <div class="k-bewertung">
+            <span class="fa fa-star checked"></span> <!-- checked füllt die sterne-->
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+          </div>
+          <div class="k-text">
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+              Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+              when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+          </div>
+        </div>
+      </div>
     </div>
+
     <div class="more-button">
       <button type="button" name="erweitern">erweitern</button>
     </div>
+
   </div>
+
 
 </main>
 
 <footer></footer>
-
-<script>
-  var map = L.map('mapid').setView([46.521202,11.2272281], 13);
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-  }).addTo(map);
-
-  L.marker([46.521202,11.2272281]).addTo(map);
-  //.bindPopup("Hier sind wir!").openPopup();
-
-    //map.locate({setView: true, maxZoom: 16});
-
-</script>
-<script>
-document.getElementById("defaultOpen").click();
-  function openInfo(evt, infoName) {
-    var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-      tabcontent[i].style.display = "none";
-    }
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-      tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-    document.getElementById(infoName).style.display = "block";
-    evt.currentTarget.className += " active";
-  }
-</script>
+<script src="models/startseite-taps.js" type="text/javascript"></script>
+<script src="models/startseite-map.js" type="text/javascript"></script>
 
   </body>
 </html>

@@ -35,7 +35,7 @@ header .headertext {
 }
 /* abschnitt1 */
 .a1 {
-  margin: 15px 20px 15px 20px;
+  margin: 15px 25px 15px 25px;
   height: 140px;
   border-bottom: 1.5px solid rgb(200, 200, 200);
 }
@@ -62,7 +62,7 @@ header .headertext {
 }
 /* abschnitt2 */
 .a2 {
-  margin: 15px 20px 15px 20px;
+  margin: 15px 25px 15px 25px;
   padding-bottom: 50px;
   height: auto;
   border-bottom: 1.5px solid rgba(200, 200, 200);
@@ -137,12 +137,12 @@ header .headertext {
 
 /* abschnitt3 */
 .a3 {
-  margin: 0px 20px 0px 20px;
+  margin: 0px 25px 0px 25px;
   height: auto;
   border-bottom: 1.5px solid rgba(200, 200, 200);
 }
-.header-a3{
-
+.header-a3 h1 {
+  margin: 50px 0px 0px 50px;
 }
 .flex-container {
   margin: 0px 10% 0px 10%;
@@ -152,14 +152,57 @@ header .headertext {
 }
 .flex-container > div {
   background-color: #f1f1f1;
-  width: 48%;
+  width: 45%;
   height: 250px;
-  margin: 10px;
-  text-align: center;
-  line-height: 75px;
-  font-size: 30px;
+  margin: 25px;
   border-radius: 25px;
 }
+.k-container {
+  margin: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.k-profilIcon {
+  margin: 20px 0px 0px 20px;
+  width: 65px;
+  height: 65px;
+  float:left;
+}
+.k-profilIcon img{
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+}
+.k-info {
+  margin: 20px 0px 0px 20px;
+}
+.k-info h1 {
+  margin: 0px 0px 0px 0px;
+  padding: 10px 0px 0px 0px;
+  font-size: 20px;
+}
+.k-info h2 {
+  margin: 0px 0px 0px 0px;
+  padding: 2px 0px 0px 0px;
+  font-size: 10px;
+}
+
+.k-inhalt {
+ margin: 20px 40px 0px 40px;
+ clear: both;
+ display: flex;
+ flex-direction: column;
+}
+.k-bewertung span{
+  margin: 0;
+}
+.checked {
+  color: orange;
+}
+.k-text p{
+  margin: 0;
+}
+
 .more-button {
 
 }

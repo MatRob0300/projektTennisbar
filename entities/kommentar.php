@@ -26,7 +26,7 @@ public function __construct($daten = array())
 }
 public function  __toString()
 {
-    return 'Id:'. $this->id .', Text: '.$this->text.', Bewertung: '.$this->bewertung.', Datum: '.$this->datum.', Benutzerid: '.$this->benutzerid;
+    return 'Id:'. $this->id.', Text: '.$this->text.', Bewertung: '.$this->bewertung.', Datum: '.$this->datum.', Benutzerid: '.$this->benutzerid;
 }
 public function toArray($mitId = true)
 {
