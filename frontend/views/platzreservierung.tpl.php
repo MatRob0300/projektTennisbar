@@ -17,7 +17,7 @@
         <h2>Tennisbar Andrian</h2>
       </div>
       <div class="reglog">
-        <a href="#"><img src="images/profilIcon.png" alt="profil-icon" title="Anmelden"></a>
+        <a href="?aktion=login"><img src="images/profilIcon.png" alt="profil-icon" title="Anmelden"></a>
       </div>
       <nav>
         <a href="?aktion=startseite">Startseite</a>

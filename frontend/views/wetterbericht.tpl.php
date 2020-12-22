@@ -16,11 +16,11 @@
         <h2>Tennisbar Andrian</h2>
       </div>
       <div class="reglog">
-        <a href="#"><img src="images/profilIcon.png" alt="profil-icon" title="Anmelden"></a>
+        <a href="?aktion=login"><img src="images/profilIcon.png" alt="profil-icon" title="Anmelden"></a>
       </div>
       <nav>
         <a href="?aktion=startseite">Startseite</a>
-        <a href="#">Bar</a>
+        <a href="?aktion=bar">Bar</a>
         <a href="?aktion=wetterbericht">Wetter</a>
         <a href="?aktion=platzreservierung">Tennisplatz</a>
         <a href="#">Über uns</a>
