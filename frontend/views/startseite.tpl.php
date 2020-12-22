@@ -27,7 +27,7 @@
       <h2>Tennisbar Andrian</h2>
     </div>
     <div class="reglog">
-      <a href="#"><img src="images/profilIcon.png" alt="profil-icon" title="Anmelden"></a>
+      <a href="?aktion=login"><img src="images/profilIcon.png" alt="profil-icon" title="Anmelden"></a>
     </div>
     <nav>
       <a href="?aktion=startseite">Startseite</a>
@@ -37,9 +37,8 @@
       <a href="#">Über uns</a>
     </nav>
 
-
-
   </div>
+
   <header>
     <div class="headertext">
       <h1>Cheers</h1>
@@ -168,8 +167,5 @@
 </main>
 
 <footer></footer>
-<script src="models/startseite-taps.js" type="text/javascript"></script>
-<script src="models/startseite-map.js" type="text/javascript"></script>
-
-  </body>
+<script src="models/startseite.js" type="text/javascript"></script>
 </html>

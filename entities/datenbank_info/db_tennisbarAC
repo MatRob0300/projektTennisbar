@@ -32,7 +32,7 @@ CREATE TABLE IF NOT EXISTS `db_tennisbarAC`.`benutzer` (
   `strasse` VARCHAR(50) NULL,
   `strassennr` VARCHAR(5) NULL,
   `registriert` TINYINT NULL,
-  `telefonnummer` INT NULL,
+  `telefonnummer` VARCHAR(15) NULL,
   PRIMARY KEY (`benutzerid`))
 ENGINE = InnoDB;
 

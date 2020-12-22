@@ -18,7 +18,16 @@ class Controller{
 
     }
     public function bar(){
-      
+
+    }
+    public function ueberUns(){
+
+    }
+    public function login(){
+
+    }
+    public function register(){
+
     }
 
 
