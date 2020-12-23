@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="styles/main-styles.css"/>
+    <link rel="stylesheet" type="text/css" href="styles/underMain-styles.css">
     <link rel="stylesheet" type="text/css" href="styles/wetterbericht-styles.css"/>
     <title>Wetterbericht Andrian</title>
   </head>
@@ -23,7 +24,7 @@
         <a href="?aktion=bar">Bar</a>
         <a href="?aktion=wetterbericht">Wetter</a>
         <a href="?aktion=platzreservierung">Tennisplatz</a>
-        <a href="#">Über uns</a>
+        <a href="?aktion=ueberUns">Über uns</a>
       </nav>
     </div>
     <header>

@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>tennisplatzreservierung für zwei Plaetze</title>
     <link rel="stylesheet" type="text/css" href="styles/main-styles.css">
+    <link rel="stylesheet" type="text/css" href="styles/underMain-styles.css">
     <link rel="stylesheet" type="text/css" href="styles/platzreservierung-styles.css">
   </head>
   <body>
@@ -24,7 +25,7 @@
         <a href="?aktion=bar">Bar</a>
         <a href="?aktion=wetterbericht">Wetter</a>
         <a href="?aktion=platzreservierung">Tennisplatz</a>
-        <a href="#">Über uns</a>
+        <a href="?aktion=ueberUns">Über uns</a>
       </nav>
     </div>
     <header>

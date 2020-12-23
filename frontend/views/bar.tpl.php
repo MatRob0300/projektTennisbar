@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Cheers - Tennisbar Andrian, Burger - Bar - Lounge</title>
     <link rel="stylesheet" type="text/css" href="styles/main-styles.css">
+    <link rel="stylesheet" type="text/css" href="styles/underMain-styles.css">
     <link rel="stylesheet" type="text/css" href="styles/bar-styles.css">
   </head>
   <body>
@@ -23,7 +24,7 @@
         <a href="?aktion=bar">Bar</a>
         <a href="?aktion=wetterbericht">Wetter</a>
         <a href="?aktion=platzreservierung">Tennisplatz</a>
-        <a href="#">Über uns</a>
+        <a href="?aktion=ueberUns">Über uns</a>
       </nav>
     </div>
     <header>
@@ -59,10 +60,10 @@
       </div>
       <div class="cards-container">
         <div class="speisekarte">
-          <img src="images/getraenke-karte.jpeg" alt="speisekarte">
+          <img id="g-karte" src="images/getraenke-karte.jpeg" alt="speisekarte">
         </div>
         <div class="getraenkekarte">
-          <img src="images/getraenke-karte.jpeg" alt="getränkekarte">
+          <img id="sp-karte" src="images/getraenke-karte.jpeg" alt="getränkekarte">
         </div>
       </div>
     </main>
@@ -110,5 +111,15 @@
         </div>
       </div>
     </aside>
+
+    <div id="myModal" class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="img01">
+      <div id="caption"></div>
+    </div>
+
+    <script src="models/bar.js" type="text/javascript">
+
+    </script>
   </body>
 </html>
