@@ -1,1 +1,7 @@
-dfd
+main {
+  background-color: white;
+}
+.a1{
+  margin: 10px 100px 50px 100px;
+  border-bottom: 1.5px solid rgb(200, 200, 200);
+}

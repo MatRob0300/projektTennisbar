@@ -42,14 +42,14 @@
     <div class="headertext">
       <h1>Cheers</h1>
       <h2>Burger - Bar - Lounge</h2>
-      <button type="button" name="button">Tennisplatz</button>
+      <a href="?aktion=platzreservierung">zum Tennisplatz</a>
     </div>
   </header>
 
 <main>
 
   <div class="a1">
-    <h1>There is random Text!</h1>
+    <!--<h1>There is random Text!</h1>-->
     <div class="suchleiste">
       <input type="searchbox" />
       <button type="button">SUCHEN</button>
@@ -96,7 +96,8 @@
   <div class="a3">
 
     <div class="header-a3">
-      <h1>dsfsdfdfds</h1>
+      <h1>Was Andere über uns denken</h1>
+      <a href="?aktion=bewertungErstellen"><img src="images/bewertung-erstellen.png" alt="kommentar erstellen" title="Bewertung erstellen"></a>
     </div>
 
     <div class="flex-container">
@@ -157,9 +158,8 @@
     </div>
 
     <div class="more-button">
-      <button type="button" name="erweitern">erweitern</button>
+      <a href="#">erweitern</a>
     </div>
-
   </div>
 
 

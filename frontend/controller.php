@@ -29,6 +29,9 @@ class Controller{
     public function register(){
 
     }
+    public function bewertungErstellen(){
+
+    }
 
 
 

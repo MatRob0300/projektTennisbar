@@ -14,6 +14,7 @@ header .headertext {
   position: absolute;
   top: 40%;
   left: 42%;
+  text-align: center;
 }
 .headertext h1 {
   text-align: center;
@@ -27,12 +28,23 @@ header .headertext {
   font-size: 25px;
   color: white;
 }
-.headertext button {
+.headertext a {
+  background-color: #1c8f9c;
+  border: none;
+  color: white;
+  padding: 15px 32px;
   text-align: center;
-  margin: 10px 0px 0px 75px;
-  width: 150px;
-  height: 35px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
 }
+.headertext a:hover{
+  background-color: white;
+  color: #1c8f9c;
+}
+
 /* abschnitt1 */
 .a1 {
   margin: 15px 25px 15px 25px;
@@ -141,8 +153,17 @@ header .headertext {
   height: auto;
   border-bottom: 1.5px solid rgba(200, 200, 200);
 }
+.header-a3 {
+  display: flex;
+}
 .header-a3 h1 {
   margin: 50px 0px 0px 50px;
+
+}
+.header-a3 img {
+  margin: 40px 0px 0px 10px;
+  width: 50px;
+  height: 50px;
 }
 .flex-container {
   margin: 0px 10% 0px 10%;
@@ -206,14 +227,26 @@ header .headertext {
 .more-button {
 
 }
-.more-button button {
-  width: 150px;
-  height: 35px;
-  border-radius: 5px;
+.more-button a {
+  background-color: #1c8f9c;
+  width: 100px;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
   display: block;
   margin: 0 auto;
   margin-top: 20px;
   margin-bottom: 20px;
+}
+.more-button a:hover{
+  background-color: rgb(200,200,200);
+  color: #4CAF50;
+
 }
 
 /* footer */
