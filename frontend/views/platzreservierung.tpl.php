@@ -33,7 +33,10 @@
         <h1>Platzreservierung</h1>
       </div>
     </header>
-    <main></main>
+    <main>
+      <?php require_once('../kalender/public/index.php');?>
+
+    </main>
     <aside>
       <div class="side-box">
         <div class="side-box-header">

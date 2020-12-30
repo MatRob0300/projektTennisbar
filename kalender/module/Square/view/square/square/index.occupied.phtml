@@ -1,0 +1,11 @@
+<?php
+
+$squareType = $this->option('subject.square.type');
+
+if ($this->notBookableReason) {
+    $reason = $this->notBookableReason;
+} else {
+    $reason = $this->t('This %s is already occupied.');
+}
+
+echo sprintf('<p><span class="red">' . $reason . '</span></p>', $squareType);
