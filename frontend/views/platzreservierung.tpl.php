@@ -36,7 +36,24 @@
       </div>
     </header>
     <main>
-
+      <div class="container">
+        <div class="court">
+          <div class="court-header">
+            <h1>Platz A</h1>
+          </div>
+          <div class="court-img">
+            <a href="#"><img src="images/bildplatzhalter.png" alt=""></a>
+          </div>
+        </div>
+        <div class="court">
+          <div class="court-header">
+            <h1>Platz B</h1>
+          </div>
+          <div class="court-img">
+            <a href="#"><img src="images/bildplatzhalter.png" alt=""></a>
+          </div>
+        </div>
+      </div>
     </main>
     <aside>
       <div class="side-box">

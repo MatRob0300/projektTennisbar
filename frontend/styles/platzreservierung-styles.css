@@ -1,0 +1,25 @@
+main {
+  height: 700px;
+}
+.container {
+  display: flex;
+  height: 100%;
+}
+.court {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  width: 50%;
+}
+.court-header {
+  height: 10%;
+}
+.court-img {
+  height: 80%;
+}
+.court-img img {
+  width: 60%;
+  height: 100%;
+  border-radius: 10px;
+}
