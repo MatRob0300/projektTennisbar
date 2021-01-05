@@ -18,7 +18,7 @@
       <form class="" action="?aktion=einloggen" method="post">
         <input type="text" name="email" placeholder="E-Mail-Adresse">
         <input type="password" name="password" placeholder="Passwort"><br/>
-        <button type="submit" name="submit" class="button">Login</button>
+        <button type="submit" name="submit" class="button">Anmelden</button>
       </form>
     </div>
     <div class="p-vn">

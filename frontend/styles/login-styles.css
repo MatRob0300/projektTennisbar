@@ -8,7 +8,7 @@ body {
 }
 main {
   width: 500px;
-  height: 400px;
+  height: 420px;
   margin: 0 auto;
   margin-top: 120px;
   text-align: center;
@@ -18,6 +18,9 @@ main {
 .header .zurueck {
   width: 30px;
   height: 30px;
+}
+.header h1 {
+  margin: 10px 0px;
 }
 .zurueck a,img {
   margin: 10px 0px 0px 10px;
@@ -32,18 +35,35 @@ input[type="text"], input[type="password"] {
     padding-left:5px;
 }
 .button {
-    width:150px;
+    width:170px;
     height: 50px;
     font-size:18px;
     background-color:#000;
     color:#fff;
     border:#fff solid 1px;
 }
-
 .button:hover {
     background-color:#fff;
     color:#000;
     cursor: pointer;
+}
+.p-vn {
+  margin: 10px 0px;
+}
+.p-vn a {
+  font-size: 15px;
+}
+.line {
+  margin: 10px 20px;
+}
+.line .before {
+  margin: 5px 0px;
+}
+.line .after {
+  margin: 5px 0px;
+}
+.reg {
+  margin: 10px 0px;
 }
 footer {
   position: fixed;

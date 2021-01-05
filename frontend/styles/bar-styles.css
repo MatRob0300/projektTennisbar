@@ -13,20 +13,20 @@ main {
   border-bottom: 1.5px solid rgb(200, 200, 200);
 }
 .info-container1 {
-  background-color: #f1f1f1;
   height: 100%;
   margin: 10px;
   display: flex;
   flex-direction: row;
   border-radius: 15px;
+  color: white;
 }
 .info-container2 {
-  background-color: #f1f1f1;
   height: 100%;
   margin: 10px;
   display: flex;
   flex-direction: row;
   border-radius: 15px;
+  color: white;
 }
 .beschreibung {
   width: 65%;
