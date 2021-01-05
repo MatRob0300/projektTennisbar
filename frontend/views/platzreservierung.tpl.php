@@ -32,28 +32,23 @@
     </div>
     <header>
       <div class="headertext">
-        <h1>Platzreservierung</h1>
+        <h1>Tennisplatz</h1>
       </div>
     </header>
     <main>
       <div class="container">
-        <div class="court">
-          <div class="court-header">
-            <h1>Platz A</h1>
-          </div>
-          <div class="court-img">
-            <a href="#"><img src="images/bildplatzhalter.png" alt=""></a>
-          </div>
+        <div class="container-img">
+          <img src="images/bildplatzhalter.png" alt="">
         </div>
-        <div class="court">
-          <div class="court-header">
-            <h1>Platz B</h1>
-          </div>
-          <div class="court-img">
-            <a href="#"><img src="images/bildplatzhalter.png" alt=""></a>
-          </div>
+        <div class="container-text">
+          <h1>Tennisplatz</h1>
+          <p>One advanced diverted domestic sex repeated bringing you old.
+             Possible procured her trifling laughter thoughts property she met way.
+             Companions shy had solicitude favourable own.</p>
+          <a href="?aktion=reservierungErstellen">jetzt reservieren</a>
         </div>
       </div>
+
     </main>
     <aside>
       <div class="side-box">

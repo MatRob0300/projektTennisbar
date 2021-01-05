@@ -3,23 +3,40 @@ main {
 }
 .container {
   display: flex;
-  height: 100%;
+  height: auto;
+  margin-top: 50px;
 }
-.court {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  justify-content: center;
+.container > div{
   width: 50%;
 }
-.court-header {
-  height: 10%;
+.container-img {
+  width: 100%;
+  margin: 50px 0px 0px 100px;
 }
-.court-img {
-  height: 80%;
+.container-img img {
+  width: 70%;
+  height: auto;
+  border-radius: 20px;
 }
-.court-img img {
-  width: 60%;
-  height: 100%;
-  border-radius: 10px;
+.container-text {
+  margin: 50px 100px 0px 0px;
+}
+.container-text h1, p{
+  color: white;
+}
+.container-text a {
+  background-color: #1c8f9c;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.container-text a:hover{
+  background-color: white;
+  color: #1c8f9c;
 }

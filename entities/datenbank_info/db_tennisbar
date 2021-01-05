@@ -8,19 +8,19 @@ SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
 
 -- -----------------------------------------------------
--- Schema db_tennisbarAC
+-- Schema db_tennisbar
 -- -----------------------------------------------------
 
 -- -----------------------------------------------------
--- Schema db_tennisbarAC
+-- Schema db_tennisbar
 -- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `db_tennisbarAC` DEFAULT CHARACTER SET utf8 ;
-USE `db_tennisbarAC` ;
+CREATE SCHEMA IF NOT EXISTS `db_tennisbar` DEFAULT CHARACTER SET utf8 ;
+USE `db_tennisbar` ;
 
 -- -----------------------------------------------------
--- Table `db_tennisbarAC`.`benutzer`
+-- Table `db_tennisbar`.`benutzer`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `db_tennisbarAC`.`benutzer` (
+CREATE TABLE IF NOT EXISTS `db_tennisbar`.`benutzer` (
   `benutzerid` INT NOT NULL AUTO_INCREMENT,
   `vorname` VARCHAR(50) NULL,
   `nachname` VARCHAR(50) NULL,
@@ -38,9 +38,9 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `db_tennisbarAC`.`reservierung`
+-- Table `db_tennisbar`.`reservierung`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `db_tennisbarAC`.`reservierung` (
+CREATE TABLE IF NOT EXISTS `db_tennisbar`.`reservierung` (
   `reservierungid` INT NOT NULL AUTO_INCREMENT,
   `platznummer` SMALLINT(1) NULL,
   `spieleranzahl` INT NULL,
@@ -50,29 +50,29 @@ CREATE TABLE IF NOT EXISTS `db_tennisbarAC`.`reservierung` (
   `bis` VARCHAR(10) NULL,
   `benutzer_benutzerid` INT NOT NULL,
   PRIMARY KEY (`reservierungid`, `benutzer_benutzerid`),
-  INDEX `fk_reservierung_benutzer1_idx` (`benutzer_benutzerid` ASC) VISIBLE,
+  INDEX `fk_reservierung_benutzer1_idx` (`benutzer_benutzerid` ASC),
   CONSTRAINT `fk_reservierung_benutzer1`
     FOREIGN KEY (`benutzer_benutzerid`)
-    REFERENCES `db_tennisbarAC`.`benutzer` (`benutzerid`)
+    REFERENCES `db_tennisbar`.`benutzer` (`benutzerid`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `db_tennisbarAC`.`kommentar`
+-- Table `db_tennisbar`.`kommentar`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `db_tennisbarAC`.`kommentar` (
+CREATE TABLE IF NOT EXISTS `db_tennisbar`.`kommentar` (
   `komentarid` INT NOT NULL AUTO_INCREMENT,
   `text` VARCHAR(300) NULL,
   `bewertung` INT NULL,
   `datum` DATETIME NULL,
   `benutzer_benutzerid` INT NOT NULL,
   PRIMARY KEY (`komentarid`, `benutzer_benutzerid`),
-  INDEX `fk_kommentar_benutzer1_idx` (`benutzer_benutzerid` ASC) VISIBLE,
+  INDEX `fk_kommentar_benutzer1_idx` (`benutzer_benutzerid` ASC),
   CONSTRAINT `fk_kommentar_benutzer1`
     FOREIGN KEY (`benutzer_benutzerid`)
-    REFERENCES `db_tennisbarAC`.`benutzer` (`benutzerid`)
+    REFERENCES `db_tennisbar`.`benutzer` (`benutzerid`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;

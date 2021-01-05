@@ -32,6 +32,9 @@ class Controller{
     public function bewertungErstellen(){
 
     }
+    public function reservierungErstellen(){
+
+    }
 
 
 

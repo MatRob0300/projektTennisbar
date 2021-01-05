@@ -2,7 +2,7 @@
 main {
   float: left;
   width: 74%;
-  height: auto;
+  height: 800px;
   background: linear-gradient(rgb(250;250;250), rgb(240;240;240));
   font-family: sans-serif;
   border-right: 1px solid rgb(200, 200, 200);;
