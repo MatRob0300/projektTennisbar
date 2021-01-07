@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  display: flex;
+  flex-wrap: nowrap;
+  background-color: DodgerBlue;
+}
+.sel-l {
+  background-color: #f1f1f1;
+  width: 50%;
+}
+.sel-r {
+  background-color: #f1f1f1;
+  width: 50%;
+}

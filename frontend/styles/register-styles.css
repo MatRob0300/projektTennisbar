@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  display: flex;
+  height: auto;
+}
+.container > .reg {
+  background-color: #f1f1f1;
+  width: 50%;
+}
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 40vh;
+  background-color: rgb(130, 130, 130);
+  color: white;
+  text-align: center;
+}
