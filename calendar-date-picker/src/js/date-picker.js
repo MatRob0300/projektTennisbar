@@ -10,8 +10,8 @@ var previousBtn = document.getElementById("previous");
 var datePicked = document.getElementById("date-picked");
 var months = "";
 var days = "";
-var monthsArr = ["Januar", "Februar", "März", "April", "Mai", "Juny", "July", "August", "September", "Oktober", "November", "Dezember"];
-var daysArr = ["So", "Mo", "Di", "Mi", "Do", "Fr", "Sa"];
+var monthsArr = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+var daysArr = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
 months = monthsArr;
 days = daysArr;
@@ -27,7 +27,7 @@ for (dhead in days) {
 
 dataHead += "</tr>";
 tableHeaderMonth.innerHTML = dataHead;
-showCalendar(currentMonth, currentYear);
+showCalendar(currentMonth, currentYear);  
 
 nextBtn.addEventListener("click", next, false);
 previousBtn.addEventListener("click", previous, false);
@@ -68,7 +68,7 @@ function showCalendar(month, year) {
   var monthString = monthsArr[month];
 
   table = document.getElementById("calendar-body");
-  table.innerHTML = "";
+  table.innerHTML = ""; 
   monthHeader.innerHTML = monthString.substring(0, 3);
   yearHeader.innerHTML = year;
   selectYear.value = year;

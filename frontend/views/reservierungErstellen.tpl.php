@@ -2,42 +2,48 @@
 <html lang="de">
   <head>
     <meta charset="utf-8">
-    <title><!--https://www.eyecon.ro/datepicker/#about
-    https://medium.com/@nitinpatel_20236/challenge-of-building-a-calendar-with-pure-javascript-a86f1303267d --></title>
+    <title><!--https://www.cssscript.com/calendar-date-picker/--></title>
     <link rel="stylesheet" type="text/css" href="styles/reservierung-erstellen-styles.css">
   </head>
-  <body onload="renderDate()">
+  <body>
     <div class="container">
       <div class="c-l">
 
-        <div class="wrapper">
-          <div class="calendar">
-            <div class="month">
-              <div class="prev" onclick="moveDate('prev')">
-                  <span>&#10094;</span>
-              </div>
-              <div>
-                  <h2 id="month"></h2>
-              </div>
-              <div class="next" onclick="moveDate('next')">
-                  <span>&#10095;</span>
-              </div>
-            </div>
-            <div class="weekdays">
-              <div>So</div>
-              <div>Mo</div>
-              <div>Di</div>
-              <div>Mi</div>
-              <div>Do</div>
-              <div>Fr</div>
-              <div>Sa</div>
-            </div>
-            <div class="days">
+        	<div class="wrapper">
+            <div class="container-calendar">
+        			<div class="button-container-calendar">
+        				<button id="previous">&#8249;</button>
+        				<button id="next">&#8250;</button>
+        				<h3 id="monthHeader"></h3>
+        				<p id="yearHeader"></p>
+        			</div>
 
-            </div>
-          </div>
-        </div>
-        
+        			<table class="table-calendar" id="calendar">
+        				<thead id="thead-month"></thead>
+        				<tbody id="calendar-body"></tbody>
+        			</table>
+
+        			<div class="footer-container-calendar">
+        				<label for="month">Jump To: </label>
+        				<select id="month">
+        					<option value=0>Jan</option>
+        					<option value=1>Feb</option>
+        					<option value=2>Mär</option>
+        					<option value=3>Apr</option>
+        					<option value=4>Mai</option>
+        					<option value=5>Jun</option>
+        					<option value=6>Jul</option>
+        					<option value=7>Aug</option>
+        					<option value=8>Sep</option>
+        					<option value=9>Okt</option>
+        					<option value=10>Nov</option>
+        					<option value=11>Dez</option>
+        				</select>
+        				<select id="year"></select>
+        			</div>
+        			<p id="date-picked"></p>
+        		</div>
+        	</div>
       </div>
       <div class="c-r">
 
