@@ -7,9 +7,13 @@
   </head>
   <body>
     <div class="container">
-      
       <div class="c-l">
-
+        <div class="court-select">
+          <select class="court" name="">
+            <option value="1">Platz A</option>
+            <option value="2">Platz B</option>
+          </select>
+        </div>
         	<div class="wrapper">
             <div class="container-calendar">
         			<div class="button-container-calendar">
@@ -47,7 +51,12 @@
         	</div>
       </div>
       <div class="c-r">
+        <div class="time-select">
+          <select class="times" name="">
 
+        
+          </select>
+        </div>
       </div>
     </div>
 
