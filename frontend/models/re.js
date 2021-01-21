@@ -8,10 +8,14 @@ var yearHeader = document.getElementById("yearHeader");
 var nextBtn = document.getElementById("next");
 var previousBtn = document.getElementById("previous");
 var datePicked = document.getElementById("date-picked");
+
+
+
 var months = "";
 var days = "";
 var monthsArr = ["Januar", "Februar", "März", "April", "Mai", "Juny", "July", "August", "September", "Oktober", "November", "Dezember"];
 var daysArr = ["So", "Mo", "Di", "Mi", "Do", "Fr", "Sa"];
+
 
 months = monthsArr;
 days = daysArr;
@@ -108,10 +112,13 @@ function showCalendar(month, year) {
 
           currentTarget.classList.add("selected");
           datePicked.innerHTML = date + " " + monthsArr[month] + " " + year;
+            document.getElementById("date").value = datePicked.innerHTML;
+
         }
 
         if (date === today.getDate() && year === today.getFullYear() && month === today.getMonth()) {
           cell.className = "date-picker selected";
+
         }
 
         row.appendChild(cell);

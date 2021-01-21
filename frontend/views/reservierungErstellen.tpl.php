@@ -7,13 +7,19 @@
   </head>
   <body>
     <div class="container">
-      <div class="c-l">
-        <div class="court-select">
-          <select class="court" name="">
+
+      <div class="header">
+        <h1>Platzreservierung</h1>
+      </div>
+      <form action="" method="post">
+        <div class="court">
+          <select class="court-select" name="">
             <option value="1">Platz A</option>
             <option value="2">Platz B</option>
           </select>
         </div>
+        <div class="calendar">
+
         	<div class="wrapper">
             <div class="container-calendar">
         			<div class="button-container-calendar">
@@ -47,17 +53,26 @@
         				<select id="year"></select>
         			</div>
         			<p id="date-picked"></p>
+              <input type="text" id="date" name="" value="" hidden required>
         		</div>
         	</div>
-      </div>
-      <div class="c-r">
-        <div class="time-select">
-          <select class="times" name="">
-
-        
-          </select>
         </div>
-      </div>
+        <div class="time">
+          <div class="time-select">
+            <select class="times" id="times" name="">
+              <?php
+              $dayTimesArr = array("08:00", "09:00", "10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00", "18:00", "19:00", "20:00", "21:00", "22:00");
+              for ($i=0; $i < $dayTimesArr.count(); $i++) {
+                
+              }
+
+              ?>
+
+            </select><!-- axios -->
+
+          </div>
+        </div>
+      </form>
     </div>
 
 

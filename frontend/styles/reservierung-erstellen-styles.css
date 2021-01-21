@@ -12,16 +12,32 @@ body {
 }
 .container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
-.c-l {
-  width: 70%;
-  height: 100vh;
+.header {
+  margin: 20px 50px;
+}
+.court {
+  width: 100%;
+  height: auto;
+  margin: 50px 0px 0px 0px;
+}
+.court select{
+  width: 25vw;
+  height: 35px;
+  margin: 0px 150px;
+  font-size: 11pt;
+}
+
+.calendar {
+  width: 100%;
+  height: auto;
+  margin: 50px 0px;
 }
 .wrapper {
   width: 100%;
   height: auto;
-  margin: 15px auto;
+  padding: 0px 150px;
 }
 .container-calendar {
   padding: 15px;
@@ -77,14 +93,14 @@ body {
 }
 /* sunday */
 
-.date-picker:nth-child(1), .red-text {
+/*.date-picker:nth-child(1), .red-text {
   color: red;
-}
+}*/
 /* friday */
-
+/*
 .date-picker:nth-child(6) {
   color: green;
-}
+}*/
 #monthAndYear {
   text-align: center;
   margin-top: 0;
@@ -126,6 +142,13 @@ body {
   font-size: 11pt;
   font-weight: bold;
 }
-.c-r {
-  width: 30%;
+.time {
+  width: 100%;
+  height: auto;
+}
+.time select{
+  width: 25vw;
+  height: 35px;
+  margin: 0px 150px;
+  font-size: 11pt;
 }
