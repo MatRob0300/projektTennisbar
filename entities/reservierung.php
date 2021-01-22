@@ -134,7 +134,7 @@ private function _update()
 /* ***** Public Methoden ***** */
 public static function findeAlle()
 {
-    $sql = 'SELECT * FROM benutzer';
+    $sql = 'SELECT * FROM reservierung';
     $abfrage = DB::getDB()->query($sql);
     $abfrage->setFetchMode(PDO::FETCH_CLASS, 'Reservierung');
     return $abfrage->fetchAll();

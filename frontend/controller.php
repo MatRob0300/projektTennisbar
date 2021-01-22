@@ -33,7 +33,7 @@ class Controller{
 
     }
     public function reservierungErstellen(){
-      
+      $this->addContext("reservierungen", Reservierung::findeAlle());
     }
 
 
@@ -42,6 +42,9 @@ class Controller{
         extract($this->context);
         require_once 'views/'.$template.".tpl.php";
 
+    }
+    private function addContext($key,$value){
+      $this->context[$key] = $value;
     }
 }
 

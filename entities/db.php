@@ -6,7 +6,7 @@ class DB {
 
     // Konstruktor privat machen, damit er nicht aufgerufen werden kann
     private function __construct() {
-        ;
+
     }
 
     public static function getDB() {
@@ -19,7 +19,7 @@ class DB {
         catch (PDOException $e){
             echo $e->getMessage();
         }
-       }
+      }
        return self::$db;
     }
 }
