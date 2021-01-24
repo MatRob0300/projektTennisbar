@@ -5,7 +5,6 @@ class Reservierung{
 
 protected $id = NULL;
 protected $platznummer = "";
-protected $spieleranzahl = "";
 protected $msanzahl = "";
 protected $datum = "";
 protected $von = "";
@@ -29,7 +28,7 @@ public function __construct($daten = array())
 }
 public function  __toString()
 {
-    return 'Id:'. $this->id .', Platznummer: '.$this->platznummer.', Spieleranzahl: '.$this->spieleranzahl.', Msanzahl: '.$this->msanzahl.', Datum: '.$this->datum.', Von: '.$this->von.', Bis: '.$this->bis.' Benutzerid: '.$this->benutzerid;
+    return 'Id:'. $this->id .', Platznummer: '.$this->platznummer.', Msanzahl: '.$this->msanzahl.', Datum: '.$this->datum.', Von: '.$this->von.', Bis: '.$this->bis.' Benutzerid: '.$this->benutzerid;
 }
 public function toArray($mitId = true)
 {
@@ -63,12 +62,6 @@ public function setPlatznummer($platznummer){
 }
 public function getPlatznummer(){
   return $this->platznummer;
-}
-public function setSpieleranzahl($spieleranzahl){
-   $this->spieleranzahl = $spieleranzahl;
-}
-public function getSpieleranzahl(){
-  return $this->spieleranzahl;
 }
 public function setMsanzahl($msanzahl){
    $this->msanzahl = $msanzahl;
@@ -115,8 +108,8 @@ public function loesche()
 private function _insert()
 {
 
-    $sql = 'INSERT INTO reservierung (platznummer, spieleranzahl, msanzahl, datum, von, bis, benutzerid)'
-         . 'VALUES (:platznummer, :spieleranzahl, :msanzahl, :datum, :von, :bis, :benutzerid)';
+    $sql = 'INSERT INTO reservierung (platznummer, msanzahl, datum, von, bis, benutzerid)'
+         . 'VALUES (:platznummer, :msanzahl, :datum, :von, :bis, :benutzerid)';
 
     $abfrage = DB::getDB()->prepare($sql);
     $abfrage->execute($this->toArray(false));
@@ -126,10 +119,10 @@ private function _insert()
 
 private function _update()
 {
-    $sql = 'UPDATE reservierung SET platznummer=?, spieleranzahl=?, msanzahl=?, datum=?, von=?, bis=?, benutzerid=?'
+    $sql = 'UPDATE reservierung SET platznummer=?, msanzahl=?, datum=?, von=?, bis=?, benutzerid=?'
         . 'WHERE id=?';
     $abfrage =  DB::getDB()->prepare($sql);
-    $abfrage->execute(array($this->getPlatznummer(), $this->getSpieleranzahl(),$this->getMsanzahl(),$this->getDatum(),$this->getVon(),$this->getBis(),$this->getBenutzerid(),$this->getId()));
+    $abfrage->execute(array($this->getPlatznummer(),$this->getMsanzahl(),$this->getDatum(),$this->getVon(),$this->getBis(),$this->getBenutzerid(),$this->getId()));
 }
 /* ***** Public Methoden ***** */
 public static function findeAlle()

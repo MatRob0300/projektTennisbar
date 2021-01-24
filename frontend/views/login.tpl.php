@@ -15,9 +15,9 @@
       <h1>Login</h1>
     </div>
     <div class="frame">
-      <form class="" action="?aktion=einloggen" method="post">
-        <input type="text" name="email" placeholder="E-Mail-Adresse">
-        <input type="password" name="password" placeholder="Passwort"><br/>
+      <form class="" action="?aktion=log" method="post">
+        <input type="text" name="email" placeholder="E-Mail-Adresse" required>
+        <input type="password" name="password" placeholder="Passwort" required><br/>
         <button type="submit" name="submit" class="button">Anmelden</button>
       </form>
     </div>

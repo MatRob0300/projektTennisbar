@@ -43,7 +43,6 @@ ENGINE = InnoDB;
 CREATE TABLE IF NOT EXISTS `db_tennisbar`.`reservierung` (
   `reservierungid` INT NOT NULL AUTO_INCREMENT,
   `platznummer` SMALLINT(1) NULL,
-  `spieleranzahl` INT NULL,
   `msanzahl` INT NULL,
   `datum` DATE NULL,
   `von` VARCHAR(10) NULL,

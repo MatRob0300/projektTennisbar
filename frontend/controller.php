@@ -24,7 +24,7 @@ class Controller{
 
     }
     public function login(){
-
+    
     }
     public function register(){
 
