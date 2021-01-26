@@ -101,61 +101,69 @@
     </div>
 
     <div class="flex-container">
-
+      <?php foreach ($kommentare as $index => $kommentar):?>
+        <?php if ($index <= 3): ?>
       <div>
         <div class="k-container">
           <div class="k-profilIcon">
             <img src="images/bildplatzhalter.png" alt="profilIcon">
           </div>
           <div class="k-info">
-            <h1>#r.matha</h1>
-            <h2> Erstellt am: 17/12/2020 , 10:59Uhr</h2>
+            <h1><?php echo $kommentar->getKname();?></h1>
+            <h2> Erstellt am: <?php echo $kommentar->getDatum();?> Uhr</h2>
           </div>
         </div>
 
         <div class="k-inhalt">
           <div class="k-bewertung">
+            <?php
+            switch ($kommentar->getBewertung()) {
+            case 1:?>
+            <span class="fa fa-star checked"></span> <!-- checked füllt die sterne-->
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+            <?php break;
+            case 2:?>
+            <span class="fa fa-star checked"></span> <!-- checked füllt die sterne-->
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+            <?php break;
+            case 3:?>
             <span class="fa fa-star checked"></span> <!-- checked füllt die sterne-->
             <span class="fa fa-star checked"></span>
             <span class="fa fa-star checked"></span>
             <span class="fa fa-star"></span>
             <span class="fa fa-star"></span>
-          </div>
-          <div class="k-text">
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-              Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-              when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-          </div>
-        </div>
-      </div>
-
-      <div>
-        <div class="k-container">
-          <div class="k-profilIcon">
-            <img src="images/bildplatzhalter.png" alt="profilIcon">
-          </div>
-          <div class="k-info">
-            <h1>#r.matha</h1>
-            <h2> Erstellt am: 17/12/2020 , 10:59Uhr</h2>
-          </div>
-        </div>
-
-        <div class="k-inhalt">
-          <div class="k-bewertung">
+            <?php break;
+            case 4:?>
             <span class="fa fa-star checked"></span> <!-- checked füllt die sterne-->
             <span class="fa fa-star checked"></span>
             <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
             <span class="fa fa-star"></span>
-            <span class="fa fa-star"></span>
+            <?php break;
+            case 5:?>
+            <span class="fa fa-star checked"></span> <!-- checked füllt die sterne-->
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <?php break;
+            }?>
           </div>
           <div class="k-text">
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-              Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-              when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+            <p><?php echo $kommentar->getText();?></p>
           </div>
         </div>
       </div>
+    <?php endif; ?>
+    <?php endforeach; ?>
     </div>
+
 
     <div class="more-button">
       <a href="#">erweitern</a>

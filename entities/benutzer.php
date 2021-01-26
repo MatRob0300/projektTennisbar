@@ -3,7 +3,7 @@
 
 class Benutzer{
 
-protected $id = NULL;
+protected $benutzerid = NULL;
 protected $vorname = "";
 protected $nachname = "";
 protected $email = "";
@@ -33,7 +33,7 @@ public function __construct($daten = array())
 }
 public function  __toString()
 {
-    return 'Id:'. $this->id .', Vorname: '.$this->vorname.', Nachname: '.$this->nachname.', Email: '.$this->email.', Passwort: '.$this->passwort.', Geburtsdatum: '.$this->geburtsdatum.', Telefonnummer: '.$this->telefonnummer.', Ort: '.$this->ort.', Plz: '.$this->plz.', Strasse: '.$this->strasse
+    return 'Benutzerid:'. $this->benutzerid .', Vorname: '.$this->vorname.', Nachname: '.$this->nachname.', Email: '.$this->email.', Passwort: '.$this->passwort.', Geburtsdatum: '.$this->geburtsdatum.', Telefonnummer: '.$this->telefonnummer.', Ort: '.$this->ort.', Plz: '.$this->plz.', Strasse: '.$this->strasse
     .', Strassennr: '.$this->strassennr.', Registriert: '.$this->registriert;
 }
 public function toArray($mitId = true)
@@ -48,7 +48,7 @@ public function toArray($mitId = true)
 
 public function speichere()
 {
-    if ( $this->getId() > 0 ) {
+    if ( $this->getBenutzerid() > 0 ) {
         // wenn die ID eine Datenbank-ID ist, also größer 0, führe ein UPDATE durch
         $this->_update();
     } else {
@@ -57,11 +57,11 @@ public function speichere()
     }
 }
 
-public function setId($id){
-   $this->id = $id;
+public function setBenutzerid($benutzerid){
+   $this->benutzerid = $benutzerid;
 }
-public function getId(){
-  return $this->id;
+public function getBenutzerid(){
+  return $this->benutzerid;
 }
 public function setVorname($vorname){
    $this->vorname = $vorname;
@@ -133,9 +133,9 @@ public function getRegistriert(){
 
 public function loesche()
 {
-    $sql = 'DELETE FROM benutzer WHERE id=?';
+    $sql = 'DELETE FROM benutzer WHERE benutzerid=?';
     $abfrage = DB::getDB()->prepare($sql);
-    $abfrage->execute( array($this->getId()) );
+    $abfrage->execute( array($this->getBenutzerid()) );
     // Objekt existiert nicht mehr in der DB, also muss die ID zurückgesetzt werden
     $this->id = 0;
 }
@@ -157,10 +157,10 @@ private function _insert()
 private function _update()
 {
     $sql = 'UPDATE benutzer SET vorname=?, nachname=?, email=?, passwort=?, geburtsdatum=?, telefonnummer=?, ort=?, plz=?, strasse=?, strassennr=?, registriert=?'
-        . 'WHERE id=?';
+        . 'WHERE benutzerid=?';
     $abfrage =  DB::getDB()->prepare($sql);
     $abfrage->execute(array($this->getVorname(), $this->getNachname(),$this->getEmail(),$this->getPasswort(),$this->getGeburtsdatum(),$this->getTelefonnummer(),
-    $this->getOrt(),$this->getPlz(),$this->getStrasse(),$this->getStrassennr(),$this->getRegistriert(),$this->getId()));
+    $this->getOrt(),$this->getPlz(),$this->getStrasse(),$this->getStrassennr(),$this->getRegistriert(),$this->getBenutzerid()));
 }
 /* ***** Public Methoden ***** */
 public static function findeAlle()
@@ -171,17 +171,17 @@ public static function findeAlle()
     return $abfrage->fetchAll();
 }
 
-public static function finde($id){
-  $sql = 'SELECT * FROM benutzer WHERE id=?';
+public static function finde($benutzerid){
+  $sql = 'SELECT * FROM benutzer WHERE benutzerid=?';
   $abfrage = DB::getDB()->prepare($sql);
-  $abfrage->execute(array($id));
+  $abfrage->execute(array($benutzerid));
   $abfrage->setFetchMode(PDO::FETCH_CLASS, 'Benutzer');
   return $abfrage->fetch();
 }
 
 public static function findeNachEmail($email)
 {
-    $sql = 'SELECT benutzer.* FROM benutzer '
+    $sql = 'SELECT benutzer.* FROM benutzer'
          . 'WHERE email like ?';
          $abfrage = DB::getDB()->prepare($sql);
          $abfrage->execute(array($email));

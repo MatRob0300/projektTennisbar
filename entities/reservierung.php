@@ -3,7 +3,7 @@
 
 class Reservierung{
 
-protected $id = NULL;
+protected $reservierungid = NULL;
 protected $platznummer = "";
 protected $msanzahl = "";
 protected $datum = "";
@@ -28,21 +28,21 @@ public function __construct($daten = array())
 }
 public function  __toString()
 {
-    return 'Id:'. $this->id .', Platznummer: '.$this->platznummer.', Msanzahl: '.$this->msanzahl.', Datum: '.$this->datum.', Von: '.$this->von.', Bis: '.$this->bis.' Benutzerid: '.$this->benutzerid;
+    return 'Reservierungid:'. $this->reservierungid .', Platznummer: '.$this->platznummer.', Msanzahl: '.$this->msanzahl.', Datum: '.$this->datum.', Von: '.$this->von.', Bis: '.$this->bis.' Benutzerid: '.$this->benutzerid;
 }
 public function toArray($mitId = true)
 {
     $attribute = get_object_vars($this);
     if ($mitId === false) {
         // wenn $mitId false ist, entferne den Schlüssel id aus dem Ergebnis
-        unset($attribute['id']);
+        unset($attribute['reservierungid']);
     }
     return $attribute;
 }
 
 public function speichere()
 {
-    if ( $this->getId() > 0 ) {
+    if ( $this->getReservierungid() > 0 ) {
         // wenn die ID eine Datenbank-ID ist, also größer 0, führe ein UPDATE durch
         $this->_update();
     } else {
@@ -51,11 +51,11 @@ public function speichere()
     }
 }
 
-public function setId($id){
-   $this->id = $id;
+public function setReservierungid($reservierungid){
+   $this->reservierungid = $reservierungid;
 }
-public function getId(){
-  return $this->id;
+public function getReservierungid(){
+  return $this->reservierungid;
 }
 public function setPlatznummer($platznummer){
    $this->platznummer = $platznummer;
@@ -96,9 +96,9 @@ public function getBenutzerid(){
 
 public function loesche()
 {
-    $sql = 'DELETE FROM reservierung WHERE id=?';
+    $sql = 'DELETE FROM reservierung WHERE reservierungid=?';
     $abfrage = DB::getDB()->prepare($sql);
-    $abfrage->execute( array($this->getId()) );
+    $abfrage->execute( array($this->getReservierungid()) );
     // Objekt existiert nicht mehr in der DB, also muss die ID zurückgesetzt werden
     $this->id = 0;
 }
@@ -120,9 +120,9 @@ private function _insert()
 private function _update()
 {
     $sql = 'UPDATE reservierung SET platznummer=?, msanzahl=?, datum=?, von=?, bis=?, benutzerid=?'
-        . 'WHERE id=?';
+        . 'WHERE reservierungid=?';
     $abfrage =  DB::getDB()->prepare($sql);
-    $abfrage->execute(array($this->getPlatznummer(),$this->getMsanzahl(),$this->getDatum(),$this->getVon(),$this->getBis(),$this->getBenutzerid(),$this->getId()));
+    $abfrage->execute(array($this->getPlatznummer(),$this->getMsanzahl(),$this->getDatum(),$this->getVon(),$this->getBis(),$this->getBenutzerid(),$this->getReservierungid()));
 }
 /* ***** Public Methoden ***** */
 public static function findeAlle()
@@ -133,20 +133,21 @@ public static function findeAlle()
     return $abfrage->fetchAll();
 }
 
-public static function finde($id){
-  $sql = 'SELECT * FROM reservierung WHERE id=?';
+public static function finde($reservierungid){
+  $sql = 'SELECT * FROM reservierung WHERE reservierungid=?';
   $abfrage = DB::getDB()->prepare($sql);
-  $abfrage->execute(array($id));
+  $abfrage->execute(array($reservierungid));
   $abfrage->setFetchMode(PDO::FETCH_CLASS, 'Reservierung');
   return $abfrage->fetch();
 }
 public static function findeNachDatum($datum){
   $sql = 'SELECT * FROM reservierung WHERE datum=?';
   $abfrage = DB::getDB()->prepare($sql);
-  $abfrage->execute(array($id));
+  $abfrage->execute(array($reservierungid));
   $abfrage->setFetchMode(PDO::FETCH_CLASS, 'Reservierung');
   return $abfrage->fetch();
 }
+
 
 
 

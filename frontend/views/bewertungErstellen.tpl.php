@@ -13,8 +13,7 @@
     </header>
 
     <main>
-      <form action="" method="post">
-
+      <form action="index.php?aktion=saveBewertung&benutzerid=<?php echo $benutzer->getBenutzerid() ?>" method="post">
         	<div class="head-container">
             <div class="b-img">
               <img src="images/bildplatzhalter.png" alt="profil-bild">
@@ -22,10 +21,10 @@
             <div class="head-info-container">
               <div class="user">
                 <label for="name">Name:</label>
-                <input type="text" name="name" value="Matha.R" placeholder="Name" required>
+                <input type="text" name="name" value="<?php echo $benutzer->getNachname().' '.substr($benutzer->getVorname(),0,1).'.'?>" placeholder="Name" required>
               </div>
               <div class="date-time">
-                <span>Erstellt am: </span><input type="text" name="date" value="18.03.2000" disabled><span> , </span><input type="text" name="time" value="15:00" disabled><span>Uhr</span>
+                <span>Erstellt am: </span><input type="text" name="datum" value="<?php echo date('d.m.Y');?>" disabled><span> , </span><input type="text" name="zeit" value="<?php echo date('H:i');?>" disabled><span>Uhr</span>
               </div>
             </div>
           </div>
@@ -50,13 +49,12 @@
 
             </div>
             <div class="text">
-              <textarea name="name" rows="20" cols="100%" placeholder="Bewertung schreiben ..." required></textarea>
+              <textarea name="b_text" rows="20" cols="100%" placeholder="Bewertung schreiben ..." required></textarea>
             </div>
           </div>
           <div class="button">
             <button type="submit" name="submit" title="erstellen">erstellen</button>
           </div>
-
       </form>
     </main>
   </body>

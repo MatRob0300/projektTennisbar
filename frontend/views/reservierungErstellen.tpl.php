@@ -60,12 +60,13 @@
         <div class="time">
           <div class="time-select">
             <select class="times" id="times" name="">
+              <?php
+              for ($i=8; $i < 21; $i++) {
+                if ("1:00" != ($i.":00")): ?>
+                    <?php echo '<option value="">'.$i.':00 - '.($i+1).':00</option>'?>
+                <?php endif;
+              }?>
             </select><!-- axios -->
-            <?php
-             foreach($reservierungen as $reservierung){ ?>
-         <h1><?php //echo $kurs->getDatum();?></h1>
- <?php    } ?>
-
 
           </div>
         </div>

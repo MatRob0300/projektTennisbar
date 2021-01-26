@@ -62,10 +62,10 @@ ENGINE = InnoDB;
 -- Table `db_tennisbar`.`kommentar`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `db_tennisbar`.`kommentar` (
-  `komentarid` INT NOT NULL AUTO_INCREMENT,
+  `kommentarid` INT NOT NULL AUTO_INCREMENT,
   `text` VARCHAR(300) NULL,
   `bewertung` INT NULL,
-  `datum` DATETIME NULL,
+  `datum` VARCHAR(20) NULL,
   `benutzer_benutzerid` INT NOT NULL,
   PRIMARY KEY (`komentarid`, `benutzer_benutzerid`),
   INDEX `fk_kommentar_benutzer1_idx` (`benutzer_benutzerid` ASC),
