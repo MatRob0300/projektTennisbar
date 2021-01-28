@@ -26,11 +26,6 @@ CREATE TABLE IF NOT EXISTS `db_tennisbar`.`benutzer` (
   `nachname` VARCHAR(50) NULL,
   `email` VARCHAR(50) NULL,
   `passwort` VARCHAR(30) NULL,
-  `geburtsdatum` DATE NULL,
-  `ort` VARCHAR(50) NULL,
-  `plz` INT NULL,
-  `strasse` VARCHAR(50) NULL,
-  `strassennr` VARCHAR(5) NULL,
   `registriert` TINYINT NULL,
   `telefonnummer` VARCHAR(15) NULL,
   PRIMARY KEY (`benutzerid`))

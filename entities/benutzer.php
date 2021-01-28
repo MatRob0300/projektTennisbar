@@ -8,12 +8,7 @@ protected $vorname = "";
 protected $nachname = "";
 protected $email = "";
 protected $passwort = "";
-protected $geburtsdatum = "";
 protected $telefonnummer = "";
-protected $ort = "";
-protected $plz = "";
-protected $strasse = "";
-protected $strassenr = "";
 protected $registriert = "";
 
 public function __construct($daten = array())
@@ -33,8 +28,8 @@ public function __construct($daten = array())
 }
 public function  __toString()
 {
-    return 'Benutzerid:'. $this->benutzerid .', Vorname: '.$this->vorname.', Nachname: '.$this->nachname.', Email: '.$this->email.', Passwort: '.$this->passwort.', Geburtsdatum: '.$this->geburtsdatum.', Telefonnummer: '.$this->telefonnummer.', Ort: '.$this->ort.', Plz: '.$this->plz.', Strasse: '.$this->strasse
-    .', Strassennr: '.$this->strassennr.', Registriert: '.$this->registriert;
+    return 'Benutzerid:'. $this->benutzerid .', Vorname: '.$this->vorname.', Nachname: '.$this->nachname.', Email: '.$this->email.', Passwort: '.$this->passwort.', Telefonnummer: '.$this->telefonnummer
+    .', Registriert: '.$this->registriert;
 }
 public function toArray($mitId = true)
 {
@@ -87,41 +82,11 @@ public function setPasswort($passwort){
 public function getPasswort(){
   return $this->passwort ;
 }
-public function setGeburtsdatum($geburtsdatum){
-   $this->geburtsdatum = $geburtsdatum;
-}
-public function getGeburtsdatum(){
-  return $this->geburtsdatum ;
-}
 public function setTelefonnummer($telefonnummer){
    $this->telefonnummer = $telefonnummer;
 }
 public function getTelefonnummer(){
   return $this->telefonnummer ;
-}
-public function setOrt($ort){
-   $this->ortid = $ort;
-}
-public function getOrt(){
-  return $this->ort;
-}
-public function setPlz($plz){
-   $this->plz = $plz;
-}
-public function getPlz(){
-  return $this->plz;
-}
-public function setStrasse($strasse){
-   $this->strasse = $strasse;
-}
-public function getStrasse(){
-  return $this->strasse ;
-}
-public function setStrassennr($strassennr){
-   $this->strassennr = $strassennr;
-}
-public function getStrassennr(){
-  return $this->strassennr ;
 }
 public function setRegistriert($registriert){
    $this->registriert = $registriert;
@@ -145,8 +110,8 @@ public function loesche()
 private function _insert()
 {
 
-    $sql = 'INSERT INTO benutzer (vorname, nachname, email, passwort, geburtsdatum, telefonnummer, ort, plz, strasse, strassennr, registriert)'
-         . 'VALUES (:vorname, :nachname, :email, :passwort, :geburtsdatum, :telefonnummer, :ort, :plz, :strasse, :strassennr, :registriert)';
+    $sql = 'INSERT INTO benutzer (vorname, nachname, email, passwort, telefonnummer, registriert)'
+         . 'VALUES (:vorname, :nachname, :email, :passwort, :telefonnummer, :registriert)';
 
     $abfrage = DB::getDB()->prepare($sql);
     $abfrage->execute($this->toArray(false));
@@ -156,11 +121,11 @@ private function _insert()
 
 private function _update()
 {
-    $sql = 'UPDATE benutzer SET vorname=?, nachname=?, email=?, passwort=?, geburtsdatum=?, telefonnummer=?, ort=?, plz=?, strasse=?, strassennr=?, registriert=?'
+    $sql = 'UPDATE benutzer SET vorname=?, nachname=?, email=?, passwort=?, telefonnummer=?, registriert=?'
         . 'WHERE benutzerid=?';
     $abfrage =  DB::getDB()->prepare($sql);
-    $abfrage->execute(array($this->getVorname(), $this->getNachname(),$this->getEmail(),$this->getPasswort(),$this->getGeburtsdatum(),$this->getTelefonnummer(),
-    $this->getOrt(),$this->getPlz(),$this->getStrasse(),$this->getStrassennr(),$this->getRegistriert(),$this->getBenutzerid()));
+    $abfrage->execute(array($this->getVorname(), $this->getNachname(),$this->getEmail(),$this->getPasswort(),$this->getTelefonnummer(),
+    $this->getRegistriert(),$this->getBenutzerid()));
 }
 /* ***** Public Methoden ***** */
 public static function findeAlle()
