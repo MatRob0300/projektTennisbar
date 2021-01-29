@@ -13,32 +13,32 @@
       </div>
       <div class="form">
         <div class="inputfield">
-          <label for="fname">Vorname*:</label>
-          <input type="text" name="fname" placeholder="Vorname">
+          <label for="vname">Vorname*:</label>
+          <input type="text" name="vname" placeholder="Vorname" required>
         </div>
         <div class="inputfield">
           <label for="surname">Nachname*:</label>
-          <input type="text" name="surname" placeholder="Nachname">
+          <input type="text" name="surname" placeholder="Nachname" required>
         </div>
         <div class="inputfield">
           <label for="password">Passwort*:</label>
-          <input type="password" name="password" placeholder="Passwort">
+          <input type="password" name="password" placeholder="Passwort" required>
         </div>
         <div class="inputfield">
           <label for="password-w">Passwort wiederholen*:</label>
-          <input type="password" name="password-w" placeholder="Passwort wiederholen">
+          <input type="password" name="password-w" placeholder="Passwort wiederholen" required>
         </div>
         <div class="inputfield">
           <label for="mail">E-Mail*:</label>
-          <input type="text" name="mail" placeholder="E-Mail-Adresse">
+          <input type="text" name="mail" placeholder="Email-Adresse" required>
        </div>
        <div class="inputfield">
          <label for="tel">Telefon*:</label>
-         <input type="text" name="tel" placeholder="">
+         <input type="text" name="tel" placeholder="Telefonnummer" required>
        </div>
        <div class="inputfield terms">
           <label class="check">
-            <input type="checkbox">
+            <input type="checkbox" required>
             <span class="checkmark"></span>
           </label>
           <p>Agreed to terms and conditions</p>

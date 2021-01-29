@@ -42,13 +42,12 @@ class Controller{
       }
     }
     public function register(){
-
+      
     }
     public function bewertungErstellen(){
         $this->addContext("benutzer",Benutzer::finde(1));
     }
     public function saveBewertung(){
-      echo $_POST['bewertung'];
       $datetime = date('d.m.Y').', '.date('H:i');
       $kommentar = new Kommentar(array("kname"=>$_POST['name'],"datum"=>$datetime,"text"=>$_POST['b_text'],"bewertung"=>$_POST['bewertung'],"benutzer_benutzerid"=>$_REQUEST['benutzerid']));
       $kommentar->speichere();
