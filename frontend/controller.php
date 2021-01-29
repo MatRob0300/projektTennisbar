@@ -42,7 +42,27 @@ class Controller{
       }
     }
     public function register(){
-      
+
+    }
+    public function reg(){
+      $vname = $_POST['name'];
+      $sname = $_POST['surname'];
+      $mail = $_POST['email'];
+      $pass = $_POST['password'];
+      $passw = $_POST['w-password'];
+      $pho = $_POST['tel'];
+      if (isset($vname) && isset($sname) && isset($mail) && isset($pass) && isset($passw) && isset($pho)) {
+        if ($pass == $passw) {
+          $db_benutzer = Benutzer::findeAlle();
+          foreach ($db_benutzer as $user):
+            if ($user->getEmail() != $mail && $user->getTelefonnummer() != $pho) {
+              $benutzer = new Benutzer(array("vorname"=>$vname,"nachname"=>$sname,"email"=>$mail,"passwort"=>$pass,"telefonnummer"=>$pho,"registriert"=>1));
+              $benutzer->speichere();
+            }
+          endforeach;
+        }
+      }
+      header("Location: index.php?aktion=login");
     }
     public function bewertungErstellen(){
         $this->addContext("benutzer",Benutzer::finde(1));

@@ -7,46 +7,42 @@
     <title>Cheers Registrierung</title>
   </head>
   <body>
-    <div class="wrapper">
-      <div class="title">
-        Registrierung
+    <main>
+      <div class="header">
+        <div class="zurueck">
+          <a href="?aktion=startseite"><img src="images/zurueck-pfeil.png" alt="zurueck-pfeil"></a>
+        </div>
+        <h1>Registrierung</h1>
       </div>
-      <div class="form">
-        <div class="inputfield">
-          <label for="vname">Vorname*:</label>
-          <input type="text" name="vname" placeholder="Vorname" required>
-        </div>
-        <div class="inputfield">
-          <label for="surname">Nachname*:</label>
-          <input type="text" name="surname" placeholder="Nachname" required>
-        </div>
-        <div class="inputfield">
-          <label for="password">Passwort*:</label>
-          <input type="password" name="password" placeholder="Passwort" required>
-        </div>
-        <div class="inputfield">
-          <label for="password-w">Passwort wiederholen*:</label>
-          <input type="password" name="password-w" placeholder="Passwort wiederholen" required>
-        </div>
-        <div class="inputfield">
-          <label for="mail">E-Mail*:</label>
-          <input type="text" name="mail" placeholder="Email-Adresse" required>
-       </div>
-       <div class="inputfield">
-         <label for="tel">Telefon*:</label>
-         <input type="text" name="tel" placeholder="Telefonnummer" required>
-       </div>
-       <div class="inputfield terms">
-          <label class="check">
-            <input type="checkbox" required>
-            <span class="checkmark"></span>
-          </label>
-          <p>Agreed to terms and conditions</p>
-       </div>
-       <div class="inputfield">
-        <input type="submit" value="Register" class="btn">
-        </div>
+      <div class="frame">
+        <form action="index.php?aktion=reg" method="post">
+          <div class="v-s">
+            <input type="text" name="name" placeholder="Vorname" required>
+            <input type="text" name="surname" placeholder="Nachname" required>
+          </div>
+          <div class="e">
+            <input type="text" name="email" placeholder="E-Mail-Adresse" required>
+          </div>
+          <div class="pp">
+            <input type="password" name="password" placeholder="Passwort" required>
+            <input type="password" name="w-password" placeholder="Passwort wiederholen" required>
+          </div>
+          <div class="t">
+            <input type="text" name="tel" placeholder="Telefon" required>
+          </div>
+          <div class="sub">
+            <div class="n-d">
+              <span>Indem du auf „Registrieren“ klickst, stimmst du unseren </span>
+              <a href="#">Nutzungsbedingungen</a>
+              <span> zu. In unserer </span>
+              <a href="#">Datenrichtlinie</a>
+              <span> erfährst du, wie wir deine Daten erfassen, verwenden und teilen.</span>
+            </div>
+            <button type="submit" name="submit" class="button">Registrieren</button>
+          </div>
+        </form>
       </div>
-    </div>
+    </main>
+    <footer></footer>
   </body>
 </html>

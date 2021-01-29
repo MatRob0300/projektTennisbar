@@ -28,8 +28,7 @@ public function __construct($daten = array())
 }
 public function  __toString()
 {
-    return 'Benutzerid:'. $this->benutzerid .', Vorname: '.$this->vorname.', Nachname: '.$this->nachname.', Email: '.$this->email.', Passwort: '.$this->passwort.', Telefonnummer: '.$this->telefonnummer
-    .', Registriert: '.$this->registriert;
+    return 'Benutzerid:'. $this->benutzerid .', Vorname: '.$this->vorname.', Nachname: '.$this->nachname.', Email: '.$this->email.', Passwort: '.$this->passwort.', Telefonnummer: '.$this->telefonnummer.', Registriert: '.$this->registriert;
 }
 public function toArray($mitId = true)
 {
