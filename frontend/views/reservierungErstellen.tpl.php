@@ -53,21 +53,13 @@
         				<select id="year"></select>
         			</div>
         			<p id="date-picked"></p>
-              <input type="text" id="date" name="" value="" hidden required>
+              <input type="text" id="date" name="" onchange="showCustomer(this.value)" required>
         		</div>
         	</div>
         </div>
         <div class="time">
-          <div class="time-select">
-            <select class="times" id="times" name="">
-              <?php
-              for ($i=8; $i < 21; $i++) {
-                if ("1:00" != ($i.":00")): ?>
-                    <?php echo '<option value="">'.$i.':00 - '.($i+1).':00</option>'?>
-                <?php endif;
-              }?>
-            </select><!-- axios -->
-
+          <div id="time-select">
+            <!-- axios -->
           </div>
         </div>
       </form>

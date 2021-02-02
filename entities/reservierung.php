@@ -140,7 +140,7 @@ public static function finde($reservierungid){
   $abfrage->setFetchMode(PDO::FETCH_CLASS, 'Reservierung');
   return $abfrage->fetch();
 }
-public static function findeNachDatum($datum){
+public static function findeVorUndBisNachDatum($datum){
   $sql = 'SELECT * FROM reservierung WHERE datum=?';
   $abfrage = DB::getDB()->prepare($sql);
   $abfrage->execute(array($reservierungid));
