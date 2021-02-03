@@ -62,7 +62,7 @@ CREATE TABLE IF NOT EXISTS `db_tennisbar`.`kommentar` (
   `bewertung` INT NULL,
   `datum` VARCHAR(20) NULL,
   `benutzer_benutzerid` INT NOT NULL,
-  PRIMARY KEY (`komentarid`, `benutzer_benutzerid`),
+  PRIMARY KEY (`kommentarid`, `benutzer_benutzerid`),
   INDEX `fk_kommentar_benutzer1_idx` (`benutzer_benutzerid` ASC),
   CONSTRAINT `fk_kommentar_benutzer1`
     FOREIGN KEY (`benutzer_benutzerid`)
