@@ -141,7 +141,7 @@ public static function finde($reservierungid){
   return $abfrage->fetch();
 }
 public static function findeNachDatumVonPlatz($datum,$platznummer){
-  $sql = 'SELECT * FROM reservierung WHERE datum=?';
+  $sql = 'SELECT * FROM reservierung WHERE datum=? and $platznummer=?';
   $abfrage = DB::getDB()->prepare($sql);
   $abfrage->execute(array($reservierungid));
   $abfrage->setFetchMode(PDO::FETCH_CLASS, 'Reservierung');
