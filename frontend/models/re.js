@@ -112,7 +112,7 @@ function showCalendar(month, year) {
 
           currentTarget.classList.add("selected");
           datePicked.innerHTML = date + " " + monthsArr[month] + " " + year;
-            document.getElementById("date").value = datePicked.innerHTML;
+            document.getElementById("date").value = year + "-" + month + "-" + date;
 
         }
 
@@ -132,19 +132,4 @@ function showCalendar(month, year) {
 
 function daysInMonth(month, year) {
   return 32 - new Date(year, month, 32).getDate();
-}
-function showCustomer(str) {
-  var xhttp;
-  if (str == "") {
-    document.getElementById("time-select").innerHTML = "";
-    return;
-  }
-  xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      document.getElementById("time-select").innerHTML = this.responseText;
-    }
-  };
-  xhttp.open("GET", "models/getcustomer.php?q="+str, true);
-  xhttp.send();
 }

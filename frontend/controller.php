@@ -76,6 +76,13 @@ class Controller{
     public function reservierungErstellen(){
       $this->addContext("reservierungen", Reservierung::findeAlle());
     }
+    public function searchForTimes(){
+      $court = $_POST['court-s'];
+      $date = $_POST['date'];
+      $formData = "hallo";//Reservierung::findeNachDatumVonPlatz($date, $court);
+      $this->addContext("TestVariable",$formData);
+      $this->addContext("template",'reservierungErstellen');
+    }
 
 
 

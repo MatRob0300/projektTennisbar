@@ -10,10 +10,11 @@
 
       <div class="header">
         <h1>Platzreservierung</h1>
+        <h1><?php echo $TestVariable ?></h1>
       </div>
-      <form action="" method="post">
+      <form action="index.php?aktion=searchForTimes" method="post">
         <div class="court">
-          <select class="court-select" name="">
+          <select class="court-select" name="court-s">
             <option value="1">Platz A</option>
             <option value="2">Platz B</option>
           </select>
@@ -52,17 +53,23 @@
         				</select>
         				<select id="year"></select>
         			</div>
+
+
         			<p id="date-picked"></p>
-              <input type="text" id="date" name="" onchange="showCustomer(this.value)" required>
+              <input type="text" id="date" name="date" required>
         		</div>
+            <div class="date-search">
+              <button type="submit" name="submit" class="button">suchen</button>
+            </div>
         	</div>
+          </form>
         </div>
         <div class="time">
           <div id="time-select">
             <!-- axios -->
           </div>
         </div>
-      </form>
+
     </div>
 
 
