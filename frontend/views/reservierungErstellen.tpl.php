@@ -11,7 +11,6 @@
 
       <div class="header">
         <h1>Platzreservierung</h1>
-        <h1><?php echo $TestVariable ?></h1>
       </div>
       <form action="index.php?aktion=searchForTimes" method="post" id="seaerchForTimes">
         <div class="court">
@@ -57,7 +56,7 @@
 
 
         			<p id="date-picked"></p>
-              <input type="text" id="date" name="date" required>
+              <input type="text" id="date" name="date" hidden required>
         		</div>
         	</div>
           </form>

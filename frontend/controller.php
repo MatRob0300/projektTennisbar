@@ -79,9 +79,7 @@ class Controller{
     public function searchForTimes(){
       $court = $_POST['court-s'];
       $date = $_POST['date'];
-      $formData = "hallo";//Reservierung::findeNachDatumVonPlatz($date, $court);
-      $this->addContext("TestVariable",$formData);
-      $this->addContext("template",'reservierungErstellen');
+      header("Location: index.php?aktion=reservierungErstellen");
     }
 
 
