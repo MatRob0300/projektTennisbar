@@ -10,7 +10,10 @@
     <div class="container">
 
       <div class="header">
-        <h1>Platzreservierung</h1>
+        <div class="zurueck">
+          <a href="?aktion=platzreservierung"><img src="images/zurueck-pfeil.png" alt="zurueck-pfeil"></a>
+        </div>
+        <h1>Reservierung</h1>
       </div>
       <form action="index.php?aktion=searchForTimes" method="post" id="seaerchForTimes">
         <div class="court">
@@ -59,14 +62,14 @@
               <input type="text" id="date" name="date" hidden required>
         		</div>
         	</div>
-          </form>
         </div>
         <div class="time">
-          <div id="time-select">
-            <!-- axios -->
-          </div>
+          <div id="time-select"></div>
         </div>
-
+        <div class="res-button">
+          <button type="submit" name="submit" class="button">reservieren</button>
+        </div>
+      </form>
     </div>
 
 

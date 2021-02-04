@@ -38,10 +38,8 @@ ENGINE = InnoDB;
 CREATE TABLE IF NOT EXISTS `db_tennisbar`.`reservierung` (
   `reservierungid` INT NOT NULL AUTO_INCREMENT,
   `platznummer` SMALLINT(1) NULL,
-  `msanzahl` INT NULL,
   `datum` DATE NULL,
-  `von` VARCHAR(10) NULL,
-  `bis` VARCHAR(10) NULL,
+  `zeit` VARCHAR(20) NULL,
   `benutzer_benutzerid` INT NOT NULL,
   PRIMARY KEY (`reservierungid`, `benutzer_benutzerid`),
   INDEX `fk_reservierung_benutzer1_idx` (`benutzer_benutzerid` ASC),

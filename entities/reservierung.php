@@ -5,10 +5,8 @@ class Reservierung{
 
 protected $reservierungid = NULL;
 protected $platznummer = "";
-protected $msanzahl = "";
 protected $datum = "";
-protected $von = "";
-protected $bis = "";
+protected $zeit = "";
 protected $benutzerid = "";
 
 public function __construct($daten = array())
@@ -28,7 +26,7 @@ public function __construct($daten = array())
 }
 public function  __toString()
 {
-    return 'Reservierungid:'. $this->reservierungid .', Platznummer: '.$this->platznummer.', Msanzahl: '.$this->msanzahl.', Datum: '.$this->datum.', Von: '.$this->von.', Bis: '.$this->bis.' Benutzerid: '.$this->benutzerid;
+    return 'Reservierungid:'. $this->reservierungid .', Platznummer: '.$this->platznummer.', Datum: '.$this->datum.', Zeit: '.$this->zeit.', Benutzerid: '.$this->benutzerid;
 }
 public function toArray($mitId = true)
 {
@@ -63,29 +61,17 @@ public function setPlatznummer($platznummer){
 public function getPlatznummer(){
   return $this->platznummer;
 }
-public function setMsanzahl($msanzahl){
-   $this->msanzahl = $msanzahl;
-}
-public function getMsanzahl(){
-  return $this->msanzahl ;
-}
 public function setDatum($datum){
    $this->datum = $datum;
 }
 public function getDatum(){
   return $this->datum ;
 }
-public function setVon($von){
-   $this->von = $von;
+public function setZeit($zeit){
+   $this->zeit = $zeit;
 }
-public function getVon(){
-  return $this->von ;
-}
-public function setBis($bis){
-   $this->bis = $bis;
-}
-public function getBis(){
-  return $this->bis ;
+public function getZeit(){
+  return $this->zeit ;
 }
 public function setBenutzerid(){
   $this->benutzerid = $benutzerid;
@@ -108,8 +94,8 @@ public function loesche()
 private function _insert()
 {
 
-    $sql = 'INSERT INTO reservierung (platznummer, msanzahl, datum, von, bis, benutzerid)'
-         . 'VALUES (:platznummer, :msanzahl, :datum, :von, :bis, :benutzerid)';
+    $sql = 'INSERT INTO reservierung (platznummer, datum, zeit, benutzerid)'
+         . 'VALUES (:platznummer, :datum, :zeit, :benutzerid)';
 
     $abfrage = DB::getDB()->prepare($sql);
     $abfrage->execute($this->toArray(false));
@@ -119,10 +105,10 @@ private function _insert()
 
 private function _update()
 {
-    $sql = 'UPDATE reservierung SET platznummer=?, msanzahl=?, datum=?, von=?, bis=?, benutzerid=?'
+    $sql = 'UPDATE reservierung SET platznummer=?, datum=?, zeit=?, benutzerid=?'
         . 'WHERE reservierungid=?';
     $abfrage =  DB::getDB()->prepare($sql);
-    $abfrage->execute(array($this->getPlatznummer(),$this->getMsanzahl(),$this->getDatum(),$this->getVon(),$this->getBis(),$this->getBenutzerid(),$this->getReservierungid()));
+    $abfrage->execute(array($this->getPlatznummer(),$this->getMsanzahl(),$this->getDatum(),$this->getZeit(),$this->getBenutzerid(),$this->getReservierungid()));
 }
 /* ***** Public Methoden ***** */
 public static function findeAlle()
