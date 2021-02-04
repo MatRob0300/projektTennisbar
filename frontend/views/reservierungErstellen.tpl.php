@@ -15,7 +15,7 @@
         </div>
         <h1>Reservierung</h1>
       </div>
-      <form action="index.php?aktion=searchForTimes" method="post" id="seaerchForTimes">
+      <form action="index.php?aktion=resErstellen" method="post" id="seaerchForTimes">
         <div class="court">
           <select class="court-select" id="platznummer" name="court-s">
             <option value="1">Platz A</option>

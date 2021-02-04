@@ -17,7 +17,7 @@
       <div class="frame">
         <form action="index.php?aktion=reg" method="post">
           <div class="v-s">
-            <input type="text" name="name" placeholder="Vorname" required>
+            <input type="text" name="firstname" placeholder="Vorname" required>
             <input type="text" name="surname" placeholder="Nachname" required>
           </div>
           <div class="e">

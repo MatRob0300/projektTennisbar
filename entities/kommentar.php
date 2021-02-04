@@ -8,7 +8,7 @@ protected $kname = "";
 protected $text = "";
 protected $datum = "";
 protected $bewertung = "";
-protected $benutzer_benutzerid = "";
+protected $benutzerid = "";
 
 public function __construct($daten = array())
 {
@@ -27,7 +27,7 @@ public function __construct($daten = array())
 }
 public function  __toString()
 {
-    return 'Kommentarid:'. $this->kommentarid.', Kname: '.$this->kname.', Text: '.$this->text.', Bewertung: '.$this->bewertung.', Datum: '.$this->datum.', Benutzer_benutzerid: '.$this->benutzer_benutzerid;
+    return 'Kommentarid:'. $this->kommentarid.', Kname: '.$this->kname.', Text: '.$this->text.', Bewertung: '.$this->bewertung.', Datum: '.$this->datum.', Benutzerid: '.$this->benutzerid;
 }
 public function toArray($mitId = true)
 {
@@ -80,11 +80,11 @@ public function setDatum($datum){
 public function getDatum(){
   return $this->datum ;
 }
-public function setBenutzer_benutzerid($benutzer_benutzerid){
-   $this->benutzer_benutzerid = $benutzer_benutzerid;
+public function setBenutzerid($benutzerid){
+   $this->benutzerid = $benutzerid;
 }
-public function getBenutzer_benutzerid(){
-  return $this->benutzer_benutzerid ;
+public function getBenutzerid(){
+  return $this->benutzerid ;
 }
 
 
@@ -102,8 +102,8 @@ public function loesche()
 private function _insert()
 {
 
-    $sql = 'INSERT INTO kommentar (kname, text, bewertung, datum, benutzer_benutzerid)'
-         . 'VALUES (:kname, :text, :bewertung, :datum, :benutzer_benutzerid)';
+    $sql = 'INSERT INTO kommentar (kname, text, bewertung, datum, benutzerid)'
+         . 'VALUES (:kname, :text, :bewertung, :datum, :benutzerid)';
 
     $abfrage = DB::getDB()->prepare($sql);
     $abfrage->execute($this->toArray(false));
@@ -113,10 +113,10 @@ private function _insert()
 
 private function _update()
 {
-    $sql = 'UPDATE kommentar SET kname=?, text=?, bewertung=?, datum=?, benutzer_benutzerid=?'
+    $sql = 'UPDATE kommentar SET kname=?, text=?, bewertung=?, datum=?, benutzerid=?'
         . 'WHERE kommentarid=?';
     $abfrage =  DB::getDB()->prepare($sql);
-    $abfrage->execute(array($this->getKname(),$this->getText(),$this->getBewertung(),$this->getDatum(),$this->getBenutzer_benutzerid(),$this->getKommentarid()));
+    $abfrage->execute(array($this->getKname(),$this->getText(),$this->getBewertung(),$this->getDatum(),$this->getBenutzerid(),$this->getKommentarid()));
 }
 /* ***** Public Methoden ***** */
 public static function findeAlle()

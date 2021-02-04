@@ -108,7 +108,6 @@ public function loesche()
 
 private function _insert()
 {
-
     $sql = 'INSERT INTO benutzer (vorname, nachname, email, passwort, telefonnummer, registriert)'
          . 'VALUES (:vorname, :nachname, :email, :passwort, :telefonnummer, :registriert)';
 

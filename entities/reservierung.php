@@ -73,7 +73,7 @@ public function setZeit($zeit){
 public function getZeit(){
   return $this->zeit ;
 }
-public function setBenutzerid(){
+public function setBenutzerid($benutzerid){
   $this->benutzerid = $benutzerid;
 }
 public function getBenutzerid(){

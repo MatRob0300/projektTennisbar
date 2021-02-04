@@ -21,9 +21,8 @@ if(isset($_GET["datum"]) && isset($_GET["platznummer"])){
   }
   echo "<select name='times' id='times' required>";
   for ($i=0; $i < count($avaibableTimes)-1; $i++) {
-        echo "<option value=".$avaibableTimes[$i].">".$avaibableTimes[$i]."</option>";
+        echo "<option value='".$avaibableTimes[$i]."'>".$avaibableTimes[$i]."</option>";
   }
-      //echo "<option value=".$r->getVon().">".$r->getVon()."-".$r->getBis()."</option>";
   echo "</select>";
 }
 ?>
