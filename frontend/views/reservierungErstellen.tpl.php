@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title><!--https://www.cssscript.com/calendar-date-picker/--></title>
     <link rel="stylesheet" type="text/css" href="styles/reservierung-erstellen-styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
   <body>
     <div class="container">
@@ -12,9 +13,9 @@
         <h1>Platzreservierung</h1>
         <h1><?php echo $TestVariable ?></h1>
       </div>
-      <form action="index.php?aktion=searchForTimes" method="post">
+      <form action="index.php?aktion=searchForTimes" method="post" id="seaerchForTimes">
         <div class="court">
-          <select class="court-select" name="court-s">
+          <select class="court-select" id="platznummer" name="court-s">
             <option value="1">Platz A</option>
             <option value="2">Platz B</option>
           </select>
@@ -58,9 +59,6 @@
         			<p id="date-picked"></p>
               <input type="text" id="date" name="date" required>
         		</div>
-            <div class="date-search">
-              <button type="submit" name="submit" class="button">suchen</button>
-            </div>
         	</div>
           </form>
         </div>
