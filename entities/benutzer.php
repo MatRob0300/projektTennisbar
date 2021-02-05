@@ -142,10 +142,8 @@ public static function finde($benutzerid){
   return $abfrage->fetch();
 }
 
-public static function findeNachEmail($email)
-{
-    $sql = 'SELECT benutzer.* FROM benutzer'
-         . 'WHERE email like ?';
+public static function findeNachEmail($email){
+    $sql = 'SELECT * FROM benutzer WHERE email like ?';
          $abfrage = DB::getDB()->prepare($sql);
          $abfrage->execute(array($email));
          $abfrage->setFetchMode(PDO::FETCH_CLASS, 'Benutzer');

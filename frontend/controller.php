@@ -28,19 +28,21 @@ class Controller{
     }
     public function log(){
       $mail = $_POST['email'];
-      $pass = password_hash($_POST['password'], PASSWORD_DEFAULT);
+      $pass = $_POST['password'];
       if (isset($pass) && isset($mail)) {
-        $benutzern = Benutzer::findeAlle();
-        foreach ($benutzern as $benutzer) {
-          if ($benutzer->getEmail() == $mail && password_verify($benutzer->getPasswort(),$pass)) {
+        $benutzer = Benutzer::findeNachEmail($mail);
+        if ($benutzer != NULL) {
+          if ($benutzer->getEmail() == $mail && $benutzer->getPasswort() == $pass) {
             header("Location: index.php?aktion=startseite");
           }else {
             header("Location: index.php?aktion=login");
           }
+        }else {
+          header("Location: index.php?aktion=login");
         }
-
       }
     }
+
     public function register(){
 
     }
