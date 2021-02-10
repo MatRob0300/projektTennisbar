@@ -25,6 +25,7 @@ CREATE TABLE IF NOT EXISTS `db_tennisbar`.`benutzer` (
   `passwort` VARCHAR(30) NULL,
   `registriert` TINYINT NULL,
   `telefonnummer` VARCHAR(15) NULL,
+  `email_token` VARCHAR(15) NULL,
   PRIMARY KEY (`benutzerid`))
 ENGINE = InnoDB;
 

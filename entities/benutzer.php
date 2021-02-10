@@ -10,6 +10,7 @@ protected $email = "";
 protected $passwort = "";
 protected $telefonnummer = "";
 protected $registriert = "";
+protected $email_token = "";
 
 public function __construct($daten = array())
 {
@@ -28,7 +29,7 @@ public function __construct($daten = array())
 }
 public function  __toString()
 {
-    return 'Benutzerid:'. $this->benutzerid .', Vorname: '.$this->vorname.', Nachname: '.$this->nachname.', Email: '.$this->email.', Passwort: '.$this->passwort.', Telefonnummer: '.$this->telefonnummer.', Registriert: '.$this->registriert;
+    return 'Benutzerid:'. $this->benutzerid .', Vorname: '.$this->vorname.', Nachname: '.$this->nachname.', Email: '.$this->email.', Passwort: '.$this->passwort.', Telefonnummer: '.$this->telefonnummer.', Registriert: '.$this->registriert.', Email_token: '.$this->Email_token;
 }
 public function toArray($mitId = true)
 {
@@ -93,6 +94,12 @@ public function setRegistriert($registriert){
 public function getRegistriert(){
   return $this->registriert;
 }
+public function setEmail_token($email_token){
+   $this->email_token = $email_token;
+}
+public function getEmail_token(){
+  return $this->email_token;
+}
 
 
 public function loesche()
@@ -108,8 +115,8 @@ public function loesche()
 
 private function _insert()
 {
-    $sql = 'INSERT INTO benutzer (vorname, nachname, email, passwort, telefonnummer, registriert)'
-         . 'VALUES (:vorname, :nachname, :email, :passwort, :telefonnummer, :registriert)';
+    $sql = 'INSERT INTO benutzer (vorname, nachname, email, passwort, telefonnummer, registriert, email_token)'
+         . 'VALUES (:vorname, :nachname, :email, :passwort, :telefonnummer, :registriert, :email_token)';
 
     $abfrage = DB::getDB()->prepare($sql);
     $abfrage->execute($this->toArray(false));
@@ -119,11 +126,11 @@ private function _insert()
 
 private function _update()
 {
-    $sql = 'UPDATE benutzer SET vorname=?, nachname=?, email=?, passwort=?, telefonnummer=?, registriert=?'
+    $sql = 'UPDATE benutzer SET vorname=?, nachname=?, email=?, passwort=?, telefonnummer=?, registriert=?, email_token=?'
         . 'WHERE benutzerid=?';
     $abfrage =  DB::getDB()->prepare($sql);
     $abfrage->execute(array($this->getVorname(), $this->getNachname(),$this->getEmail(),$this->getPasswort(),$this->getTelefonnummer(),
-    $this->getRegistriert(),$this->getBenutzerid()));
+    $this->getRegistriert(),$this->getEmail_token(),$this->getBenutzerid()));
 }
 /* ***** Public Methoden ***** */
 public static function findeAlle()
