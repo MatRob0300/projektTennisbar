@@ -1,42 +1,50 @@
-<!DOCTYPE html>
-<html lang="de">
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="styles/main-styles.css"/>
-    <link rel="stylesheet" type="text/css" href="styles/login-styles.css"/>
-    <title></title>
-  </head>
-  <body>
-  <main>
-    <div class="header">
-      <div class="zurueck">
-        <a href="?aktion=startseite"><img src="images/zurueck-pfeil.png" alt="zurueck-pfeil"></a>
-      </div>
-      <h1>Login</h1>
-    </div>
-    <div class="frame">
-      <form action="index.php?aktion=log" method="post">
-        <input type="text" name="email" placeholder="E-Mail-Adresse" required>
-        <input type="password" name="password" placeholder="Passwort" required><br/>
-        <button type="submit" name="submit" class="button">Anmelden</button>
-      </form>
-    </div>
-    <div class="p-vn">
-      <a href="#">Passwort vergessen?</a>
-    </div>
-    <div class="line">
-      <span>
-        <hr class="before">
-        oder
-        <hr class="after">
-      </span>
-    </div>
-    <div class="reg">
-      <a href="?aktion=register">Neues Konto erstellen</a>
-    </div>
-  </main>
+<html>
+<head>
+<title>Benutzer Login</title>
+<link rel="stylesheet" type="text/css" href="styles/main-styles.css"/>
+<link rel="stylesheet" type="text/css" href="styles/login-styles.css"/>
+</head>
+<body>
+    <div>
+        <form action="index.php?aktion=log" method="post" id="frmLogin" onSubmit="return validate();">
+            <div class="demo-table">
 
-  <footer></footer>
-
-  </body>
+                <div class="form-head">Login</div>
+                <?php
+                if(isset($_SESSION["errorMessage"])) {
+                ?>
+                <div class="error-message"><?php  echo $_SESSION["errorMessage"]; ?></div>
+                <?php
+                unset($_SESSION["errorMessage"]);
+                }
+                ?>
+                <div class="field-column">
+                    <div>
+                        <label for="username">Email:</label><span id="user_info" class="error-info"></span>
+                    </div>
+                    <div>
+                        <input name="email" id="user_name" type="email"
+                            class="demo-input-box">
+                    </div>
+                </div>
+                <div class="field-column">
+                    <div>
+                        <label for="password">Passwort:</label><span id="password_info" class="error-info"></span>
+                    </div>
+                    <div>
+                        <input name="passwort" id="password" type="password"
+                            class="demo-input-box">
+                    </div>
+                </div>
+                <div class=field-column>
+                    <div>
+                        <input type="submit" name="submit" value="Login"
+                        class="btnLogin"></span>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script type="text/javascript" src="models/log.js"></script>
+</body>
 </html>

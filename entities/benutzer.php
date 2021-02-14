@@ -36,7 +36,7 @@ public function toArray($mitId = true)
     $attribute = get_object_vars($this);
     if ($mitId === false) {
         // wenn $mitId false ist, entferne den Schlüssel id aus dem Ergebnis
-        unset($attribute['id']);
+        unset($attribute['benutzerid']);
     }
     return $attribute;
 }
@@ -156,13 +156,31 @@ public static function findeNachEmail($email){
          $abfrage->setFetchMode(PDO::FETCH_CLASS, 'Benutzer');
          return $abfrage->fetch();
 }
+public static function findeNachEmailToken($email_token){
+    $sql = 'SELECT * FROM benutzer WHERE email_token like ?';
+         $abfrage = DB::getDB()->prepare($sql);
+         $abfrage->execute(array($email_token));
+         $abfrage->setFetchMode(PDO::FETCH_CLASS, 'Benutzer');
+         return $abfrage->fetchAll();
+}
 
 public function getVorUndNachname(){
   return $this->getVorname().' '.$this->getNachname();
 }
+public function processLogin($email, $passwort) {
+        $sql = "select * FROM benutzer WHERE email = ? AND passwort = ?";
+        $abfrage = DB::getDB()->prepare($sql);
+        $abfrage->execute(array($email, $passwort));
+        $abfrage->setFetchMode(PDO::FETCH_CLASS, 'Benutzer');
+        $result = $abfrage->fetch();
+        if(!empty($result)) {
+          session_start();
+          $_SESSION["loggedIn"] = "true";
+          $_SESSION["userId"] = $result->getBenutzerid();
+            return true;
+        }
+    }
 
 
 }
-
-
 ?>

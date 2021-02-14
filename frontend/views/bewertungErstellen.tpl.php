@@ -1,3 +1,6 @@
+<?php
+if(!isset($_SESSION["loggedIn"])){
+  header('Location: index.php?aktion=login');}?>
 <!DOCTYPE html>
 <html lang="de">
   <head>
@@ -32,19 +35,19 @@
           <div class="body-container">
             <div class="bewertung-checkbox">
 
-              <input type="radio" id="sehr-gut" name="bewertung" value="5" required>
+              <input type="radio" id="be" name="bewertung" value="5" required>
               <label for="sehr-gut">sehr-gut</label>
 
-              <input type="radio" id="female" name="bewertung" value="4">
+              <input type="radio" id="be" name="bewertung" value="4">
               <label for="female">gut</label>
 
-              <input type="radio" id="other" name="bewertung" value="3">
+              <input type="radio" id="be" name="bewertung" value="3">
               <label for="other">genügend</label>
 
-              <input type="radio" id="female" name="bewertung" value="2">
+              <input type="radio" id="be" name="bewertung" value="2">
               <label for="female">schlecht</label>
 
-              <input type="radio" id="other" name="bewertung" value="1">
+              <input type="radio" id="be" name="bewertung" value="1">
               <label for="other">sehr-schlecht</label>
 
             </div>

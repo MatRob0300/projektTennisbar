@@ -12,7 +12,6 @@ class Controller{
       $this->addContext("kommentare",Kommentar::findeAlle());
     }
     public function platzreservierung(){
-
     }
     public function wetterbericht(){
 
@@ -27,20 +26,40 @@ class Controller{
 
     }
     public function log(){
-      $mail = $_POST['email'];
+      if (!empty($_POST [ "submit" ])) {
+    $email = filter_var( $_POST [ "email" ], FILTER_SANITIZE_STRING );
+    $password = filter_var( $_POST [ "passwort" ], FILTER_SANITIZE_STRING );
+    $isLoggedIn = Benutzer::processLogin($email,$password);
+    if(!$isLoggedIn) {
+        $_SESSION [ "errorMessage" ] = "Ungültige Anmeldeinformationen" ;
+        header("Location: index.php?aktion=login");
+      }else{
+        header("Location: index.php?aktion=startseite");
+      }
+    }
+
+      /*$mail = $_POST['email'];
       $pass = $_POST['password'];
       if (isset($pass) && isset($mail)) {
         $benutzer = Benutzer::findeNachEmail($mail);
         if ($benutzer != NULL) {
           if ($benutzer->getEmail() == $mail && $benutzer->getPasswort() == $pass) {
-            header("Location: index.php?aktion=startseite");
+            if (session_status() == PHP_SESSION_NONE) {
+              session_start();
+              $_SESSION['loggedIn'] = "hallo";
+              header("Location: index.php?aktion=startseite");
+            }
           }else {
             header("Location: index.php?aktion=login");
           }
         }else {
           header("Location: index.php?aktion=login");
         }
-      }
+      }*/
+    }
+    public function logout(){
+      session_destroy ();
+        header("Location: index.php");
     }
 
     public function register(){
@@ -55,17 +74,18 @@ class Controller{
       $pho = $_POST['tel'];
       if (isset($vname) && isset($sname) && isset($mail) && isset($pass) && isset($passw) && isset($pho)) {
         if ($pass == $passw) {
-          $db_benutzer = Benutzer::findeAlle();
-          foreach ($db_benutzer as $user):
-            if ($user->getEmail() != $mail && $user->getTelefonnummer() != $pho) {
-              $benutzer = new Benutzer(array("vorname"=>$vname,"nachname"=>$sname,"email"=>$mail,"passwort"=>$pass,"telefonnummer"=>$pho,"registriert"=>1));
-              $benutzer->speichere();
-
-            }
-          endforeach;
+          $user = Benutzer::findeNachEmail($mail);
+          if ($user == NULL) {
+            $newBenutzer = new Benutzer(array("vorname"=>$vname,"nachname"=>$sname,"email"=>$mail,"passwort"=>$pass,"telefonnummer"=>$pho,"registiert"=>1,"email_token"=>NULL));
+            $newBenutzer->speichere();
+            header("Location: index.php?aktion=login");
+          }else {
+            header("Location: index.php?aktion=register");
+          }
+        }else {
+          header("Location: index.php?aktion=register");
         }
       }
-      header("Location: index.php?aktion=login");
     }
     public function bewertungErstellen(){
         $this->addContext("benutzer",Benutzer::finde(1));

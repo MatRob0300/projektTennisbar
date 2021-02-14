@@ -1,3 +1,15 @@
+<?php
+if(!isset($_SESSION["loggedIn"])){
+  $logpath = "?aktion=login";
+  $logicon = "images/profilIcon.png";
+  $logalt = "login-icon";
+  $logtitle = "Anmelden";
+}else{
+  $logpath = "?aktion=logout";
+  $logicon = "images/logout.png";
+  $logalt = "logout-icon";
+  $logtitle = "Abmelden";
+}?>
 <!DOCTYPE html>
 <html lang="de">
   <head>
@@ -26,7 +38,7 @@
       <h2>Tennisbar Andrian</h2>
     </div>
     <div class="reglog">
-      <a href="?aktion=login"><img src="images/profilIcon.png" alt="profil-icon" title="Anmelden"></a>
+      <a href="<?php echo $logpath ?>"><img src="<?php echo $logicon ?>" alt="<?php echo $logalt ?>" title="<?php echo $logtitle ?>"></a>
     </div>
     <nav>
       <a href="?aktion=startseite">Startseite</a>
