@@ -9,7 +9,12 @@
         <form action="index.php?aktion=log" method="post" id="frmLogin" onSubmit="return validate();">
             <div class="demo-table">
 
-                <div class="form-head">Login</div>
+                <div class="form-head">
+                  <div class="zurueck">
+                    <a href="?aktion=startseite"><img src="images/zurueck-pfeil.png" alt="zurueck-pfeil"></a>
+                  </div>
+                  <h1>Login</h1>
+                </div>
                 <?php
                 if(isset($_SESSION["errorMessage"])) {
                 ?>
@@ -42,6 +47,15 @@
                         class="btnLogin"></span>
                     </div>
                 </div>
+              <div class="p-vn">
+                <a href="#">Passwort vergessen?</a>
+              </div>
+              <div class="line">
+                <span><hr class="before">oder<hr class="after"></span>
+              </div>
+              <div class="reg">
+                <a href="?aktion=register">Neues Konto erstellen</a>
+              </div>
             </div>
         </form>
     </div>
