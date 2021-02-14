@@ -88,7 +88,7 @@ class Controller{
       }
     }
     public function bewertungErstellen(){
-        $this->addContext("benutzer",Benutzer::finde(1));
+        $this->addContext("benutzer",Benutzer::finde($_SESSION['userId']));
     }
     public function saveBewertung(){
       $datetime = date('d.m.Y').', '.date('H:i');
@@ -103,7 +103,7 @@ class Controller{
       $court = $_POST['court-s'];
       $date = $_POST['date'];
       $zeit = $_POST['times'];
-      $reservierung = new Reservierung(array("platznummer"=>$court,"datum"=>$date,"zeit"=>$zeit,"benutzerid"=>1));
+      $reservierung = new Reservierung(array("platznummer"=>$court,"datum"=>$date,"zeit"=>$zeit,"benutzerid"=>$_SESSION['userId']));
       $reservierung->speichere();
       header("Location: index.php?aktion=reservierungErstellen");
     }
