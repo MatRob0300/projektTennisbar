@@ -171,3 +171,17 @@ body {
   width: 150px;
   height: 40px;
 }
+.res-button .btn {
+  margin: 0px 10px;
+  width: 150px;
+  height: 40px;
+}
+
+.error-message {
+    padding: 7px 10px;
+    background: #eaffdb;
+    border: #6dc72c 1px solid;
+    color: #7ce630;
+    border-radius: 4px;
+    margin: 30px 10px 10px 10px;
+}

@@ -26,36 +26,17 @@ class Controller{
 
     }
     public function log(){
-      if (!empty($_POST [ "submit" ])) {
-    $email = filter_var( $_POST [ "email" ], FILTER_SANITIZE_STRING );
-    $password = filter_var( $_POST [ "passwort" ], FILTER_SANITIZE_STRING );
-    $isLoggedIn = Benutzer::processLogin($email,$password);
-    if(!$isLoggedIn) {
-        $_SESSION [ "errorMessage" ] = "Ungültige Anmeldeinformationen" ;
-        header("Location: index.php?aktion=login");
-      }else{
-        header("Location: index.php?aktion=startseite");
-      }
-    }
-
-      /*$mail = $_POST['email'];
-      $pass = $_POST['password'];
-      if (isset($pass) && isset($mail)) {
-        $benutzer = Benutzer::findeNachEmail($mail);
-        if ($benutzer != NULL) {
-          if ($benutzer->getEmail() == $mail && $benutzer->getPasswort() == $pass) {
-            if (session_status() == PHP_SESSION_NONE) {
-              session_start();
-              $_SESSION['loggedIn'] = "hallo";
-              header("Location: index.php?aktion=startseite");
-            }
-          }else {
-            header("Location: index.php?aktion=login");
-          }
-        }else {
+        if (!empty($_POST [ "submit" ])) {
+          $email = filter_var( $_POST [ "email" ], FILTER_SANITIZE_STRING );
+          $password = filter_var( $_POST [ "passwort" ], FILTER_SANITIZE_STRING );
+          $isLoggedIn = Benutzer::processLogin($email,$password);
+        if(!$isLoggedIn) {
+          $_SESSION [ "errorMessage" ] = "Ungültige Anmeldeinformationen" ;
           header("Location: index.php?aktion=login");
+        }else{
+          header("Location: index.php?aktion=startseite");
         }
-      }*/
+      }
     }
     public function logout(){
       session_destroy ();
@@ -74,15 +55,23 @@ class Controller{
       $pho = $_POST['tel'];
       if (isset($vname) && isset($sname) && isset($mail) && isset($pass) && isset($passw) && isset($pho)) {
         if ($pass == $passw) {
+          if (is_numeric($pho) == 1) {
           $user = Benutzer::findeNachEmail($mail);
           if ($user == NULL) {
             $newBenutzer = new Benutzer(array("vorname"=>$vname,"nachname"=>$sname,"email"=>$mail,"passwort"=>$pass,"telefonnummer"=>$pho,"registiert"=>1,"email_token"=>NULL));
             $newBenutzer->speichere();
+            //Function::send_bestaetigungsEmailReg($vname,$sname,$mail);
             header("Location: index.php?aktion=login");
           }else {
+            $_SESSION['errorMessage'] = "Den Benutzer mit dieser Email existiert schon!";
             header("Location: index.php?aktion=register");
           }
+        }else{
+          $_SESSION['errorMessage'] = "Diese Telefonnummer ist nicht möglich!";
+          header("Location: index.php?aktion=register");
+        }
         }else {
+          $_SESSION['errorMessage'] = "Passwörter stimmen nicht überein!";
           header("Location: index.php?aktion=register");
         }
       }
@@ -100,12 +89,14 @@ class Controller{
       $this->addContext("reservierungen", Reservierung::findeAlle());
     }
     public function resErstellen(){
-      $court = $_POST['court-s'];
-      $date = $_POST['date'];
-      $zeit = $_POST['times'];
-      $reservierung = new Reservierung(array("platznummer"=>$court,"datum"=>$date,"zeit"=>$zeit,"benutzerid"=>$_SESSION['userId']));
-      $reservierung->speichere();
-      header("Location: index.php?aktion=reservierungErstellen");
+        $court = $_POST['court-s'];
+        $date = $_POST['date'];
+        $zeit = $_POST['times'];
+        $reservierung = new Reservierung(array("platznummer"=>$court,"datum"=>$date,"zeit"=>$zeit,"benutzerid"=>$_SESSION['userId']));
+        $reservierung->speichere();
+        $_SESSION['errorMessageRes'] = "Erfolgreich reserviert";
+        //Funktionen::send_bestaetigungsEmailRes();
+        header("Location: index.php?aktion=reservierungErstellen");
     }
 
 

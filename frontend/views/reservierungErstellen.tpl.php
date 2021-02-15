@@ -72,6 +72,14 @@ if(!isset($_SESSION["loggedIn"])){
         <div class="res-button">
           <button type="submit" name="submit" class="button">reservieren</button>
         </div>
+        <?php
+        if(isset($_SESSION["errorMessageRes"])) {
+        ?>
+        <div class="error-message"><?php  echo $_SESSION["errorMessageRes"]; ?></div>
+        <?php
+        unset($_SESSION["errorMessageRes"]);
+        }
+        ?>
       </form>
     </div>
 

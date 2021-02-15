@@ -14,21 +14,29 @@
         </div>
         <h1>Registrierung</h1>
       </div>
+      <?php
+      if(isset($_SESSION["errorMessage"])) {
+      ?>
+      <div class="error-message"><?php  echo $_SESSION["errorMessage"]; ?></div>
+      <?php
+      unset($_SESSION["errorMessage"]);
+      }
+      ?>
       <div class="frame">
-        <form action="index.php?aktion=reg" method="post">
+        <form action="index.php?aktion=reg" method="post" onSubmit="return validate();">
           <div class="v-s">
-            <input type="text" name="firstname" placeholder="Vorname" required>
-            <input type="text" name="surname" placeholder="Nachname" required>
+            <input type="text" name="firstname" id="firstname" placeholder="Vorname" required>
+            <input type="text" name="surname" id="surname" placeholder="Nachname" required>
           </div>
           <div class="e">
-            <input type="text" name="email" placeholder="E-Mail-Adresse" required>
+            <input type="text" name="email" id="email" placeholder="E-Mail-Adresse" required>
           </div>
           <div class="pp">
-            <input type="password" name="password" placeholder="Passwort" required>
-            <input type="password" name="w-password" placeholder="Passwort wiederholen" required>
+            <input type="password" name="password" id="password" placeholder="Passwort" pattern=".{8,}" required title="mindestens 8 Ziffern">
+            <input type="password" name="w-password" id="password-w" placeholder="Passwort wiederholen" pattern=".{8,}" required title="mindestens 8 Ziffern">
           </div>
           <div class="t">
-            <input type="text" name="tel" placeholder="Telefon" required>
+            <input type="text" name="tel" id="tel" placeholder="Telefon" required>
           </div>
           <div class="sub">
             <div class="n-d">
@@ -44,5 +52,6 @@
       </div>
     </main>
     <footer></footer>
+    <script type="text/javascript" src="models/reg.js"></script>
   </body>
 </html>

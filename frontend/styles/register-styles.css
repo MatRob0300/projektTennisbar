@@ -72,3 +72,11 @@ footer {
   color: white;
   text-align: center;
 }
+.error-message {
+    padding: 7px 10px;
+    background: #fff1f2;
+    border: #ffd5da 1px solid;
+    color: #d6001c;
+    border-radius: 4px;
+    margin: 30px 10px 10px 10px;
+}
