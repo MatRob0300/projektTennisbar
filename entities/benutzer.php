@@ -174,7 +174,9 @@ public function processLogin($email, $passwort) {
         $abfrage->setFetchMode(PDO::FETCH_CLASS, 'Benutzer');
         $result = $abfrage->fetch();
         if(!empty($result)) {
-          session_start();
+          if(session_status() == PHP_SESSION_NONE){
+            session_start();
+          }
           $_SESSION["loggedIn"] = "true";
           $_SESSION["userId"] = $result->getBenutzerid();
             return true;

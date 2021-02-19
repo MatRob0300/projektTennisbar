@@ -27,6 +27,9 @@ class Controller{
     }
     public function log(){
         if (!empty($_POST [ "submit" ])) {
+          if (isset($_POST['rememberme'])) {
+
+          }
           $email = filter_var( $_POST [ "email" ], FILTER_SANITIZE_STRING );
           $password = filter_var( $_POST [ "passwort" ], FILTER_SANITIZE_STRING );
           $isLoggedIn = Benutzer::processLogin($email,$password);
@@ -98,8 +101,12 @@ class Controller{
         //Funktionen::send_bestaetigungsEmailRes();
         header("Location: index.php?aktion=reservierungErstellen");
     }
+    public function presetSemail(){
 
-
+    }
+    public function passwordreset(){
+      
+    }
 
     private function generatePage($template){
         extract($this->context);

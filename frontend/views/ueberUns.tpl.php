@@ -45,15 +45,28 @@ if(!isset($_SESSION["loggedIn"])){
       </div>
     </header>
     <main>
-      <div class="a1">
-        <p>One advanced diverted domestic sex repeated bringing you old.
-          Possible procured her trifling laughter thoughts property she met way.
-          Companions shy had solicitude favourable own. Which could saw guest man now heard but.
-          Lasted my coming uneasy marked so should.
-          Gravity letters it amongst herself dearest an windows by.
-          Wooded ladies she basket season age her uneasy saw.
-          Discourse unwilling am no described dejection incommode no listening of.
-          Before nature his parish boy. </p>
+      <div class="quotation">
+        <cite>„Cheers to the people, who love us, the losers who lost us and the lucky guys who get to meet us!“</cite>
+      </div>
+      <div class="firstParagraph">
+        <p>Unsere Philosophie ist simple. Die beste Qualität.
+          100% einheimisches Fleisch, 100% selbstgemachte Saucen, einheimische Eier,
+          viel selbstgemachtes Brot, eine gute und breite Bierauswahl und nuuuur gute Laune.
+          - Ja, Fastfood geht auch anders ;)</p>
+      </div>
+      <div class="secondParagraph">
+        <p>Wir finden, dass das Leben zu kurz ist für schlechtes Essen.
+          Deshalb werden die Burger bei uns so serviert, wie sie sein sollen:
+          hausgemacht, saftig und mit frischen und einheimischen Zutaten.
+          Auch das Trinken soll zu diesem Konzept passen -
+          deshalb versuchen wir einheimische Produzenten zu unterstützen und auf Qualität besonders zu achten.
+          Nur das Beste für unsere Gäste!</p>
+      </div>
+      <div class="closing">
+        <p>#wirliebenburger</p>
+      </div>
+      <div class="picture">
+        <img src="images/bildplatzhalter.png" alt="bildTennisbar">
       </div>
 
 

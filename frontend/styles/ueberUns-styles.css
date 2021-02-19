@@ -1,7 +1,26 @@
 main {
   background-color: white;
 }
-.a1{
-  margin: 10px 100px 50px 100px;
-  border-bottom: 1.5px solid rgb(200, 200, 200);
+.quotation {
+  margin: 100px 250px;
+  text-align: center;
+}
+.quotation cite{
+  font-size: 28px;
+}
+.firstParagraph {
+  margin: 0px 150px;
+}
+.secondParagraph {
+  margin: 0px 150px;
+}
+.closing {
+  margin: 0px 150px;
+}
+.picture {
+  margin: 10px 150px;
+}
+.picture img {
+  width: 100%;
+  height: 250px;
 }
