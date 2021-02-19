@@ -25,3 +25,37 @@ document.getElementById("defaultOpen").click();
   //.bindPopup("Hier sind wir!").openPopup();
   //tailwind CSS.org
     //map.locate({setView: true, maxZoom: 16});
+    function showAllOfBewertungen(){
+        $.ajax({
+         url: 'models/getBewertungen.php',
+         //data: {datum: formattedDate, platznummer: pN},
+         type: 'get',
+         success: function(response){
+           console.log("resp " + response);
+            if(response != 0){
+                document.getElementById('flex-container').innerHTML = response;
+                var myobj = document.getElementById("ml");
+                myobj.innerHTML = "weniger laden";
+                myobj.setAttribute("onclick","showOnlyFourBewertungen()");
+            }
+         },
+      });
+    }
+    function showOnlyFourBewertungen() {
+      $.ajax({
+       url: 'models/removeBewertungen.php',
+       //data: {datum: formattedDate, platznummer: pN},
+       type: 'get',
+       success: function(response){
+         console.log("resp" + response);
+          if(response != 0){
+            var myNode = document.getElementById("flex-container");
+            myNode.innerHTML = '';
+              document.getElementById('flex-container').innerHTML = response;
+              var myobj = document.getElementById("ml");
+              myobj.innerHTML = "mehr laden";
+              myobj.setAttribute("onclick","showAllOfBewertungen()");
+          }
+       },
+    });
+    }

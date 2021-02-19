@@ -105,7 +105,10 @@ class Controller{
 
     }
     public function passwordreset(){
-      
+
+    }
+    public function editprofil(){
+      $this->addContext("benutzer",Benutzer::finde($_SESSION['userId']));
     }
 
     private function generatePage($template){

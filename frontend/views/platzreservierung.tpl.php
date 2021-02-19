@@ -1,15 +1,3 @@
-<?php
-if(!isset($_SESSION["loggedIn"])){
-  $logpath = "?aktion=login";
-  $logicon = "images/profilIcon.png";
-  $logalt = "login-icon";
-  $logtitle = "Anmelden";
-}else{
-  $logpath = "?aktion=logout";
-  $logicon = "images/logout.png";
-  $logalt = "logout-icon";
-  $logtitle = "Abmelden";
-}?>
 <!DOCTYPE html>
 <html lang="de">
   <head>
@@ -18,8 +6,6 @@ if(!isset($_SESSION["loggedIn"])){
     <link rel="stylesheet" type="text/css" href="styles/main-styles.css">
     <link rel="stylesheet" type="text/css" href="styles/underMain-styles.css">
     <link rel="stylesheet" type="text/css" href="styles/platzreservierung-styles.css">
-
-
   </head>
   <body>
 
@@ -31,9 +17,21 @@ if(!isset($_SESSION["loggedIn"])){
         <h1>Cheers</h1>
         <h2>Tennisbar Andrian</h2>
       </div>
-      <div class="reglog">
-        <a href="<?php echo $logpath ?>"><img src="<?php echo $logicon ?>" alt="<?php echo $logalt ?>" title="<?php echo $logtitle ?>"></a>
-      </div>
+      <?php
+      if(!isset($_SESSION["loggedIn"])){
+        echo "<div class='reglog'>";
+        echo $log = "<a href='?aktion=login'><img src='images/profilIcon.png' alt='login-icon' title='Anmelden'></a>";
+        echo "</div>";
+      }else{
+        echo "<div class='regbutton'>";
+        echo "<div class='dropdown'>";
+        echo "<button><img src='images/logout.png'/></button>";
+        echo "<div class='dropdown-content'>";
+        echo "<a href='?aktion=editprofil'>Mein Profil</a>";
+        echo "<a href='#'>Meine Reservierungen</a>";
+        echo "<a href='?aktion=logout'>Abmelden</a>";
+        echo "</div></div></div>";
+      }?>
       <nav>
         <a href="?aktion=startseite">Startseite</a>
         <a href="?aktion=bar">Bar</a>

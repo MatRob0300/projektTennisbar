@@ -227,9 +227,9 @@ header .headertext {
 .more-button {
 
 }
-.more-button a {
+.more-button button {
   background-color: #1c8f9c;
-  width: 100px;
+  width: 200px;
   border: none;
   color: white;
   padding: 15px 32px;
@@ -243,7 +243,7 @@ header .headertext {
   margin-top: 20px;
   margin-bottom: 20px;
 }
-.more-button a:hover{
+.more-button button:hover{
   background-color: rgb(200,200,200);
   color: #4CAF50;
 
