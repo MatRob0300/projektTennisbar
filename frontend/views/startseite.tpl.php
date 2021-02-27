@@ -37,7 +37,7 @@
         echo "<button><img src='images/logout.png'/></button>";
         echo "<div class='dropdown-content'>";
         echo "<a href='?aktion=editprofil'>Mein Profil</a>";
-        echo "<a href='#'>Meine Reservierungen</a>";
+        echo "<a href='?aktion=meineReservierungen'>Meine Reservierungen</a>";
         echo "<a href='?aktion=logout'>Abmelden</a>";
         echo "</div></div></div>";
       }?>
@@ -104,86 +104,6 @@
 
      <div class="map" id="mapid"></div>
 
-  </div>
-
-  <div class="a3">
-
-    <div class="header-a3">
-      <h1>Was Andere über uns denken</h1>
-      <a href="?aktion=bewertungErstellen"><img src="images/bewertung-erstellen.png" alt="kommentar erstellen" title="Bewertung erstellen"></a>
-    </div>
-
-    <div class="flex-container" id="flex-container">
-      <?php $count = 0;
-      foreach ($kommentare as $index => $kommentar):
-        $count = $index;?>
-        <?php if ($index <= 3): ?>
-      <div id="b-con">
-        <div class="k-container">
-          <div class="k-profilIcon">
-            <img src="images/bildplatzhalter.png" alt="profilIcon">
-          </div>
-          <div class="k-info">
-            <h1><?php echo $kommentar->getKname();?></h1>
-            <h2> Erstellt am: <?php echo $kommentar->getDatum();?> Uhr</h2>
-          </div>
-        </div>
-
-        <div class="k-inhalt">
-          <div class="k-bewertung">
-            <?php
-            switch ($kommentar->getBewertung()) {
-            case 1:?>
-            <span class="fa fa-star checked"></span> <!-- checked füllt die sterne-->
-            <span class="fa fa-star"></span>
-            <span class="fa fa-star"></span>
-            <span class="fa fa-star"></span>
-            <span class="fa fa-star"></span>
-            <?php break;
-            case 2:?>
-            <span class="fa fa-star checked"></span> <!-- checked füllt die sterne-->
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star"></span>
-            <span class="fa fa-star"></span>
-            <span class="fa fa-star"></span>
-            <?php break;
-            case 3:?>
-            <span class="fa fa-star checked"></span> <!-- checked füllt die sterne-->
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star"></span>
-            <span class="fa fa-star"></span>
-            <?php break;
-            case 4:?>
-            <span class="fa fa-star checked"></span> <!-- checked füllt die sterne-->
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star"></span>
-            <?php break;
-            case 5:?>
-            <span class="fa fa-star checked"></span> <!-- checked füllt die sterne-->
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <?php break;
-            }?>
-          </div>
-          <div class="k-text">
-            <p><?php echo $kommentar->getText();?></p>
-          </div>
-        </div>
-      </div>
-    <?php endif; ?>
-    <?php endforeach; ?>
-    </div>
-
-    <?php if ($count == 4): ?>
-      <div class="more-button" id="more-button">
-        <button onclick="showAllOfBewertungen()" id="ml">mehr laden</button>
-      </div>
-    <?php endif; ?>
   </div>
 </main>
 

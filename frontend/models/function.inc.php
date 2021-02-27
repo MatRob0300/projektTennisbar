@@ -17,7 +17,7 @@ class Funktionen{
 
             $to = strip_tags($mail);
 
-            $mailer->From = "sekretariat@berufsschule.bz";
+            $mailer->From = ""; //email von Cheers
             $mailer->FromName = "Cheers Tennisbar Andrian";
             $mailer->addAddress($to, $benutzer->getVorname() . " " . $benutzer->getNachname());
             $mailer->Subject = $subject;
@@ -36,7 +36,7 @@ class Funktionen{
 
             $to = strip_tags($mail);
 
-            $mailer->From = "sekretariat@berufsschule.bz";
+            $mailer->From = ""; //email von Cheers
             $mailer->FromName = "Cheers Tennisbar Andrian";
             $mailer->addAddress($to, $vname . " " . $sname);
             $mailer->Subject = $subject;
@@ -48,6 +48,34 @@ class Funktionen{
             } else {
                 $_SESSION["Info_mail"] = "Deine Email wurde erfolgreich versendet!";
             }*/
+    }
+    public static function send_PasswordResetEmail($mail){
+        require_once 'PHPMailer-master/src/PHPMailer.php';
+        $newPass = bin2hex(random_bytes(15));
+        $subject = strip_tags('Passwort vergessen bei Cheers Tennisbar Andrian');
+        $message = strip_tags("Hallo,\n \n Die Zugangsdaten zu ihren Profil lauten wie folgt:");
+
+            $mailer = new \PHPMailer\PHPMailer\PHPMailer();
+
+            $benutzer = Benutzer::findeNachEmail($mail);
+            $to = strip_tags($mail);
+
+            $mailer->From = ""; //email von Cheers
+            $mailer->FromName = "Cheers Tennisbar Andrian";
+            $mailer->addAddress($to, $benutzer->getVorname().' '.$benutzer->getNachname());
+            $mailer->Subject = $subject;
+            $mailer->CharSet = "UTF-8";
+            $mailer->Body = $message . "\n E-Mail-Adresse: " . $mail . "\n neues Passwort: " . $newPass . " \n \n Viele Grüße \n Cheers Tennisbar Andrian";
+
+            if (!$mailer->send()) {
+                $_SESSION["Info_mail"] = "Fehler beim versenden ihrer Email!";
+            } else {
+                $benutzer->setPasswort($newPass);
+                $user = new Benutzer($benutzer);
+                $user->speichere();
+                $_SESSION["Info_mail"] = "Deine Email wurde erfolgreich versendet!";
+            }
+
     }
 }
 ?>

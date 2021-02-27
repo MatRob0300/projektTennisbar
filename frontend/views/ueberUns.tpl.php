@@ -27,7 +27,7 @@
         echo "<button><img src='images/logout.png'/></button>";
         echo "<div class='dropdown-content'>";
         echo "<a href='?aktion=editprofil'>Mein Profil</a>";
-        echo "<a href='#'>Meine Reservierungen</a>";
+        echo "<a href='?aktion=meineReservierungen'>Meine Reservierungen</a>";
         echo "<a href='?aktion=logout'>Abmelden</a>";
         echo "</div></div></div>";
       }?>

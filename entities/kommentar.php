@@ -121,7 +121,7 @@ private function _update()
 /* ***** Public Methoden ***** */
 public static function findeAlle()
 {
-    $sql = 'SELECT * FROM kommentar';
+    $sql = 'SELECT * FROM kommentar ORDER BY bewertung DESC' ;
     $abfrage = DB::getDB()->query($sql);
     $abfrage->setFetchMode(PDO::FETCH_CLASS, 'Kommentar');
     return $abfrage->fetchAll();
@@ -133,6 +133,13 @@ public static function finde($id){
   $abfrage->execute(array($kommentarid));
   $abfrage->setFetchMode(PDO::FETCH_CLASS, 'Kommentar');
   return $abfrage->fetch();
+}
+public static function findeNachBenutzerid($benutzerid){
+  $sql = 'SELECT * FROM kommentar WHERE benutzerid=?';
+  $abfrage = DB::getDB()->prepare($sql);
+  $abfrage->execute(array($benutzerid));
+  $abfrage->setFetchMode(PDO::FETCH_CLASS, 'Kommentar');
+  return $abfrage->fetchAll();
 }
 
 

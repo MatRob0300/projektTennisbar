@@ -133,6 +133,13 @@ public static function findeNachDatumVonPlatz($datum,$platznummer){
   $res = $abfrage->fetchAll();
   return $res;
 }
+public static function findeAlleNachBenutzer($benutzerid){
+  $sql = 'SELECT * FROM reservierung WHERE benutzerid = ? ORDER BY platznummer ASC';
+  $abfrage = DB::getDB()->prepare($sql);
+  $abfrage->execute(array($benutzerid));
+  $abfrage->setFetchMode(PDO::FETCH_CLASS, 'Reservierung');
+  return $abfrage->fetchAll();
+}
 
 
 

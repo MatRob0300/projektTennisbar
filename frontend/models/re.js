@@ -143,12 +143,8 @@ function showTimesOfDate(formattedDate, pN) {
      data: {datum: formattedDate, platznummer: pN},
      type: 'get',
      success: function(response){
-       console.log("resp" + response);
         if(response != 0){
-            //var div = document.createElement("DIV");
-            //div.setAttribute("id","b-con");
-            //document.getElementById("flex-container").appendChild(div);
-            document.getElementById('b-con').innerHTML = response;
+            document.getElementById('time-select').innerHTML = response;
         }
      },
   });

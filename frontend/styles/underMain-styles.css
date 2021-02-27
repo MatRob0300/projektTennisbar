@@ -2,9 +2,11 @@ header {
   margin: 0px 0px 0px 0px;
   background-color: rgb(25, 25, 25);
   width: 100%;
-  height: auto;
+  height: 600px;
 }
 header .headertext {
+  position: relative;
+  top: 40%;
   text-align: center;
   line-height: 650px;
   height: 100%;
@@ -14,8 +16,6 @@ header .headertext {
   font-size: 100px;
   color: white;
   line-height: 1.5;
-  display: inline-block;
-  vertical-align: middle;
 }
 
 /* beginn von body */
@@ -84,7 +84,7 @@ aside {
   margin: 0px 0px 0px 0px;
   padding: 0px;
   font-size: 20px;
-} 
+}
 .textinfo p {
   margin: 0px 0px 0px 0px;
   padding: 0px;

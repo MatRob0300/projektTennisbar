@@ -29,7 +29,7 @@ public function __construct($daten = array())
 }
 public function  __toString()
 {
-    return 'Benutzerid:'. $this->benutzerid .', Vorname: '.$this->vorname.', Nachname: '.$this->nachname.', Email: '.$this->email.', Passwort: '.$this->passwort.', Telefonnummer: '.$this->telefonnummer.', Registriert: '.$this->registriert.', Email_token: '.$this->Email_token;
+    return 'Benutzerid:'. $this->benutzerid .', Vorname: '.$this->vorname.', Nachname: '.$this->nachname.', Email: '.$this->email.', Passwort: '.$this->passwort.', Telefonnummer: '.$this->telefonnummer.', Registriert: '.$this->registriert.', Email_token: '.$this->email_token;
 }
 public function toArray($mitId = true)
 {
@@ -121,13 +121,12 @@ private function _insert()
     $abfrage = DB::getDB()->prepare($sql);
     $abfrage->execute($this->toArray(false));
     // setze die ID auf den von der DB generierten Wert
-    $this->id = DB::getDB()->lastInsertId();
+    $this->benutzerid = DB::getDB()->lastInsertId();
 }
 
 private function _update()
 {
-    $sql = 'UPDATE benutzer SET vorname=?, nachname=?, email=?, passwort=?, telefonnummer=?, registriert=?, email_token=?'
-        . 'WHERE benutzerid=?';
+    $sql = 'UPDATE benutzer SET vorname=?, nachname=?, email=?, passwort=?, telefonnummer=?, registriert=?, email_token=? WHERE benutzerid=?';
     $abfrage =  DB::getDB()->prepare($sql);
     $abfrage->execute(array($this->getVorname(), $this->getNachname(),$this->getEmail(),$this->getPasswort(),$this->getTelefonnummer(),
     $this->getRegistriert(),$this->getEmail_token(),$this->getBenutzerid()));
@@ -148,7 +147,6 @@ public static function finde($benutzerid){
   $abfrage->setFetchMode(PDO::FETCH_CLASS, 'Benutzer');
   return $abfrage->fetch();
 }
-
 public static function findeNachEmail($email){
     $sql = 'SELECT * FROM benutzer WHERE email like ?';
          $abfrage = DB::getDB()->prepare($sql);
@@ -166,6 +164,13 @@ public static function findeNachEmailToken($email_token){
 
 public function getVorUndNachname(){
   return $this->getVorname().' '.$this->getNachname();
+}
+public function getPasswortVonBenutzer($benutzerid){
+  $sql = 'SELECT passwort FROM benutzer WHERE benutzerid=?';
+  $abfrage = DB::getDB()->prepare($sql);
+  $abfrage->execute(array($benutzerid));
+  $abfrage->setFetchMode(PDO::FETCH_CLASS, 'Benutzer');
+  return $abfrage->fetch();
 }
 public function processLogin($email, $passwort) {
         $sql = "select * FROM benutzer WHERE email = ? AND passwort = ?";

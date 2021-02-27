@@ -10,39 +10,45 @@ ul {
 body {
     font-family: "Lato", sans-serif;
 }
-.container {
+header {
   display: flex;
-  flex-direction: column;
+  margin: 40px 40px;
+  padding: 10px 10px;
+  border: 1px solid rgb(200,200,200);
+  border-radius: 10px;
 }
-.header .zurueck {
+header .zurueck {
   width: 30px;
   height: 30px;
+  margin: 10px 10px;
 }
-.header h1 {
-  margin: 10px 100px;
+header h1 {
+  margin: 25px 10px;
   font-size: 50px;
 }
 .zurueck a,img {
-  margin: 10px 0px 0px 10px;
   width: 100%;
   height: 100%;
 }
 .court {
-  width: 100%;
-  height: auto;
-  margin: 50px 0px 0px 0px;
+  margin: 20px 50px;
+  padding: 20px 50px;
+  background-color: #00a2b7;
+  border: 1px solid rgb(200,200,200);
+  border-radius: 10px;
+}
+.court h2 {
+  margin: 5px 0px;
+  color: white;
 }
 .court select{
   width: 25vw;
   height: 35px;
-  margin: 0px 150px;
   font-size: 11pt;
 }
-
 .calendar {
-  width: 100%;
   height: auto;
-  margin: 50px 0px;
+  margin: 25px 50px;
 }
 .wrapper {
   width: 100%;
@@ -101,16 +107,6 @@ body {
 .date-picker.selected span {
   color: #00BCD4;
 }
-/* sunday */
-
-/*.date-picker:nth-child(1), .red-text {
-  color: red;
-}*/
-/* friday */
-/*
-.date-picker:nth-child(6) {
-  color: green;
-}*/
 #monthAndYear {
   text-align: center;
   margin-top: 0;
@@ -153,14 +149,15 @@ body {
   font-weight: bold;
 }
 .time {
-  width: 100%;
-  height: 200px;
+  width: 50%;
+  height: 120px;
+  margin: 0px 150px;
 }
 .time select{
   width: 25vw;
   height: 35px;
-  margin: 0px 150px;
   font-size: 11pt;
+  padding: 0px 20px;
 }
 .res-button {
   display: flex;
@@ -176,6 +173,10 @@ body {
   width: 150px;
   height: 40px;
 }
+.calendar-body {
+  border: 1px solid rgb(200,200,200);
+  margin: 0px 50px;
+}
 
 .error-message {
     padding: 7px 10px;
@@ -183,5 +184,5 @@ body {
     border: #6dc72c 1px solid;
     color: #7ce630;
     border-radius: 4px;
-    margin: 30px 10px 10px 10px;
+    margin: 10px 10px 10px 10px;
 }

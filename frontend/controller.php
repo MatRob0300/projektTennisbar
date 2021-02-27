@@ -27,9 +27,6 @@ class Controller{
     }
     public function log(){
         if (!empty($_POST [ "submit" ])) {
-          if (isset($_POST['rememberme'])) {
-
-          }
           $email = filter_var( $_POST [ "email" ], FILTER_SANITIZE_STRING );
           $password = filter_var( $_POST [ "passwort" ], FILTER_SANITIZE_STRING );
           $isLoggedIn = Benutzer::processLogin($email,$password);
@@ -60,19 +57,19 @@ class Controller{
         if ($pass == $passw) {
           if (is_numeric($pho) == 1) {
           $user = Benutzer::findeNachEmail($mail);
-          if ($user == NULL) {
+          if ($user == false) {
             $newBenutzer = new Benutzer(array("vorname"=>$vname,"nachname"=>$sname,"email"=>$mail,"passwort"=>$pass,"telefonnummer"=>$pho,"registiert"=>1,"email_token"=>NULL));
             $newBenutzer->speichere();
             //Function::send_bestaetigungsEmailReg($vname,$sname,$mail);
             header("Location: index.php?aktion=login");
+          }else{
+              $_SESSION['errorMessage'] = "Den Benutzer mit dieser E-Mail-Adresse existiert schon!";
+              header("Location: index.php?aktion=register");
+            }
           }else {
-            $_SESSION['errorMessage'] = "Den Benutzer mit dieser Email existiert schon!";
+            $_SESSION['errorMessage'] = "Diese Telefonnummer existiert nicht!";
             header("Location: index.php?aktion=register");
           }
-        }else{
-          $_SESSION['errorMessage'] = "Diese Telefonnummer ist nicht möglich!";
-          header("Location: index.php?aktion=register");
-        }
         }else {
           $_SESSION['errorMessage'] = "Passwörter stimmen nicht überein!";
           header("Location: index.php?aktion=register");
@@ -101,16 +98,64 @@ class Controller{
         //Funktionen::send_bestaetigungsEmailRes();
         header("Location: index.php?aktion=reservierungErstellen");
     }
-    public function presetSemail(){
-
+    public function meineReservierungen(){
+      $this->addContext("reservierungen",Reservierung::findeAlleNachBenutzer($_SESSION['userId']));
     }
-    public function passwordreset(){
+    public function presetSemail(){
 
     }
     public function editprofil(){
       $this->addContext("benutzer",Benutzer::finde($_SESSION['userId']));
+      $this->addContext("benutzers",Benutzer::finde(5));
     }
-
+    public function updateProfilKontaktInfo(){
+      if (isset($_POST['submit'])) {
+        if (isset($_POST['mail']) && isset($_POST['tel'])) {
+          $dopMail = Benutzer::findeNachEmail($_POST['mail']);
+          $userMail = Benutzer::finde($_SESSION['userId']);
+          if ($dopMail == false || $userMail->getEmail() == $_POST['mail']) {
+            $altBenutzer = Benutzer::finde($_SESSION['userId']);
+            $altBenutzer->setEmail($_POST['mail']);
+            $altBenutzer->setTelefonnummer($_POST['tel']);
+            $altBenutzer->speichere();
+            header("Location: index.php?aktion=editprofil");
+          } else {
+            $_SESSION['errorMessageKI'] = "Fehlgeschlagen, diese E-Mail existiert schon!";
+            header("Location: index.php?aktion=editprofil");
+          }
+        }
+      }
+    }
+    public function updateProfilPasswort(){
+      if (isset($_POST['submit'])) {
+        if (isset($_POST['pass']) && isset($_POST['pass-w'])) {
+          if ($_POST['pass'] == $_POST['pass-w']) {
+            $altBenutzer = Benutzer::finde($_SESSION['userId']);
+            $altBenutzer->setPasswort($_POST['pass']);
+            $altBenutzer->speichere();
+            header("Location: index.php?aktion=editprofil");
+          } else {
+            $_SESSION['errorMessagePI'] = "Fehlgeschlagen, die Passwörter stimmen nicht überein!";
+            header("Location: index.php?aktion=editprofil");
+          }
+        }
+      }
+    }
+    public function checkMailForPassReset(){
+      if (isset($_POST['mt'])) {
+        $benutzer = Benutzer::findeNachEmail($_POST['mt']);
+        if ($benutzer != false) {
+          $mail = $benutzer->getEmail();
+          //send_PasswordResetEmail($mail);
+          $_SESSION['errorMessagePassReset'] = "Ihnen wurde eine E-Mail zugesendet! <a href='models/send_PasswordResetEmail(".$mail.")'>erneut senden</a>";
+          //$_SESSION['errorMessagePassReset'] = "Ihnen wurde eine E-Mail zugesendet! <a href='#'>erneut senden</a>";
+          header("Location: index.php?aktion=presetSemail");
+        }else {
+          $_SESSION['errorMessagePassReset'] = "Entschuldigung, wir konnten die eingegebenen E-Mail-Adresse nicht finden!";
+          header("Location: index.php?aktion=presetSemail");
+        }
+      }
+    }
     private function generatePage($template){
         extract($this->context);
         require_once 'views/'.$template.".tpl.php";
