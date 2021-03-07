@@ -133,10 +133,24 @@ public static function findeNachDatumVonPlatz($datum,$platznummer){
   $res = $abfrage->fetchAll();
   return $res;
 }
-public static function findeAlleNachBenutzer($benutzerid){
+/*public static function findeAlleNachBenutzer($benutzerid){
   $sql = 'SELECT * FROM reservierung WHERE benutzerid = ? ORDER BY platznummer ASC';
   $abfrage = DB::getDB()->prepare($sql);
   $abfrage->execute(array($benutzerid));
+  $abfrage->setFetchMode(PDO::FETCH_CLASS, 'Reservierung');
+  return $abfrage->fetchAll();
+}*/
+public function findeAlleNachBenutzer(Benutzer $benutzer){
+  $sql = 'SELECT reservierung.* FROM reservierung,benutzer WHERE benutzer.benutzerid = reservierung.benutzerid AND benutzer.benutzerid = ? ORDER BY reservierung.platznummer ASC';
+  $abfrage = DB::getDB()->prepare($sql);
+  $abfrage->execute(array($benutzer->getBenutzerid()));
+  $abfrage->setFetchMode(PDO::FETCH_CLASS, 'Reservierung');
+  return $abfrage->fetchAll();
+}
+public function findeAlleVonBenutzerUnabgelaufenDatum(Benutzer $benutzer){
+  $sql = 'SELECT reservierung.* FROM reservierung,benutzer WHERE benutzer.benutzerid = reservierung.benutzerid AND benutzer.benutzerid = ? AND reservierung.datum >= CURRENT_DATE';
+  $abfrage = DB::getDB()->prepare($sql);
+  $abfrage->execute(array($benutzer->getBenutzerid()));
   $abfrage->setFetchMode(PDO::FETCH_CLASS, 'Reservierung');
   return $abfrage->fetchAll();
 }

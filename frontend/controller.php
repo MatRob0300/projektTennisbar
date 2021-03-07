@@ -99,7 +99,7 @@ class Controller{
         header("Location: index.php?aktion=reservierungErstellen");
     }
     public function meineReservierungen(){
-      $this->addContext("reservierungen",Reservierung::findeAlleNachBenutzer($_SESSION['userId']));
+      $this->addContext("reservierungen",Reservierung::findeAlleNachBenutzer(Benutzer::finde($_SESSION['userId'])));
     }
     public function presetSemail(){
 

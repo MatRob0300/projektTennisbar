@@ -134,10 +134,17 @@ public static function finde($id){
   $abfrage->setFetchMode(PDO::FETCH_CLASS, 'Kommentar');
   return $abfrage->fetch();
 }
-public static function findeNachBenutzerid($benutzerid){
+/*public static function findeNachBenutzerid($benutzerid){
   $sql = 'SELECT * FROM kommentar WHERE benutzerid=?';
   $abfrage = DB::getDB()->prepare($sql);
   $abfrage->execute(array($benutzerid));
+  $abfrage->setFetchMode(PDO::FETCH_CLASS, 'Kommentar');
+  return $abfrage->fetchAll();
+}*/
+public static function findeNachBenutzer(Benutzer $benutzer){
+  $sql = 'SELECT kommentar.* FROM kommentar,benutzer WHERE kommentar.benutzerid = benutzer.benutzerid AND benutzer.benutzerid=?';
+  $abfrage = DB::getDB()->prepare($sql);
+  $abfrage->execute(array($benutzerid->getBenutzerid()));
   $abfrage->setFetchMode(PDO::FETCH_CLASS, 'Kommentar');
   return $abfrage->fetchAll();
 }

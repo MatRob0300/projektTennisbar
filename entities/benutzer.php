@@ -165,15 +165,8 @@ public static function findeNachEmailToken($email_token){
 public function getVorUndNachname(){
   return $this->getVorname().' '.$this->getNachname();
 }
-public function getPasswortVonBenutzer($benutzerid){
-  $sql = 'SELECT passwort FROM benutzer WHERE benutzerid=?';
-  $abfrage = DB::getDB()->prepare($sql);
-  $abfrage->execute(array($benutzerid));
-  $abfrage->setFetchMode(PDO::FETCH_CLASS, 'Benutzer');
-  return $abfrage->fetch();
-}
 public function processLogin($email, $passwort) {
-        $sql = "select * FROM benutzer WHERE email = ? AND passwort = ?";
+        $sql = 'SELECT * FROM benutzer WHERE email = ? AND passwort = ?';
         $abfrage = DB::getDB()->prepare($sql);
         $abfrage->execute(array($email, $passwort));
         $abfrage->setFetchMode(PDO::FETCH_CLASS, 'Benutzer');
