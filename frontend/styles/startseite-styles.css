@@ -1,15 +1,16 @@
-/* main abschnitt */
-main {
-  margin: 0;
-  padding: 0;
-  height: auto;
-}
+/* header abschnitt */
 header {
   margin: 0px 0px 0px 0px;
-  background-color: rgb(25, 25, 25);
+  background-image: url("../images/tennisbar_vonAussen.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   width: 100%;
-  height: 900px;
-  border-radius: 0 0 95% 25% / 3%;
+  height: 100vh;
+  z-index: -1;
+  -webkit-filter: drop-shadow(10px 5px 3px rgba(0,0,0,0.7));
+  filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.5));
+  /*border-radius: 0 0 75% 25% / 1%;*/
 }
 header .headertext {
   position: relative;
@@ -19,13 +20,18 @@ header .headertext {
 .headertext h1 {
   text-align: center;
   margin: 0px 0px 0px 0px;
-  font-size: 100px;
+  font-size: 180px;
   color: white;
+  -webkit-filter: drop-shadow(5px 5px 3px rgba(0,0,0,0.7));
+  filter: drop-shadow(5px 5px 3px rgba(0,0,0,0.5));
+  shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .headertext h2 {
   text-align: center;
-  margin: 5px 0px 0px 25px;
-  font-size: 25px;
+  margin: 0px 0px 10px 25px;
+  font-size: 35px;
+  -webkit-filter: drop-shadow(5px 5px 3px rgba(0,0,0,0.7));
+  filter: drop-shadow(5px 5px 3px rgba(0,0,0,0.5));
   color: white;
 }
 .headertext a {
@@ -34,6 +40,8 @@ header .headertext {
   color: white;
   padding: 15px 32px;
   text-align: center;
+  -webkit-filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.7));
+  filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.5));
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
@@ -44,66 +52,58 @@ header .headertext {
   background-color: white;
   color: #1c8f9c;
 }
+/* main abschnitt */
+body {
+  background-color: rgba(28,143,156,0.7);
+  margin: 0;
+  padding: 0;
+}
+main {
+  background-color: white;
+  margin: 20px 150px;
+  -webkit-filter: drop-shadow(10px 5px 3px rgba(0,0,0,0.7));
+  filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.5));
 
-/* abschnitt1 */
-.a1 {
-  margin: 15px 25px 15px 25px;
-  height: 140px;
-  border-bottom: 1.5px solid rgb(200, 200, 200);
-
-}
-.a1 h1{
-  float: left;
-  margin: 50px 0px 0px 50px;
-}
-.suchleiste {
-  float: right;
-  margin: 50px 100px 0px 0px;
-  border-radius: 15px;
-}
-.suchleiste input {
-  width: 350px;
-  height: 30px;
-  margin: 0px 50px 0px 0px;
-  border: 0.5px solid black;
-  border-radius: 15px;
-}
-.suchleiste button {
-  width: 120px;
-  height: 30px;
-  border-radius: 5px;
-}
-/* abschnitt2 */
-.a2 {
-  margin: 15px 25px 15px 25px;
-  padding-bottom: 50px;
-  height: auto;
-  border-bottom: 1.5px solid rgba(200, 200, 200);
-}
-#beschA2 {
-  margin: 50px 20px 15px 50px;
-}
-#beschA2 h2 {
-  margin: 50px 0px 20px 0px;
-  font-size: 30px;
-}
-#beschA2 p {
-  margin: 0px 150px 20px 0px;
-  font-size: 20px;
 }
 .info {
   height: auto;
-  margin: 100px 15% 100px 15%;
+  padding-bottom: 20px;
+}
+.info-desc {
+  padding: 20px 100px;
+}
+.info-desc h1 {
+  font-size: 40px;
+  color: rgba(230,166,63,0.8) /*rgba(20,148,157,0.8)*/;
+  margin: 50px 0px;
+  -webkit-filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.2));
+  filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.2));
+}
+.info-desc p {
+  margin: 20px 0px;
+  color: rgba(32,42,44,0.8);
+  font-size: 20px;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  padding: 20px 0px;
+}
+.info-text {
+  width: 50%;
+  height: 300px;
+  margin: 0px 0px 0px 100px;
 }
 .tab {
-  width: 75%;
   overflow: hidden;
   border: 1px solid #ccc;
   background-color: #f1f1f1;
+
 }
 .tab button {
   width: 50%;
   background-color: inherit;
+  color: rgba(230,166,63,0.8);
   float: left;
   border: none;
   outline: none;
@@ -111,6 +111,8 @@ header .headertext {
   padding: 14px 16px;
   transition: 0.3s;
   font-size: 18px;
+  -webkit-filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.2));
+  filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.2));
 }
 .tab button:hover {
   background-color: #ddd;
@@ -130,6 +132,7 @@ header .headertext {
 }
 .tabcontent li {
   margin: 10px 0px 10px 0px;
+  color: rgba(32,42,44,0.8);
   font-size: 20px;
 }
 .tabcontent {
@@ -142,10 +145,12 @@ header .headertext {
   to {opacity: 1;}
 }
 .map {
-  margin: 0px 10% 0px 10%;
   height: 200px;
-  width: 80%;
+  width: 40%;
+  margin: 0px 150px;
   z-index: 0;
+  -webkit-filter: drop-shadow(2px 2px 1px rgba(0,0,0,0.8));
+  filter: drop-shadow(2px 2px 1px rgba(0,0,0,0.8));
 }
 
 /* abschnitt3 */

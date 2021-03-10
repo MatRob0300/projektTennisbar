@@ -142,6 +142,9 @@ class Controller{
         }
       }
     }
+    public function speisekarte(){
+      
+    }
     public function checkMailForPassReset(){
       if (isset($_POST['mt'])) {
         $benutzer = Benutzer::findeNachEmail($_POST['mt']);

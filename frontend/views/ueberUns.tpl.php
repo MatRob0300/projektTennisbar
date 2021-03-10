@@ -8,38 +8,8 @@
     <link rel="stylesheet" type="text/css" href="styles/ueberUns-styles.css">
   </head>
   <body>
-    <div class="obersteLeiste">
-      <div class="logo">
-        <a href="?aktion=startseite"><img src="images/cheersLogo.png" alt="cheers-logo" title="Startseite"></a>
-      </div>
-      <div class="titelUntertitel">
-        <h1>Cheers</h1>
-        <h2>Tennisbar Andrian</h2>
-      </div>
-      <?php
-      if(!isset($_SESSION["loggedIn"])){
-        echo "<div class='reglog'>";
-        echo $log = "<a href='?aktion=login'><img src='images/profilIcon.png' alt='login-icon' title='Anmelden'></a>";
-        echo "</div>";
-      }else{
-        echo "<div class='regbutton'>";
-        echo "<div class='dropdown'>";
-        echo "<button><img src='images/logout.png'/></button>";
-        echo "<div class='dropdown-content'>";
-        echo "<a href='?aktion=editprofil'>Mein Profil</a>";
-        echo "<a href='?aktion=meineReservierungen'>Meine Reservierungen</a>";
-        echo "<a href='?aktion=logout'>Abmelden</a>";
-        echo "</div></div></div>";
-      }?>
-      <nav>
-        <a href="?aktion=startseite">Startseite</a>
-        <a href="?aktion=bar">Bar</a>
-        <a href="?aktion=wetterbericht">Wetter</a>
-        <a href="?aktion=platzreservierung">Tennisplatz</a>
-        <a href="?aktion=ueberUns">Über uns</a>
-      </nav>
-    </div>
-    <header>
+    <?php require_once 'views/navbar.php'; ?>
+    <header id="header">
       <div class="headertext">
         <h1>Über uns</h1>
       </div>
@@ -173,7 +143,7 @@
         </div>
 
       </div>
-
     </footer>
+    <script src="scripts/navbar.js" type="text/javascript"></script>
   </body>
 </html>

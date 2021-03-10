@@ -3,43 +3,13 @@
   <head>
     <meta charset="utf-8">
     <title>Cheers - Tennisbar Andrian, Burger - Bar - Lounge</title>
-    <link rel="stylesheet" type="text/css" href="styles/main-styles.css">
     <link rel="stylesheet" type="text/css" href="styles/underMain-styles.css">
     <link rel="stylesheet" type="text/css" href="styles/bar-styles.css">
+    <link rel="stylesheet" type="text/css" href="styles/navbar-styles.css">
   </head>
   <body>
-    <div class="obersteLeiste">
-      <div class="logo">
-        <a href="?aktion=startseite"><img src="images/cheersLogo.png" alt="cheers-logo" title="Startseite"></a>
-      </div>
-      <div class="titelUntertitel">
-        <h1>Cheers</h1>
-        <h2>Tennisbar Andrian</h2>
-      </div>
-      <?php
-      if(!isset($_SESSION["loggedIn"])){
-        echo "<div class='reglog'>";
-        echo $log = "<a href='?aktion=login'><img src='images/profilIcon.png' alt='login-icon' title='Anmelden'></a>";
-        echo "</div>";
-      }else{
-        echo "<div class='regbutton'>";
-        echo "<div class='dropdown'>";
-        echo "<button><img src='images/logout.png'/></button>";
-        echo "<div class='dropdown-content'>";
-        echo "<a href='?aktion=editprofil'>Mein Profil</a>";
-        echo "<a href='?aktion=meineReservierungen'>Meine Reservierungen</a>";
-        echo "<a href='?aktion=logout'>Abmelden</a>";
-        echo "</div></div></div>";
-      }?>
-      <nav>
-        <a href="?aktion=startseite">Startseite</a>
-        <a href="?aktion=bar">Bar</a>
-        <a href="?aktion=wetterbericht">Wetter</a>
-        <a href="?aktion=platzreservierung">Tennisplatz</a>
-        <a href="?aktion=ueberUns">Über uns</a>
-      </nav>
-    </div>
-    <header>
+    <?php require_once 'views/navbar.php'; ?>
+    <header id="header">
       <div class="headertext">
         <h1>Bar</h1>
       </div>
@@ -78,6 +48,7 @@
           <img id="sp-karte" src="images/getraenke-karte.jpeg" alt="getränkekarte">
         </div>
       </div>-->
+      <a href="?aktion=speisekarte" target="anzeigen">zu den Speisekarten</a>
     </main>
 
     <aside>
@@ -123,15 +94,6 @@
         </div>
       </div>
     </aside>
-
-
-
-    <div id="myModal" class="modal">
-      <span class="close">&times;</span>
-      <img class="modal-content" id="img01">
-      <div id="caption"></div>
-    </div>
-
     <footer>
 
       <div class="footer-container">
@@ -193,7 +155,8 @@
       </div>
 
     </footer>
-    <script src="models/bar.js" type="text/javascript"></script>
+    <script src="scripts/bar.js" type="text/javascript"></script>
+    <script src="scripts/navbar.js" type="text/javascript"></script>
 
   </body>
 </html>

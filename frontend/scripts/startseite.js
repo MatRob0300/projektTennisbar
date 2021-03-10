@@ -41,6 +41,8 @@ document.getElementById("defaultOpen").click();
          },
       });
     }
+    
+    //bewertungen
     function showOnlyFourBewertungen() {
       $.ajax({
        url: 'models/removeBewertungen.php',
