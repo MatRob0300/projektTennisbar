@@ -70,14 +70,14 @@
           </div>
         </div>
       </div>
-      <div class="cards-container">
+      <!--<div class="cards-container">
         <div class="speisekarte">
           <img id="g-karte" src="images/getraenke-karte.jpeg" alt="speisekarte">
         </div>
         <div class="getraenkekarte">
           <img id="sp-karte" src="images/getraenke-karte.jpeg" alt="getränkekarte">
         </div>
-      </div>
+      </div>-->
     </main>
 
     <aside>
@@ -193,10 +193,7 @@
       </div>
 
     </footer>
+    <script src="models/bar.js" type="text/javascript"></script>
 
-
-    <script src="models/bar.js" type="text/javascript">
-
-    </script>
   </body>
 </html>

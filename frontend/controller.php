@@ -100,6 +100,7 @@ class Controller{
     }
     public function meineReservierungen(){
       $this->addContext("reservierungen",Reservierung::findeAlleNachBenutzer(Benutzer::finde($_SESSION['userId'])));
+      $this->addContext("uDatums",Reservierung::findeAlleUnabgelaufenDatumVonBenutzer(Benutzer::finde($_SESSION['userId'])));
     }
     public function presetSemail(){
 
@@ -155,6 +156,11 @@ class Controller{
           header("Location: index.php?aktion=presetSemail");
         }
       }
+    }
+    public function loescheReservierung(){
+      $reservierung = Reservierung::finde($_GET['reservierungid']);
+      $reservierung->loesche();
+      header('Location: index.php?aktion=meineReservierungen');
     }
     private function generatePage($template){
         extract($this->context);

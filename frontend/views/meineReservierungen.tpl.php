@@ -4,23 +4,20 @@
     <meta charset="utf-8">
     <title></title>
     <link rel="stylesheet" type="text/css" href="styles/meineReservierungen.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
   <body>
-    <table>
-  <tr>
-    <th>Nr.</th>
-    <th>Firstname</th>
-    <th>Lastname</th>
-    <th>Age</th>
-  </tr>
-  <?php foreach ($reservierungen as $reservierung) {?>
-    <tr>
-      <td><?php echo $reservierung->getPlatznummer(); ?></td>
-      <td><?php echo $reservierung->getDatum(); ?></td>
-      <td><?php echo $reservierung->getZeit(); ?></td>
-    </tr>
-  <?php} ?>
+      <select name="date" onchange="showResOfDate(this.value,<?php echo $_SESSION['userId'] ?>)">
+        <option value=""></option>
+        <?php foreach ($uDatums as $datum) { ?>
+          <option value="<?php echo $datum->getDatum() ?>"><?php echo $datum->getDatum() ?></option>
+        <?php } ?>
+      </select>
+      <button type="button" name="button" onclick="showResOfDate('mr',<?php echo $_SESSION['userId'] ?>)">alle Reservierungen</button>
+      <div class="table-wrapper">
+      <table class="fl-table" id="res"></table>
+      </div>
 
-</table>
+      <script src="models/mr.js" type="text/javascript"></script>
   </body>
 </html>
