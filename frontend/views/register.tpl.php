@@ -52,6 +52,6 @@
       </div>
     </main>
     <footer></footer>
-    <script type="text/javascript" src="models/reg.js"></script>
+    <script type="text/javascript" src="scripts/reg.js"></script>
   </body>
 </html>

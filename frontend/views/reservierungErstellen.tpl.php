@@ -32,8 +32,8 @@ if(!isset($_SESSION["loggedIn"])){
           	<div class="wrapper">
               <div class="container-calendar">
           			<div class="button-container-calendar">
-          				<button id="previous">&#8249;</button>
-          				<button id="next">&#8250;</button>
+          				<button type="button" id="previous">&#8249;</button>
+          				<button type="button" id="next">&#8250;</button>
           				<h3 id="monthHeader"></h3>
           				<p id="yearHeader"></p>
           			</div>
@@ -83,6 +83,6 @@ if(!isset($_SESSION["loggedIn"])){
           ?>
         </form>
       </main>
-      <script src="models/re.js" type="text/javascript"></script>
+      <script src="scripts/re.js" type="text/javascript"></script>
   </body>
 </html>

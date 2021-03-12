@@ -14,7 +14,7 @@ if(isset($_GET["datum"]) && isset($_GET["benutzer"])){
   if ($_GET['datum'] != 'mr') {
     $res = Reservierung::findeNachDatumVonBenutzer($_GET["datum"], $_GET["benutzer"]);
   }else {
-    $res = Reservierung::findeAlleBenutzerUnabgelaufenDatum(Benutzer::finde($_GET["benutzer"]));
+    $res = Reservierung::findeAlleNachBenutzer(Benutzer::finde($_GET["benutzer"]));
   }
   foreach ($res as $key => $re) {
     echo "<tr>";

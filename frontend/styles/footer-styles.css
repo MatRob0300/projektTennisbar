@@ -1,0 +1,99 @@
+/* footer */
+
+footer {
+  clear: both;
+  background-color: rgb(30,30,30);
+  color: white;
+  width: 100%;
+  height: 250px;
+  -webkit-filter: drop-shadow(10px 5px 3px rgba(0,0,0,0.7));
+  filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.5));
+  /*border-radius: 75% 25% 0 0 / 5%;*/
+}
+.footer-container {
+  display: flex;
+  flex-direction: row;
+}
+.footer-left {
+  margin: 0px 100px;
+  width: 50%;
+}
+.footer-info {
+  margin: 0px 25px 0px 30px;
+
+}
+.first {
+  margin-top: 60px;
+}
+.footer-texticon {
+  margin: 0px 20px 0px 30px;
+  height: 30px;
+  width: 30px;
+  float: left;
+  background-color: white;
+  border-radius: 50px;
+}
+.footer-texticon img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+}
+.footer-textinfo {
+  margin: 5px 20px 0px 80px;
+  height: 50px;
+}
+.footer-textinfo h2 {
+  margin: 0px 0px 0px 0px;
+  padding: 0px;
+  font-size: 15px;
+  -webkit-filter: drop-shadow(5px 5px 3px rgba(0,0,0,0.7));
+  filter: drop-shadow(5px 5px 3px rgba(0,0,0,0.5));
+}
+.footer-textinfo p {
+  margin: 0px 0px 0px 0px;
+  padding: 0px;
+  font-size: 20px;
+  -webkit-filter: drop-shadow(5px 5px 3px rgba(0,0,0,0.7));
+  filter: drop-shadow(5px 5px 3px rgba(0,0,0,0.5));
+}
+.footer-textinfo-e p {
+  margin: 0px 0px 0px 0px;
+  padding: 0px;
+  font-size: 20px;
+  color: rgb(24,116,205);
+  -webkit-filter: drop-shadow(5px 5px 3px rgba(0,0,0,0.7));
+  filter: drop-shadow(5px 5px 3px rgba(0,0,0,0.5));
+}
+.footer-right {
+  margin: 0px 120px 0px 0px;
+  width: 50%;
+}
+.footer-right-text {
+  margin-top: 60px;
+}
+.footer-right-text h1 {
+  font-size: 30px;
+  -webkit-filter: drop-shadow(5px 5px 3px rgba(0,0,0,0.7));
+  filter: drop-shadow(5px 5px 3px rgba(0,0,0,0.5));
+}
+.footer-right-text p {
+  margin-top: 10px;
+  -webkit-filter: drop-shadow(5px 5px 3px rgba(0,0,0,0.7));
+  filter: drop-shadow(5px 5px 3px rgba(0,0,0,0.5));
+}
+.footer-right-hyperlinks {
+  margin-top: 20px;
+  display: flex;
+  display: row;
+}
+.footer-right-hyperlinks > div {
+  width: 50px;
+  height: 50px;
+  margin: 0px 5px;
+}
+.link img{
+  width: 100%;
+  height: 100%;
+  -webkit-filter: drop-shadow(5px 5px 3px rgba(0,0,0,0.7));
+  filter: drop-shadow(5px 5px 3px rgba(0,0,0,0.5));
+}

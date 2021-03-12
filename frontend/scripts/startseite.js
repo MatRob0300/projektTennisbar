@@ -41,7 +41,7 @@ document.getElementById("defaultOpen").click();
          },
       });
     }
-    
+
     //bewertungen
     function showOnlyFourBewertungen() {
       $.ajax({

@@ -97,6 +97,6 @@
         </form>
       </div>
     </main>
-    <script src="models/editprofil.js" type="text/javascript"></script>
+    <script src="scripts/editprofil.js" type="text/javascript"></script>
   </body>
 </html>

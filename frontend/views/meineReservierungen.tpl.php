@@ -18,6 +18,6 @@
       <table class="fl-table" id="res"></table>
       </div>
 
-      <script src="models/mr.js" type="text/javascript"></script>
+      <script src="scripts/mr.js" type="text/javascript"></script>
   </body>
 </html>

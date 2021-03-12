@@ -8,7 +8,8 @@
   <body>
     <div id="navbar" class="obersteLeiste">
       <div class="logo">
-        <a href="?aktion=startseite"><img src="images/logo.png" alt="cheers-logo" title="Startseite"></a>
+        <a href="?aktion=startseite"><img src="images/logo.png" class="cheers-logo" alt="cheers-logo" title="Startseite"></a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
       </div>
       <div class="titelUntertitel">
         <h1>Cheers</h1>
@@ -16,11 +17,11 @@
       </div>
         <?php
         if(!isset($_SESSION["loggedIn"])){
-          echo "<div class='regbutton'>";
+          echo "<div class='logbutton'>";
           echo "<a href='?aktion=login'><img src='images/profilIcon.png' alt='login-icon' title='Anmelden'></a>";
           echo "</div>";
         }else{
-          echo "<div class='regbutton'>";
+          echo "<div class='outbutton'>";
           echo "<div class='dropdown'>";
           echo "<button><img src='images/logout.png'></button>";
           echo "<div class='dropdown-content'>";
@@ -29,13 +30,15 @@
           echo "<a href='?aktion=logout'>Abmelden</a>";
           echo "</div></div></div>";
         }?>
-      <nav>
-        <a href="?aktion=startseite">Startseite</a>
-        <a href="?aktion=bar">Bar</a>
-        <a href="?aktion=wetterbericht">Wetter</a>
-        <a href="?aktion=platzreservierung">Tennisplatz</a>
-        <a href="?aktion=ueberUns">Über uns</a>
-      </nav>
+        <div class="nav">
+          <nav>
+            <a href="?aktion=startseite">Startseite</a>
+            <a href="?aktion=bar">Bar</a>
+            <a href="?aktion=wetterbericht">Wetter</a>
+            <a href="?aktion=platzreservierung">Tennisplatz</a>
+            <a href="?aktion=ueberUns">Über uns</a>
+          </nav>
+        </div>
     </div>
   </body>
 </html>

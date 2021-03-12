@@ -1,6 +1,7 @@
-body {
-  margin: 0;
-  padding: 0;
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
 }
 .obersteLeiste {
   width: 100%;
@@ -9,7 +10,8 @@ body {
   background-color: rgba(28,143,156,0.8);
   height: 100px;
   z-index: 2;
-
+  -webkit-filter: drop-shadow(2px 2px 3px rgba(0,0,0,0.7));
+  filter: drop-shadow(2px 2px 3px rgba(0,0,0,0.5));
 }
 .logo {
   float: left;
@@ -22,6 +24,13 @@ body {
   height: 100px;
   -webkit-filter: drop-shadow(2px 2px 3px rgba(0,0,0,0.7));
   filter: drop-shadow(2px 2px 3px rgba(0,0,0,0.5));
+}
+.logo .icon {
+  display: none;
+  text-decoration: none;
+  font-size: 40px;
+  color: white;
+  padding: 20px 40px;
 }
 .titelUntertitel {
   float: left;
@@ -41,13 +50,13 @@ body {
 }
 nav {
   float: right;
-  margin: 42px 100px 0px 0px;
+  margin: 42px 0px;
 }
 nav a{
   text-decoration: none;
   color: white;
-  margin: 0px 35px 0px 0px;
   font-size: 18px;
+  margin: 0px 10px;
   -webkit-filter: drop-shadow(2px 2px 3px rgba(0,0,0,0.7));
   filter: drop-shadow(2px 2px 3px rgba(0,0,0,0.5));
 }
@@ -57,30 +66,41 @@ nav a:hover {
   filter: drop-shadow(2px 2px 3px rgba(230,166,63,0.7));
 
 }
-.regbutton {
-  width: 96px;
-  height: 80px;
-  margin: 10px 15px 0px 0px;
+.outbutton {
+  width: 60px;
+  height: auto;
+  padding: 20px 20px;
   float: right;
 }
-.regbutton button{
-  width: 65px;
-  height: 65px;
+.outbutton button{
+  width: 100%;
+  height: auto;
   background-color: rgba(28,143,156,0.8);
-  margin: 10px 0px 0px 0px;
   border: none;
   border-radius: 50%;
   cursor: pointer;
 }
-.regbutton button img {
-  width: 65px;
-  height: 65px;
-  margin: -3px 0px 0px -8px;
-  padding: 0px;
+.outbutton button img {
+  width: 100%;
+  height: auto;
   border-radius: 50%;
   -webkit-filter: drop-shadow(2px 2px 3px rgba(0,0,0,0.7));
   filter: drop-shadow(2px 2px 3px rgba(0,0,0,0.5));
   opacity: 0.9;
+}
+.logbutton {
+  width: 60px;
+  height: auto;
+  padding: 20px 20px;
+  float: right;
+}
+.logbutton img{
+  width: 100%;
+  height: auto;
+  background-color: rgba(28,143,156,0.8);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
 }
 .dropbtn {
   background-color: #4CAF50;
@@ -95,7 +115,7 @@ nav a:hover {
 .dropdown-content {
   display: none;
   position: absolute;
-  left: -50px;
+  left: -80px;
   background-color: #f9f9f9;
   min-width: 155px;
   border: 2px solid rgba(28,143,156,0.8);
@@ -121,16 +141,43 @@ nav a:hover {
 .dropdown:hover .dropbtn {
   background-color: #3e8e41;
 }
-.content {
-  padding: 16px;
-}
 
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
+@media screen and (max-width: 850px) {
+  .cheers-logo,.titelUntertitel{
+    display: none;
+  }
+  .obersteLeiste nav a {
+    display: none;
 
-.sticky + .content {
-  padding-top: 60px;
+  }
+  .obersteLeiste .logo {
+    width: 80px;
+  }
+  .obersteLeiste .logo a.icon {
+    display: block;
+  }
+  .logbutton {
+    width: 60px;
+    height: auto;
+    padding: 20px 20px 0px 0px;
+  }
+  .obersteLeiste.responsive nav {
+    width: 100vw;
+    position: absolute;
+    top: 58px;
+    left: 0px;
+    padding: 20px 0px;
+    text-align: center;
+    float: none;
+    display: block;
+    background-color: rgba(28,143,156,0.8);
+    -webkit-filter: drop-shadow(2px 2px 3px rgba(0,0,0,0.7));
+    filter: drop-shadow(2px 2px 3px rgba(0,0,0,0.5));
+    border-bottom: 4px ridge rgb(230,166,63);
+  }
+  .obersteLeiste.responsive nav a {
+    float: none;
+    display: block;
+    margin: 10px 20px;
+  }
 }
