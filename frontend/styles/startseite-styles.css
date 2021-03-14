@@ -69,22 +69,18 @@ header .headertext {
 /* main abschnitt */
 main {
   background-color: white;
-  margin: 20px 150px;
+  margin: 15px 150px;
+  padding: 20px 100px;
   -webkit-filter: drop-shadow(10px 5px 3px rgba(0,0,0,0.7));
   filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.5));
-
-}
-.info {
-  height: auto;
-  padding-bottom: 20px;
 }
 .info-desc {
-  padding: 20px 100px;
+  padding: 20px 0px;
 }
 .info-desc h1 {
-  font-size: 40px;
+  font-size: 45px;
   color: rgba(230,166,63,0.8) /*rgba(20,148,157,0.8)*/;
-  margin: 50px 0px;
+  margin: 50px 0px 25px 0px;
   -webkit-filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.2));
   filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.2));
 }
@@ -92,6 +88,7 @@ main {
   margin: 20px 0px;
   color: rgba(32,42,44,0.8);
   font-size: 20px;
+  line-height: 30px;
 }
 .container {
   display: flex;
@@ -99,9 +96,8 @@ main {
   padding: 20px 0px;
 }
 .info-text {
-  width: 50%;
+  width: 60%;
   height: 300px;
-  margin: 0px 0px 0px 100px;
 }
 .tab {
   overflow: hidden;
@@ -119,7 +115,7 @@ main {
   cursor: pointer;
   padding: 14px 16px;
   transition: 0.3s;
-  font-size: 18px;
+  font-size: 20px;
   -webkit-filter: drop-shadow(5px 5px 3px rgba(0,0,0,0.7));
   filter: drop-shadow(5px 5px 3px rgba(0,0,0,0.5));
 }
@@ -134,7 +130,7 @@ main {
 .tabcontent {
   display: inline-block;
   margin: 10px 0px 10px 15px;
-  max-height: 140px;
+  max-height: 150px;
   padding: 6px 12px;
   border-left: 1px solid #ccc;
   border-top: none;
@@ -158,9 +154,9 @@ main {
   to {opacity: 1;}
 }
 .map {
-  height: 200px;
   width: 40%;
-  margin: 0px 150px;
+  height: 220px;
+  margin: 0px 10px 0px 100px;
   z-index: 0;
   -webkit-filter: drop-shadow(2px 2px 1px rgba(0,0,0,0.8));
   filter: drop-shadow(2px 2px 1px rgba(0,0,0,0.8));
@@ -257,7 +253,7 @@ main {
   background-color: rgb(200,200,200);
   color: #4CAF50;
 }
-@media screen and (max-width: 680px) {
+@media screen and (max-width: 800px) {
   .headertext h1 {
     font-size: 140px;
   }
@@ -270,6 +266,247 @@ main {
     font-size: 15px;
     margin: 4px 2px;
     cursor: pointer;
+  }
+}
+@media screen and (max-width: 1300px) {
+  main {
+    margin: 15px 25px;
+    padding: 20px 100px;
+  }
+  .info-desc {
+    padding: 20px 0px;
+  }
+  .info-desc h1 {
+    font-size: 45px;
+    margin: 20px 0px 25px 0px;
+  }
+  .info-desc p {
+    margin: 20px 0px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .container {
+    flex-direction: column;
+    padding: 20px 0px;
+  }
+  .info-text {
+    width: 100%;
+    height: 300px;
+  }
+  .tab button {
+    width: 50%;
+    padding: 14px 16px;
+    font-size: 20px;
+  }
+  .tabcontent {
+    margin: 10px 0px 10px 15px;
+    max-height: 150px;
+    padding: 6px 12px;
+  }
+  .tabcontent ul {
+    margin: 0px 0px 50px 0px;
+    padding: 0px 50px;
+  }
+  .tabcontent li {
+    margin: 10px 0px 10px 0px;
+    font-size: 20px;
+  }
+  .map {
+    width: 100%;
+    height: 200px;
+    margin: 0px;
+    z-index: 0;
+  }
+}
+@media screen and (max-width: 850px) {
+  main {
+    margin: 15px 25px;
+    padding: 10px 50px;
+  }
+  .info-desc h1 {
+    font-size: 42px;
+    margin: 20px 0px 25px 0px;
+  }
+  .info-desc p {
+    margin: 20px 0px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .container {
+    flex-direction: column;
+    padding: 20px 0px;
+  }
+  .info-text {
+    width: 100%;
+    height: 300px;
+  }
+  .tab button {
+    width: 50%;
+    padding: 14px 16px;
+    font-size: 20px;
+  }
+  .tabcontent {
+    margin: 10px 0px 10px 15px;
+    max-height: 150px;
+    padding: 6px 12px;
+  }
+  .tabcontent ul {
+    margin: 0px 0px 50px 0px;
+    padding: 0px 50px;
+  }
+  .tabcontent li {
+    margin: 10px 0px 10px 0px;
+    font-size: 20px;
+  }
+  .map {
+    width: 100%;
+    height: 150px;
+    margin: 0px;
+    z-index: 0;
+  }
+}
+@media screen and (max-width: 620px) {
+  main {
+    margin: 15px 25px;
+    padding: 20px 30px;
+  }
+  .info-desc h1 {
+    font-size: 45px;
+    margin: 20px 0px 25px 0px;
+  }
+  .info-desc p {
+    margin: 20px 0px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .container {
+    flex-direction: column;
+    padding: 20px 0px;
+  }
+  .info-text {
+    width: 100%;
+    height: 300px;
+  }
+  .tab button {
+    width: 50%;
+    padding: 14px 16px;
+    font-size: 20px;
+  }
+  .tabcontent {
+    margin: 10px 0px 10px 15px;
+    max-height: 150px;
+    padding: 6px 12px;
+  }
+  .tabcontent ul {
+    margin: 0px 0px 50px 0px;
+    padding: 0px 50px;
+  }
+  .tabcontent li {
+    margin: 10px 0px 10px 0px;
+    font-size: 20px;
+  }
+  .map {
+    width: 100%;
+    height: 150px;
+    margin: 0px;
+    z-index: 0;
+  }
+}
+@media screen and (max-width: 520px) {
+  main {
+    margin: 15px 15px;
+    padding: 20px 20px;
+  }
+  .info {
+    padding: 0px 5px
+  }
+  .info-desc h1 {
+    font-size: 35px;
+    margin: 20px 0px 25px 0px;
+  }
+  .info-desc p {
+    margin: 20px 0px;
+    font-size: 16px;
+    line-height: 25px;
+  }
+  .container {
+    flex-direction: column;
+    padding: 20px 0px;
+  }
+  .info-text {
+    width: 100%;
+    height: 250px;
+  }
+  .tab button {
+    width: 50%;
+    padding: 14px 16px;
+    font-size: 16px;
+  }
+  .tabcontent {
+    margin: 10px 0px 10px 15px;
+    max-height: 150px;
+    padding: 6px 12px;
+  }
+  .tabcontent ul {
+    margin: 0px 0px 50px 0px;
+    padding: 0px 20px;
+  }
+  .tabcontent li {
+    margin: 10px 0px 10px 0px;
+    font-size: 16px;
+  }
+  .map {
+    width: 100%;
+    height: 150px;
+    margin: 0px;
+    z-index: 0;
+  }
+}
+@media screen and (max-width: 440px) {
+  main {
+    margin: 10px 10px;
+    padding: 20px 20px;
+  }
+  .info-desc h1 {
+    font-size: 35px;
+    margin: 20px 0px 25px 0px;
+  }
+  .info-desc p {
+    margin: 20px 0px;
+    font-size: 16px;
+    line-height: 25px;
+  }
+  .container {
+    flex-direction: column;
+    padding: 20px 0px;
+  }
+  .info-text {
+    width: 100%;
+    height: 250px;
+  }
+  .tab button {
+    width: 50%;
+    padding: 14px 16px;
+    font-size: 16px;
+  }
+  .tabcontent {
+    margin: 10px 0px 10px 15px;
+    max-height: 150px;
+    padding: 6px 12px;
+  }
+  .tabcontent ul {
+    margin: 0px 0px 50px 0px;
+    padding: 0px 20px;
+  }
+  .tabcontent li {
+    margin: 10px 0px 10px 0px;
+    font-size: 16px;
+  }
+  .map {
+    width: 100%;
+    height: 150px;
+    margin: 0px;
+    z-index: 0;
   }
 }
 @media screen and (max-width: 520px) {

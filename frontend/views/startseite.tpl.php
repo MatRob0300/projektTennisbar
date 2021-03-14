@@ -68,7 +68,6 @@
        <div class="map" id="mapid"></div>
 
     </div>
-
   </div>
 </main>
 

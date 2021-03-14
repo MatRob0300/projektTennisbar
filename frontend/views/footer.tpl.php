@@ -10,7 +10,7 @@
       <div class="footer-container">
         <div class="footer-left">
           <div class="footer-left-kon">
-            <div class="footer-info first">
+            <div class="footer-info">
               <div class="footer-texticon">
                 <img src="images/locationIcon.png" alt="bar-icon">
               </div>
@@ -60,6 +60,9 @@
             </div>
           </div>
         </div>
+      </div>
+      <div class="imp-cop">
+        <span></span>
       </div>
     </footer>
   </body>
