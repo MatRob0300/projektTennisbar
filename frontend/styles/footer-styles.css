@@ -77,7 +77,7 @@
 
 /* Media Queries */
 
-@media (max-width: 600px) {
+@media (max-width: 620px) {
   .footer-distributed .footer-left, .footer-distributed .footer-right {
     text-align: center;
   }
@@ -87,5 +87,6 @@
   }
   .footer-distributed .footer-left p.footer-links {
     line-height: 1.8;
+    font-size: 12px;
   }
 }

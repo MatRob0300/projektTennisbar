@@ -1,6 +1,8 @@
 header {
-  margin: 0px 0px 0px 0px;
-  background-color: rgb(25, 25, 25);
+  background-image: url("../images/tennisbar_vonAussen.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   width: 100%;
   height: 600px;
 }
@@ -8,93 +10,27 @@ header .headertext {
   position: relative;
   top: 40%;
   text-align: center;
-  line-height: 650px;
-  height: 100%;
+  height: auto;
 }
 .headertext h1 {
-  margin: 0px 0px 0px 0px;
-  font-size: 100px;
+  margin: 0px;
+  font-size: 180px;
   color: white;
   line-height: 1.5;
 }
-
-/* beginn von body */
-main {
-  background-color: rgb(50, 50, 50);
-  float: left;
-  width: 75%;
-  height: auto;
+@media screen and (max-width: 800px) {
+  .headertext h1 {
+    font-size: 140px;
+  }
 }
-/* seitenleiste*/
-aside {
-  background-color: white;
-  float: right;
-  width: 25%;
-  height: 700px;
-}
-.side-box {
-  height: auto;
-}
-.side-box-header {
-  margin: 40px 25px 20px 25px;
-  padding: 0px 0px 10px 0px;
-  border-bottom: 1.5px dotted rgb(200, 200, 200);
-}
-.side-box-header h2 {
-  font-size: 25px;
-  font-weight: bold;
-  color: #333333;
-}
-.suchleiste {
-  margin: 40px 25px 20px 25px;
-  padding: 0px 0px 0px 0px;
-}
-.suchleiste input {
-  margin: 0px 10px 0px 10px;
-  width: 280px;
-  height: 25px;
-  border-radius: 25px;
-}
-.suchleiste button {
-  width: 100px;
-  height: 30px;
-  border-radius: 5px;
-}
-.info {
-  margin: 50px 25px 20px 30px;
-  padding: 5px 0px 5px 0px;
-  border-left: 1.5px solid rgb(200, 200, 200);
-  border-top: 1.5px solid rgb(200, 200, 200);
-}
-.texticon {
-  margin: 15px 20px 0px 30px;
-  height: 25px;
-  width: 25px;
-  float: left;
-}
-.texticon img {
-  width: 100%;
-  height: 100%;
-}
-.textinfo {
-  margin: 10px 20px 0px 80px;
-  height: 50px;
-}
-.textinfo h2 {
-  margin: 0px 0px 0px 0px;
-  padding: 0px;
-  font-size: 20px;
-}
-.textinfo p {
-  margin: 0px 0px 0px 0px;
-  padding: 0px;
-  font-size: 15px;
-  color: black;
-}
-.textinfo a {
-  margin: 15px 0px 0px 0px;
-  padding: 0px;
-  text-decoration: none;
-  font-size: 15px;
-
+@media screen and (max-width: 520px) {
+  header {
+    height: 50vh;
+  }
+  header .headertext {
+    top: 30%;
+  }
+  .headertext h1 {
+    font-size: 150px;
+  }
 }

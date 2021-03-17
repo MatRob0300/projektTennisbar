@@ -2,6 +2,9 @@
 <html lang="de">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="true">
     <title></title>
     <link rel="stylesheet" type="text/css" href="styles/editprofil-styles.css">
   </head>
@@ -19,11 +22,11 @@
       </div>
       <div class="content">
         <div class="page-title">
-          <h1>Edit Profile</h1>
+          <h1>Profil bearbeiten</h1>
         </div>
         <div class="background-white p20 mb30">
           <h3 class="page-title">
-            Anrede Informationen
+            Benutzer Informationen
           </h3>
           <div class="row">
             <div class="form-group col-sm-6">

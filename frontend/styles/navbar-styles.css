@@ -50,7 +50,7 @@ html, body {
 }
 nav {
   float: right;
-  margin: 42px 0px;
+  margin: 42px 20px;
 }
 nav a{
   text-decoration: none;

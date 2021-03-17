@@ -2,13 +2,16 @@
 <html lang="de">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="true">
     <link rel="stylesheet" type="text/css" href="styles/main-styles.css"/>
     <link rel="stylesheet" type="text/css" href="styles/underMain-styles.css">
     <link rel="stylesheet" type="text/css" href="styles/wetterbericht-styles.css"/>
     <title>Wetterbericht Andrian</title>
   </head>
   <body>
-    <?php require_once 'views/navbar.tpl.php'; ?>
+    <?php require_once 'views/navbar.php'; ?>
     <header id="header">
       <div class="headertext">
         <h1>Wetter</h1>
@@ -41,42 +44,8 @@
         </div>
       </div>
     </main>
-    <aside>
-      <div class="side-box">
-        <div class="side-box-header">
-          <h2>Suche</h2>
-        </div>
-        <div class="suchleiste">
-          <input type="searchbox" />
-          <button type="button">SUCHEN</button>
-        </div>
-      </div>
-      <div class="side-box">
-        <div class="side-box-header">
-          <h2>Info</h2>
-        </div>
-        <div class="info">
-          <div class="texticon">
-            <img src="images/bar-icon.png" alt="bar-icon">
-          </div>
-          <div class="textinfo">
-            <h2>Bar</h2>
-            <a href="#">zur Bar</a>
-          </div>
-        </div>
-        <div class="info">
-          <div class="texticon">
-            <img src="images/tennis-icon.png" alt="tennis-icon">
-          </div>
-          <div class="textinfo">
-            <h2>Tennis</h2>
-            <a href="?aktion=platzreservierung">zur Platzreservierung</a>
-          </div>
-        </div>
-      </div>
-    </aside>
 
-    <?php require_once 'views/footer.tpl.php'; ?>
+    <?php require_once 'views/footer.php'; ?>
 
     <script src="scripts/wetter.js" type="text/javascript"></script>
     <script src="scripts/navbar.js" type="text/javascript"></script>

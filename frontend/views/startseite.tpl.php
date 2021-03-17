@@ -21,7 +21,7 @@
   <body>
 
 
-  <?php require_once 'views/navbar.tpl.php'; ?>
+  <?php require_once 'views/navbar.php'; ?>
 
   <header id="header">
     <div class="headertext">
@@ -70,8 +70,7 @@
     </div>
   </div>
 </main>
-
-<?php require_once 'views/footer.tpl.php'; ?>
+<?php require_once 'views/footer.php'; ?>
 
 <script src="scripts/startseite.js" type="text/javascript"></script>
 <script src="scripts/navbar.js" type="text/javascript"></script>
