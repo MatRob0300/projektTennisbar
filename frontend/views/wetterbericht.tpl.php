@@ -21,7 +21,7 @@
       <!--
       https://openweathermap.org/
       -->
-      <h1>Heute</h1>
+      <!--<h1>Heute</h1>
 
       <div class="container">
         <div class="weather-icon">
@@ -35,20 +35,26 @@
           </div>
           <div class="extra-info">
             <div class="wind">
-              <p><span>Windstärke:</span><span id="weather-wind"></span><span>km/h</span></p>
+              <p><span>Windstärke: </span><span id="weather-wind"></span><span>m/s</span></p>
             </div>
             <div class="humidity">
-              <p><span>Luftfeuchtigkeit:</span><span id="weather-humidity"></span><span>%</span></p>
+              <p><span>Luftfeuchtigkeit: </span><span id="weather-humidity"></span><span>%</span></p>
             </div>
           </div>
         </div>
-      </div>
+      </div>-->
+
+      	<div id="meteoprovbz_widget"></div>
+
     </main>
 
     <?php require_once 'views/footer.php'; ?>
-
+    <script src="https://wetter.ws.siag.it/Widget_v1.svc/web/loadSimpleWidget/de/0/Landscape.js"></script>
     <script src="scripts/wetter.js" type="text/javascript"></script>
     <script src="scripts/navbar.js" type="text/javascript"></script>
+    <script>
+        meteoprovbz_Widget.CreateWidget(document.getElementById("meteoprovbz_widget"));
+    </script>
 
   </body>
 </html>
