@@ -21,7 +21,7 @@
       <!--
       https://openweathermap.org/
       -->
-      <!--<h1>Heute</h1>
+      <h1>Heute</h1>
 
       <div class="container">
         <div class="weather-icon">
@@ -42,19 +42,13 @@
             </div>
           </div>
         </div>
-      </div>-->
-
-      	<div id="meteoprovbz_widget"></div>
+      </div>
 
     </main>
 
     <?php require_once 'views/footer.php'; ?>
-    <script src="https://wetter.ws.siag.it/Widget_v1.svc/web/loadSimpleWidget/de/0/Landscape.js"></script>
     <script src="scripts/wetter.js" type="text/javascript"></script>
     <script src="scripts/navbar.js" type="text/javascript"></script>
-    <script>
-        meteoprovbz_Widget.CreateWidget(document.getElementById("meteoprovbz_widget"));
-    </script>
 
   </body>
 </html>

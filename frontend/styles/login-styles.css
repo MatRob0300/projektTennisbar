@@ -1,9 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+}
 body {
     font-family: Arial;
     color: #333;
     font-size: 0.95em;
 }
-
+.main {
+  margin-top: 100px;
+}
 .form-head {
     color: #191919;
     font-weight: normal;
@@ -44,16 +50,6 @@ body {
   color: black;
   border-radius: 4px;
   margin: 30px 10px 10px 10px;
-}
-
-.container {
-  padding: 50px 10px;
-  background: rgb(200,200,200);
-  border: rgb(100,100,100) 1px solid;
-  color: black;
-  border-radius: 4px;
-  margin: 100px 100px;
-  text-align: center;
 }
 .reset-label{
   margin: 10px 0px 5px 0px;

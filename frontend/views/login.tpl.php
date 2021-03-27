@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" href="styles/login-styles.css"/>
   </head>
   <body>
-    <div>
+    <div class="main">
       <form action="index.php?aktion=log" method="post" id="frmLogin" onSubmit="return validate();">
         <div class="demo-table">
           <div class="form-head">

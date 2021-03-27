@@ -1,28 +1,31 @@
 main {
-  height: 700px;
+  padding: 20px 20px;
 }
 .container {
   display: flex;
   height: auto;
-  margin-top: 50px;
+  padding: 20px;
 }
 .container > div{
   width: 50%;
 }
 .container-img {
   width: 100%;
-  margin: 50px 0px 0px 100px;
+  padding: 20px;
 }
 .container-img img {
-  width: 70%;
+  width: 100%;
   height: auto;
   border-radius: 20px;
 }
 .container-text {
-  margin: 50px 100px 0px 0px;
+  padding: 20px;
 }
-.container-text h1, p{
-  color: white;
+.container-text h1{
+  padding: 0px 0px 20px 0px;
+}
+.container-text p{
+  padding: 0px 0px 20px 0px;
 }
 .container-text a {
   background-color: #1c8f9c;
