@@ -70,7 +70,9 @@ footer {
   height: 30vh;
   background-color: rgb(130, 130, 130);
   color: white;
-  text-align: center;
+}
+.footer-links a {
+font-size: 20px;
 }
 .error-message {
     padding: 7px 10px;

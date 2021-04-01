@@ -20,64 +20,49 @@
 
     <main>
       <div class="container">
-        <div class="item l">
-          <figure class="tm-description-figure">
-            <img src="images/bildplatzhalter.png" alt="Image" class="img-fluid" />
-          </figure>
-        </div>
-        <div class="item r">
-          <div class="tm-description-box">
-            <h4 class="tm-gallery-title">Maecenas nulla neque</h4>
-            <p class="tm-mb-45">Redistributing this template as a downloadable ZIP file on any template collection site is strictly prohibited.
-               You will need to for additional permissions about our templates. Thank you.</p>
-            <a href="?aktion=speisekarte" target="karten" class="tm-btn tm-right">unsere Karten</a>
-          </div>
+        <div class="tm-description-box">
+          <h4 class="tm-gallery-title">Maecenas nulla neque</h4>
+          <p class="tm-mb-45">Redistributing this template as a downloadable ZIP file on any template collection site is strictly prohibited.
+              You will need to for additional permissions about our templates. Thank you.</p>
+          <a href="?aktion=speisekarte" target="karten" class="tm-btn tm-right">unsere Karten</a>
         </div>
       </div>
       <div class="flex-container">
         <div class="flex-item">
-          <article class="tm-gallery-item">
-						<figure>
-							<img src="images/bildplatzhalter.png" alt="Image" class="img-fluid tm-gallery-img" />
-							<figcaption>
-								<h4 class="tm-gallery-title">Tiroler Burger</h4>
-								<p class="tm-gallery-description">Nam in suscipit nisi, sit amet consectetur metus. Ut sit amet tellus accumsan</p>
-							</figcaption>
-						</figure>
-					</article>
+          <figure>
+            <img src="images/bildplatzhalter.png" alt="Trulli">
+            <figcaption>
+              <h1>Classic Burger</h1>
+              <p>Hallo mein name ist burger, ich liebe burger und Cheers ist meine Heimat!</p>
+            </figcaption>
+          </figure>
         </div>
         <div class="flex-item">
-          <article class="tm-gallery-item">
-						<figure>
-							<img src="images/bildplatzhalter.png" alt="Image" class="img-fluid tm-gallery-img" />
-							<figcaption>
-								<h4 class="tm-gallery-title">Classic Burger</h4>
-								<p class="tm-gallery-description">Nam in suscipit nisi, sit amet consectetur metus. Ut sit amet tellus accumsan</p>
-							</figcaption>
-						</figure>
-					</article>
+          <figure>
+            <img src="images/bildplatzhalter.png" alt="Trulli">
+            <figcaption>
+              <h1>Classic Burger</h1>
+              <p>Hallo mein name ist burger, ich liebe burger und Cheers ist meine Heimat!</p>
+            </figcaption>
+          </figure>
         </div>
         <div class="flex-item">
-          <article class="tm-gallery-item">
-						<figure>
-							<img src="images/bildplatzhalter.png" alt="Image" class="img-fluid tm-gallery-img" />
-							<figcaption>
-								<h4 class="tm-gallery-title">Natur Burger</h4>
-								<p class="tm-gallery-description">Nam in suscipit nisi, sit amet consectetur metus. Ut sit amet tellus accumsan</p>
-							</figcaption>
-						</figure>
-					</article>
+          <figure>
+            <img src="images/bildplatzhalter.png" alt="Trulli">
+            <figcaption>
+              <h1>Classic Burger</h1>
+              <p>Hallo mein name ist burger, ich liebe burger und Cheers ist meine Heimat!</p>
+            </figcaption>
+          </figure>
         </div>
         <div class="flex-item">
-          <article class="tm-gallery-item">
-						<figure>
-							<img src="images/bildplatzhalter.png" alt="Image" class="img-fluid tm-gallery-img" />
-							<figcaption>
-								<h4 class="tm-gallery-title">Kinder Burger</h4>
-								<p class="tm-gallery-description">Nam in suscipit nisi, sit amet consectetur metus. Ut sit amet tellus accumsan</p>
-							</figcaption>
-						</figure>
-					</article>
+          <figure>
+            <img src="images/bildplatzhalter.png" alt="Trulli">
+            <figcaption>
+              <h1>Classic Burger</h1>
+              <p>Hallo mein name ist burger, ich liebe burger und Cheers ist meine Heimat!</p>
+            </figcaption>
+          </figure>
         </div>
       </div>
     </main>

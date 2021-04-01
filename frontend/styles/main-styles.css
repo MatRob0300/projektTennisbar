@@ -2,3 +2,11 @@ body {
   margin: 0px;
   padding: 0px;
 }
+:root{
+  --main-orange: rgba(255, 203, 0, 1);
+  --main-hellblau: rgba(0, 48, 80, 1);
+  --main-dunkelblau : rgba(155,235,84,92);
+  --main-schriftschwarz: rgba( 236, 112, 99, 1);
+  --dark-white: rgba(189,195,199);
+  --main-white: rgba(250,250,250);
+}

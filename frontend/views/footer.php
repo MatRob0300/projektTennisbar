@@ -34,7 +34,7 @@
 
 				</p>
 
-				<p>Robert Matha &copy; 2020/21</p>
+				<p>Robert Matha Copyright &copy; 2020/21</p>
 			</div>
 		</footer>
   </body>

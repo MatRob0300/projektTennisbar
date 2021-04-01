@@ -30,14 +30,6 @@ body {
   margin: 0;
   padding: 0;
 }
-main {
-  height: auto;
-  background-color: white;
-  margin: 15px 150px;
-  padding: 20px 100px;
-  -webkit-filter: drop-shadow(10px 5px 3px rgba(0,0,0,0.7));
-  filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.5));
-}
 @media screen and (max-width: 800px) {
   .headertext h1 {
     font-size: 140px;
