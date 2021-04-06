@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="styles/underMain-styles.css">
     <link rel="stylesheet" type="text/css" href="styles/bar-styles.css">
     <link rel="stylesheet" type="text/css" href="styles/navbar-styles.css">
+    <link rel="stylesheet" type="text/css"  href="styles/bootstrap.css">
   </head>
   <body>
     <?php require_once 'views/navbar.php'; ?>
@@ -19,53 +20,73 @@
     </header>
 
     <main>
-      <div class="container">
-        <div class="tm-description-box">
-          <h4 class="tm-gallery-title">Maecenas nulla neque</h4>
-          <p class="tm-mb-45">Redistributing this template as a downloadable ZIP file on any template collection site is strictly prohibited.
-              You will need to for additional permissions about our templates. Thank you.</p>
-          <a href="?aktion=speisekarte" target="karten" class="tm-btn tm-right">unsere Karten</a>
+      <div id="features" class="text-center">
+        <div class="container">
+          <div class="section-title">
+            <h2>Our Specials</h2>
+          </div>
+          <div class="row">
+            <div class="col-xs-12 col-sm-4">
+              <div class="features-item">
+                <h3>Lorem ipsum dolor</h3>
+                <img src="images/bildplatzhalter.png" class="img-responsive" alt="">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sed commodo.</p>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-4">
+              <div class="features-item">
+                <h3>Consectetur adipiscing</h3>
+                <img src="images/bildplatzhalter.png" class="img-responsive" alt="">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sed commodo.</p>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-4">
+              <div class="features-item">
+                <h3>Duis sed dapibus</h3>
+                <img src="images/bildplatzhalter.png" class="img-responsive" alt="">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sed commodo.</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="flex-container">
-        <div class="flex-item">
-          <figure>
-            <img src="images/bildplatzhalter.png" alt="Trulli">
-            <figcaption>
-              <h1>Classic Burger</h1>
-              <p>Hallo mein name ist burger, ich liebe burger und Cheers ist meine Heimat!</p>
-            </figcaption>
-          </figure>
-        </div>
-        <div class="flex-item">
-          <figure>
-            <img src="images/bildplatzhalter.png" alt="Trulli">
-            <figcaption>
-              <h1>Classic Burger</h1>
-              <p>Hallo mein name ist burger, ich liebe burger und Cheers ist meine Heimat!</p>
-            </figcaption>
-          </figure>
-        </div>
-        <div class="flex-item">
-          <figure>
-            <img src="images/bildplatzhalter.png" alt="Trulli">
-            <figcaption>
-              <h1>Classic Burger</h1>
-              <p>Hallo mein name ist burger, ich liebe burger und Cheers ist meine Heimat!</p>
-            </figcaption>
-          </figure>
-        </div>
-        <div class="flex-item">
-          <figure>
-            <img src="images/bildplatzhalter.png" alt="Trulli">
-            <figcaption>
-              <h1>Classic Burger</h1>
-              <p>Hallo mein name ist burger, ich liebe burger und Cheers ist meine Heimat!</p>
-            </figcaption>
-          </figure>
+      <!-- About Section -->
+      <div id="about">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-xs-12 col-md-6 about-img"> </div>
+            <div class="col-xs-12 col-md-3 col-md-offset-1">
+              <div class="about-text">
+                <div class="section-title">
+                  <h2>Our Story</h2>
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante facilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare diam commodo nibh.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante facilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare.</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </main>
+      <!-- Team Section -->
+      <div id="team">
+        <div class="container">
+          <div id="row">
+            <div class="col-md-6">
+              <div class="col-md-10 col-md-offset-1">
+                <div class="section-title">
+                  <h2>Meet Our Chef</h2>
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante facilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare diam commodo nibh.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante facilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare.</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="team-img"><img src="images/bildplatzhalter.png" alt="..."></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </main>
     <?php require_once 'views/footer.php'; ?>
     <script src="scripts/navbar.js" type="text/javascript"></script>
 	</body>

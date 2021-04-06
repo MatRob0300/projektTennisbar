@@ -36,5 +36,8 @@
     <?php require_once 'views/footer.php'; ?>
 
     <script src="scripts/navbar.js" type="text/javascript"></script>
+    <script src="scripts/pr.js" type="text/javascript">
+
+    </script>
   </body>
 </html>

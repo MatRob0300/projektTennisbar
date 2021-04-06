@@ -2,9 +2,6 @@
   margin: 0;
   padding: 0;
 }
-html {
-  font-family: "helvetica neue", sans-serif;
-}
 body {
   background-color: rgba(28,143,156,0.5);
   margin: 0;
@@ -22,7 +19,6 @@ header {
   -webkit-filter: drop-shadow(10px 5px 3px rgba(0,0,0,0.7));
   filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.5));
   filter: contrast(125%);
-  /*border-radius: 0 0 75% 25% / 1%;*/
 }
 header .headertext {
   position: relative;
@@ -33,6 +29,7 @@ header .headertext {
   text-align: center;
   margin: 0px 0px 0px 0px;
   font-size: 180px;
+  font-family: 'Dancing script', cursive;
   color: white;
   -webkit-filter: drop-shadow(5px 5px 3px rgba(0,0,0,0.7));
   filter: drop-shadow(5px 5px 3px rgba(0,0,0,0.5));
@@ -42,6 +39,7 @@ header .headertext {
   text-align: center;
   margin: 0px 0px 10px 25px;
   font-size: 35px;
+  font-family: 'Autour One', cursive;
   -webkit-filter: drop-shadow(5px 5px 3px rgba(0,0,0,0.7));
   filter: drop-shadow(5px 5px 3px rgba(0,0,0,0.5));
   color: white;
@@ -69,7 +67,7 @@ header .headertext {
 /* main abschnitt */
 main {
   background-color: white;
-  margin: 15px 150px;
+  margin: 15px 50px;
   padding: 20px 100px;
   -webkit-filter: drop-shadow(10px 5px 3px rgba(0,0,0,0.7));
   filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.5));
@@ -81,6 +79,7 @@ main {
   font-size: 45px;
   color: rgba(230,166,63,0.8) /*rgba(20,148,157,0.8)*/;
   margin: 50px 0px 25px 0px;
+  font-family: 'Autour One',sans-serif;
   -webkit-filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.2));
   filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.2));
 }
@@ -88,6 +87,7 @@ main {
   margin: 20px 0px;
   color: rgba(32,42,44,0.8);
   font-size: 20px;
+  font-family: 'Autour One', sans-serif;
   line-height: 30px;
 }
 .container {
@@ -143,6 +143,7 @@ main {
   margin: 10px 0px 10px 0px;
   color: rgba(32,42,44,0.8);
   font-size: 20px;
+  font-family: 'Autour One', sans-serif;
 }
 .tabcontent {
   animation: fadeEffect 1s; /* Fading effect takes 1 second */

@@ -26,7 +26,7 @@
   <header id="header">
     <div class="headertext">
       <h1>Cheers</h1>
-      <h2>Burger - Bar - Lounge</h2>
+      <h2>Burger-Bar-Lounge</h2>
       <a href="?aktion=platzreservierung">zum Tennisplatz</a>
     </div>
   </header>
@@ -57,10 +57,10 @@
 
         <div id="oeffnungszeiten" class="tabcontent">
           <ul>
-            <li>Montag: 10:00 - 18:00Uhr</li>
-            <li>Dienstag: 10:00 - 18:00Uhr</li>
-            <li>Mittwoch: 10:00 - 18:00Uhr</li>
-            <li>Donnerstag: 10:00 - 18:00Uhr</li>
+            <li>Mo:<span> 10:00 - 18:00Uhr</span></li>
+            <li>Di:<span> 10:00 - 18:00Uhr</span></li>
+            <li>Mi:<span> 10:00 - 18:00Uhr</span></li>
+            <li>Do:<span> 10:00 - 18:00Uhr</span></li>
           </ul>
         </div>
       </div>

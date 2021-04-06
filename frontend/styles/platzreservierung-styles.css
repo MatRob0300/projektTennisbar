@@ -1,20 +1,18 @@
 main {
-  padding: 20px 20px;
+  height: auto;
+  background-color: white;
+  margin: 15px 50px;
+  -webkit-filter: drop-shadow(10px 5px 3px rgba(0,0,0,0.7));
+  filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.5));
 }
 .container {
-  display: flex;
-  height: auto;
   padding: 20px;
 }
-.container > div{
-  width: 50%;
-}
 .container-img {
-  width: 100%;
+  float: left;
   padding: 20px;
 }
 .container-img img {
-  width: 100%;
   height: auto;
   border-radius: 20px;
 }
@@ -42,4 +40,21 @@ main {
 .container-text a:hover{
   background-color: white;
   color: #1c8f9c;
+}
+/* Introduction */
+
+.tm-section-title {
+  font-size: 2.6rem;
+  font-weight: normal;
+}
+
+.tm-intro-text {
+  font-size: 1.2rem;
+  line-height: 1.4;
+}
+
+.tm-icon {
+  display: block;
+  margin-bottom: 55px;
+  color: #3496d8;
 }

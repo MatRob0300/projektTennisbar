@@ -21,8 +21,9 @@
       <!--
       https://openweathermap.org/
       -->
-      <h1>Heute</h1>
-
+      <div class="title">
+        <h1>Aktuelles Wetter</h1>
+      </div>
       <div class="container">
         <div class="weather-icon">
             <img id="temp-icon" src="" alt="">
@@ -30,8 +31,10 @@
         </div>
         <div class="weather-info">
           <div class="temp">
-            <p><span id="temp-h">Temperatur</span></p>
-            <p><span id="temp-value"></span><span id="temp-unit">°C</span></p>
+            <p>
+              <span id="temp-value"></span>
+              <span id="temp-unit">°C</span>
+            </p>
           </div>
           <div class="extra-info">
             <div class="wind">
@@ -43,7 +46,6 @@
           </div>
         </div>
       </div>
-
     </main>
 
     <?php require_once 'views/footer.php'; ?>

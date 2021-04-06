@@ -1,3 +1,8 @@
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
 html, body {
     margin: 0;
     padding: 0;
@@ -66,7 +71,7 @@ nav a:hover {
 
 }
 .outbutton {
-  width: 60px;
+  width: 100px;
   height: auto;
   padding: 20px 20px;
   float: right;
@@ -88,7 +93,7 @@ nav a:hover {
   opacity: 0.9;
 }
 .logbutton {
-  width: 60px;
+  width: 100px;
   height: auto;
   padding: 20px 20px;
   float: right;
@@ -156,7 +161,7 @@ nav a:hover {
     display: block;
   }
   .logbutton {
-    width: 60px;
+    width: 80px;
     height: auto;
     padding: 20px 20px 0px 0px;
   }

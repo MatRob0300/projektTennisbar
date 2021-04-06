@@ -4,6 +4,8 @@
    .then(res => res.json())
    .then((out) => {
      var temp = out['main']['temp'];
+     var tempMin = out['main']['temp_min'];
+     var tempMax = out['main']['temp_max'];
      var wind = out['wind']['speed'];
      var humidity = out['main']['humidity'];
      var description = out['weather'][0]['description'];
@@ -14,7 +16,7 @@
        document.getElementById("weather-description").innerHTML = description;
        document.getElementById("temp-icon").src = wi1.concat(weathericon, wi2);
        document.getElementById("temp-icon").alt = weatheralt;
-       document.getElementById("temp-value").innerHTML = temp;
+       document.getElementById("temp-value").innerHTML = temp
        document.getElementById("weather-wind").innerHTML = wind;
        document.getElementById("weather-humidity").innerHTML = humidity;
      console.log('Checkout this JSON! ', out);
