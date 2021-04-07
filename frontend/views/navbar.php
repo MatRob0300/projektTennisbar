@@ -33,15 +33,15 @@
           echo "<a href='?aktion=logout'>Abmelden</a>";
           echo "</div></div></div>";
         }?>
-        <div class="nav">
-          <nav>
-            <a href="?aktion=startseite">Startseite</a>
-            <a href="?aktion=bar">Bar</a>
-            <a href="?aktion=wetterbericht">Wetter</a>
-            <a href="?aktion=platzreservierung">Tennisplatz</a>
-            <a href="?aktion=ueberUns">Über uns</a>
-          </nav>
-        </div>
+      <div class="nav">
+        <nav>
+          <a href="?aktion=startseite">Startseite</a>
+          <a href="?aktion=bar">Bar</a>
+          <a href="?aktion=wetterbericht">Wetter</a>
+          <a href="?aktion=platzreservierung">Tennisplatz</a>
+          <a href="?aktion=ueberUns">Über uns</a>
+        </nav>
+      </div>
     </div>
   </body>
 </html>

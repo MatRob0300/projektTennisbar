@@ -6,7 +6,7 @@ main {
   filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.5));
 }
 .container {
-  padding: 20px;
+  padding: 20px 50px;
 }
 .container-img {
   float: left;
