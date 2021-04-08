@@ -88,29 +88,22 @@ body {
 }
 
 .btnLogin {
-    padding: 13px;
-    background-color: #5d9cec;
-    color: #f5f7fa;
+    padding: 15px 32px;
+    background-color: #1c8f9c;
+    color: white;
     cursor: pointer;
     border-radius: 4px;
     width: 100%;
     border: #5791da 1px solid;
     font-size: 1.1em;
+    -webkit-filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.7));
+    filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.5));
+    cursor: pointer;
 }
-
-.response-text {
-    max-width: 380px;
-    font-size: 1.5em;
-    text-align: center;
-    background: #fff3de;
-    padding: 42px;
-    border-radius: 3px;
-    border: #f5e9d4 1px solid;
-    font-family: arial;
-    line-height: 34px;
-    margin: 15px auto;
+.btnLogin:hover {
+  background-color: white;
+  color: #1c8f9c;
 }
-
 .terms {
     margin-bottom: 5px;
 }
@@ -152,4 +145,57 @@ a.logout-button {
 .reg {
   text-align: center;
   margin: 10px 0px;
+}
+footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+@media screen and (max-width: 440px) {
+  .main {
+    margin-top: 100px;
+  }
+  .form-head {
+      color: #191919;
+      font-weight: normal;
+      font-weight: 400;
+      margin: 10px;
+      text-align: center;
+      font-size: 1.5em;
+  }
+  .head {
+    color: #191919;
+    font-weight: normal;
+    font-weight: 400;
+    font-size: 1.8em;
+    margin: 0px 10px;
+  }
+  .demo-table {
+      background: #ffffff;
+      border-spacing: initial;
+      margin: 50px 10px;
+      word-break: break-word;
+      table-layout: auto;
+      line-height: 1.8em;
+      color: #333;
+      border-radius: 4px;
+      padding: 0px;
+      width: auto;
+      border: 1px solid;
+      border-color: #e5e6e9 #dfe0e4 #d0d1d5;
+  }
+
+  .demo-table .field-column {
+      padding: 15px 10px;
+  }
+  .btnLogin {
+      padding: 13px;
+      background-color: #5d9cec;
+      color: #f5f7fa;
+      cursor: pointer;
+      border-radius: 4px;
+      width: 100%;
+      border: #5791da 1px solid;
+      font-size: 1.1em;
+  }
 }

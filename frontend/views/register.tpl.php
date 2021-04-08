@@ -12,7 +12,7 @@
     <main>
       <div class="header">
         <div class="zurueck">
-          <a href="?aktion=startseite"><img src="images/zurueck-pfeil.png" alt="zurueck-pfeil"></a>
+          <a href="?aktion=login"><img src="images/zurueck-pfeil.png" alt="zurueck-pfeil"></a>
         </div>
         <h1>Registrierung</h1>
       </div>

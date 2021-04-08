@@ -28,10 +28,10 @@
             ?>
             <div class="field-column">
               <div>
-                <label for="username">Email:</label>
+                <label for="email">Email:</label>
               </div>
               <div>
-                <input name="email" type="email" class="demo-input-box">
+                <input name="email" id="email" type="email" class="demo-input-box">
               </div>
             </div>
             <div class="field-column">
@@ -59,5 +59,6 @@
           </div>
         </form>
       </div>
+      <?php require_once 'views/footer.php'; ?>
     </body>
   </html>

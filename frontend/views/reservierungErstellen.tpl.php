@@ -86,6 +86,7 @@ if(!isset($_SESSION["loggedIn"])){
           ?>
         </form>
       </main>
+      <?php require_once 'views/footer.php'; ?>
       <script src="scripts/re.js" type="text/javascript"></script>
   </body>
 </html>

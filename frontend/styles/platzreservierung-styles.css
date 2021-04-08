@@ -58,3 +58,64 @@ main {
   margin-bottom: 55px;
   color: #3496d8;
 }
+@media screen and (max-width: 440px) {
+  main {
+    height: auto;
+    background-color: white;
+    margin: 10px 20px;
+    -webkit-filter: drop-shadow(10px 5px 3px rgba(0,0,0,0.7));
+    filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.5));
+  }
+  .container {
+    padding: 20px 20px;
+  }
+  .container-img {
+    padding: 20px;
+  }
+  .container-img img {
+    height: auto;
+    border-radius: 20px;
+  }
+  .container-text {
+    padding: 20px;
+  }
+  .container-text h1{
+    padding: 0px 0px 20px 0px;
+  }
+  .container-text p{
+    padding: 0px 0px 20px 0px;
+  }
+  .container-text a {
+    background-color: #1c8f9c;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+  .container-text a:hover{
+    background-color: white;
+    color: #1c8f9c;
+  }
+  /* Introduction */
+
+  .tm-section-title {
+    font-size: 2.6rem;
+    font-weight: normal;
+  }
+
+  .tm-intro-text {
+    font-size: 1.2rem;
+    line-height: 1.4;
+  }
+
+  .tm-icon {
+    display: block;
+    margin-bottom: 55px;
+    color: #3496d8;
+  }
+}

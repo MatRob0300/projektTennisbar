@@ -143,7 +143,7 @@ class Controller{
       }
     }
     public function speisekarte(){
-      
+
     }
     public function checkMailForPassReset(){
       if (isset($_POST['mt'])) {
