@@ -28,15 +28,83 @@
           <p>One advanced diverted domestic sex repeated bringing you old.
              Possible procured her trifling laughter thoughts property she met way.
              Companions shy had solicitude favourable own.</p>
-          <a href="?aktion=reservierungErstellen">jetzt reservieren</a>
+          <!--<a href="?aktion=reservierungErstellen">jetzt reservieren</a>-->
+          <button type="button" id="myBtn">jetzt reservieren</button>
         </div>
       </div>
-
     </main>
+    <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <form action="index.php?aktion=resErstellen" method="post" id="seaerchForTimes">
+        <div class="court">
+          <h2>Platzauswahl:</h2>
+          <select class="court-select" id="platznummer" name="court-s">
+            <option value="1">Platz A</option>
+            <option value="2">Platz B</option>
+          </select>
+        </div>
+        <div class="calendar-body">
+        <div class="calendar">
+          <div class="wrapper">
+            <div class="container-calendar">
+              <div class="button-container-calendar">
+                <button type="button" id="previous">&#8249;</button>
+                <button type="button" id="next">&#8250;</button>
+                <h3 id="monthHeader"></h3>
+                <p id="yearHeader"></p>
+              </div>
+
+              <table class="table-calendar" id="calendar">
+                <thead id="thead-month"></thead>
+                <tbody id="calendar-body"></tbody>
+              </table>
+
+              <div class="footer-container-calendar">
+                <label for="month">Jump To: </label>
+                <select id="month">
+                  <option value=0>Jan</option>
+                  <option value=1>Feb</option>
+                  <option value=2>Mär</option>
+                  <option value=3>Apr</option>
+                  <option value=4>Mai</option>
+                  <option value=5>Jun</option>
+                  <option value=6>Jul</option>
+                  <option value=7>Aug</option>
+                  <option value=8>Sep</option>
+                  <option value=9>Okt</option>
+                  <option value=10>Nov</option>
+                  <option value=11>Dez</option>
+                </select>
+                <select id="year"></select>
+              </div>
+
+
+              <p id="date-picked"></p>
+              <input type="text" id="date" name="date" hidden required>
+            </div>
+          </div>
+        </div>
+          <div class="time" id="time-select"></div>
+        <div class="res-button">
+          <button type="submit" name="submit" class="button">reservieren</button>
+        </div>
+        </div>
+        <?php
+        if(isset($_SESSION["errorMessageRes"])) {
+        ?>
+        <div class="error-message"><?php  echo $_SESSION["errorMessageRes"]; ?></div>
+        <?php
+        unset($_SESSION["errorMessageRes"]);
+        }
+        ?>
+      </form>
+    </div>
+  </div>
     <?php require_once 'views/footer.php'; ?>
 
     <script src="scripts/navbar.js" type="text/javascript"></script>
-
-    </script>
+    <script src="scripts/re.js" type="text/javascript"></script>
+    <script src="scripts/modalwindow.js" type="text/javascript"></script>
   </body>
 </html>
