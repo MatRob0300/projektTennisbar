@@ -19,6 +19,6 @@
         overflow-y: hidden;
       }
     </style>
-    <iframe src="models/speisekarte.pdf#toolbar=1"></iframe>
+    <iframe src="models/menu_DE.pdf#toolbar=1"></iframe>
   </body>
 </html>

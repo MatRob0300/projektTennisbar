@@ -34,7 +34,9 @@
 <main>
   <div class="info">
     <div class="info-desc">
-      <h1>Überschrift</h1>
+      <div class="section-title">
+        <h2>Our Story</h2>
+      </div>
       <p>One advanced diverted domestic sex repeated bringing you old.
         Possible procured her trifling laughter thoughts property she met way.
         Companions shy had solicitude favourable own. Which could saw guest man now heard but.

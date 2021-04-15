@@ -17,7 +17,7 @@ class Funktionen{
 
             $to = strip_tags($mail);
 
-            $mailer->From = ""; //email von Cheers
+            $mailer->From = "say.cheers@outlook.com"; //email von Cheers
             $mailer->FromName = "Cheers Tennisbar Andrian";
             $mailer->addAddress($to, $benutzer->getVorname() . " " . $benutzer->getNachname());
             $mailer->Subject = $subject;
@@ -36,7 +36,7 @@ class Funktionen{
 
             $to = strip_tags($mail);
 
-            $mailer->From = ""; //email von Cheers
+            $mailer->From = "say.cheers@outlook.com"; //email von Cheers
             $mailer->FromName = "Cheers Tennisbar Andrian";
             $mailer->addAddress($to, $vname . " " . $sname);
             $mailer->Subject = $subject;
@@ -60,7 +60,7 @@ class Funktionen{
             $benutzer = Benutzer::findeNachEmail($mail);
             $to = strip_tags($mail);
 
-            $mailer->From = ""; //email von Cheers
+            $mailer->From = "say.cheers@outlook.com"; //email von Cheers
             $mailer->FromName = "Cheers Tennisbar Andrian";
             $mailer->addAddress($to, $benutzer->getVorname().' '.$benutzer->getNachname());
             $mailer->Subject = $subject;

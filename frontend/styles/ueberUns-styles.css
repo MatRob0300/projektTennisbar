@@ -10,10 +10,24 @@ main {
   text-align: center;
 }
 .quotation cite{
-  font-size: 28px;
+  font-weight: 400;
+	font-size: 38px;
+	color: rgba(230,166,63,0.8) /*rgba(20,148,157,0.8)*/;
+	text-transform: uppercase;
+	position: relative;
+	margin-top: 10px;
+	margin-bottom: 15px;
+	padding-bottom: 20px;
+  -webkit-filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.2));
+  filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.2));
 }
 .firstParagraph, .secondParagraph, .closing {
   padding: 20px 150px;
+  color: rgba(32,42,44,0.8);
+  font-size: 20px;
+  font-family: 'Autour One', sans-serif;
+  line-height: 30px;
+  text-align: justify;
 }
 .picture {
   padding: 20px 50px;

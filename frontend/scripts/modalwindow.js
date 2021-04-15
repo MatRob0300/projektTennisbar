@@ -2,15 +2,13 @@ var modal = document.getElementById("myModal");
 
 // Get the button that opens the modal
 var btn = document.getElementById("myBtn");
-if (btn.clicked == true) {
-  var logged = "<?php echo if(!isset($_SESSION['loggedIn'])){header('Location: index.php?aktion=login');}";
-}
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 
 // When the user clicks on the button, open the modal
 btn.onclick = function() {
+  var logged = "<?php echo if(!isset($_SESSION['loggedIn'])){ header('Location: index.php?aktion=login'); } ?>";
   modal.style.display = "block";
 }
 

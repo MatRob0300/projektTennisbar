@@ -9,7 +9,6 @@
     <link rel="stylesheet" type="text/css" href="styles/underMain-styles.css">
     <link rel="stylesheet" type="text/css" href="styles/bar-styles.css">
     <link rel="stylesheet" type="text/css" href="styles/navbar-styles.css">
-    <link rel="stylesheet" type="text/css"  href="styles/bootstrap.css">
   </head>
   <body>
     <?php require_once 'views/navbar.php'; ?>
@@ -26,21 +25,21 @@
             <h2>Our Specials</h2>
           </div>
           <div class="row">
-            <div class="col-xs-12 col-sm-4">
+            <div class="col-sm-4">
               <div class="features-item">
                 <h3>Lorem ipsum dolor</h3>
                 <img src="images/bildplatzhalter.png" class="img-responsive" alt="">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sed commodo.</p>
               </div>
             </div>
-            <div class="col-xs-12 col-sm-4">
+            <div class="col-sm-4">
               <div class="features-item">
                 <h3>Consectetur adipiscing</h3>
                 <img src="images/bildplatzhalter.png" class="img-responsive" alt="">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sed commodo.</p>
               </div>
             </div>
-            <div class="col-xs-12 col-sm-4">
+            <div class="col-sm-4">
               <div class="features-item">
                 <h3>Duis sed dapibus</h3>
                 <img src="images/bildplatzhalter.png" class="img-responsive" alt="">
@@ -53,8 +52,8 @@
       <!-- About Section -->
       <div id="about">
         <div class="container-fluid">
-          <div class="row">
-            <div class="col-xs-12 col-md-6 about-img"> </div>
+          <div class="row row-2">
+            <div class="col-xs-12 about-img"></div>
             <div class="col-xs-12 col-md-3 col-md-offset-1">
               <div class="about-text">
                 <div class="section-title">
@@ -62,6 +61,7 @@
                 </div>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante facilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare diam commodo nibh.</p>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante facilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare.</p>
+                <a href="?aktion=speisekarte" target="karten">unsere Karten</a>
               </div>
             </div>
           </div>
