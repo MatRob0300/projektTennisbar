@@ -14,8 +14,8 @@ main {
   height: auto;
   background-color: white;
   margin: 15px 50px;
-  -webkit-filter: drop-shadow(10px 5px 3px rgba(0,0,0,0.7));
-  filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.5));
+  -webkit-filter: drop-shadow(5px 5px 5px 5px rgba(0,0,0,0.7));
+  filter: drop-shadow(5px 5px 5px 5px rgba(0,0,0,0.5));
 }
 main h1, h2, h3 {
 	font-family: 'Raleway', sans-serif;
@@ -47,27 +47,18 @@ main h3 {
 	font-size: 24px;
 	font-weight: 400;
 	color: #333;
+  font-family: 'Autour One',sans-serif;
+  -webkit-filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.2));
+  filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.2));
 }
 main p {
   color: rgba(32,42,44,0.8);
   font-size: 16px;
   font-family: 'Autour One', sans-serif;
   line-height: 25px;
-}
-main p.intro {
-	margin: 12px 0 0;
-	line-height: 24px;
-}
-main a {
-	color: #8eb640;
-}
-main a:hover, a:focus {
-	text-decoration: none;
-	color: #222;
-}
-main a:focus {
-	outline: none;
-	outline-offset: none;
+  font-family: 'Autour One',sans-serif;
+  -webkit-filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.2));
+  filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.2));
 }
 /* Features Section */
 #features {

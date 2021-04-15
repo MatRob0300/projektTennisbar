@@ -27,7 +27,7 @@ header .headertext {
 }
 .headertext h1 {
   text-align: center;
-  margin: 0px 0px 0px 0px;
+  margin: 0px;
   font-size: 180px;
   font-family: 'Dancing script', cursive;
   color: white;
@@ -75,7 +75,7 @@ main {
 .info-desc {
   padding: 20px 0px;
 }
-.info-desc h2 {
+.info-desc h1 {
   font-weight: 400;
 	font-size: 38px;
 	color: rgba(230,166,63,0.8) /*rgba(20,148,157,0.8)*/;
@@ -88,7 +88,7 @@ main {
   -webkit-filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.2));
   filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.2));
 }
-.info-desc h2::after {
+.info-desc h1::after {
 	position: absolute;
 	content: "";
 	background: rgba(20,148,157,0.8);

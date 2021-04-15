@@ -35,7 +35,7 @@
   <div class="info">
     <div class="info-desc">
       <div class="section-title">
-        <h2>Our Story</h2>
+        <h1>Our Story</h1>
       </div>
       <p>One advanced diverted domestic sex repeated bringing you old.
         Possible procured her trifling laughter thoughts property she met way.
