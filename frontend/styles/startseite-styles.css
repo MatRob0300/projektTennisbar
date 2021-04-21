@@ -154,7 +154,7 @@ main {
   padding: 0px 50px;
 }
 .tabcontent li {
-  margin: 10px 0px 10px 0px;
+  margin: 5px 0px;
   color: rgba(32,42,44,0.8);
   font-size: 18px;
   font-family: 'Arial', sans-serif;

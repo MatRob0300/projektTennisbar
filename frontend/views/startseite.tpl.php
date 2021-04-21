@@ -66,7 +66,7 @@
             <li><span>Do:</span><span> 10:00 - 18:00Uhr</span></li>
             <li><span>Fr:</span><span> 10:00 - 18:00Uhr</span></li>
             <li><span>Sa:</span><span> 10:00 - 18:00Uhr</span></li>
-          </ul>
+         </ul>
         </div>
       </div>
 
