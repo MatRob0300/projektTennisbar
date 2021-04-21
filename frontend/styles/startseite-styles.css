@@ -112,7 +112,7 @@ main {
 }
 .info-text {
   width: 60%;
-  height: 300px;
+  height: auto;
 }
 .tab {
   overflow: hidden;
@@ -145,20 +145,32 @@ main {
 .tabcontent {
   display: inline-block;
   margin: 10px 0px 10px 15px;
-  max-height: 150px;
+  height: auto;
   padding: 6px 12px;
   border-left: 1px solid #ccc;
   border-top: none;
 }
 .tabcontent ul {
-  margin: 0px 0px 50px 0px;
   padding: 0px 50px;
 }
 .tabcontent li {
   margin: 10px 0px 10px 0px;
   color: rgba(32,42,44,0.8);
-  font-size: 20px;
-  font-family: 'Autour One', sans-serif;
+  font-size: 18px;
+  font-family: 'Arial', sans-serif;
+  list-style-type: none;
+}
+.tabcontent li span:nth-child(1){
+  margin: 0px 10px;
+}
+.tabcontent li:nth-child(2) span:nth-child(2){
+  margin: 0px 10px;
+}
+.tabcontent li:nth-child(3) span:nth-child(2){
+  margin: 0px 4px;
+}
+.tabcontent li:nth-child(5) span:nth-child(2){
+  margin: 0px 6px;
 }
 .tabcontent {
   animation: fadeEffect 1s; /* Fading effect takes 1 second */
@@ -171,103 +183,11 @@ main {
 }
 .map {
   width: 40%;
-  height: 220px;
+  height: 280px;
   margin: 0px 10px 0px 100px;
   z-index: 0;
   -webkit-filter: drop-shadow(2px 2px 1px rgba(0,0,0,0.8));
   filter: drop-shadow(2px 2px 1px rgba(0,0,0,0.8));
-}
-
-/* abschnitt3 */
-.a3 {
-  margin: 0px 25px 0px 25px;
-  height: auto;
-}
-.header-a3 {
-  display: flex;
-}
-.header-a3 h1 {
-  margin: 50px 0px 0px 50px;
-
-}
-.header-a3 img {
-  margin: 40px 0px 0px 10px;
-  width: 50px;
-  height: 50px;
-}
-.flex-container {
-  margin: 0px 10% 0px 10%;
-  padding: 0px 0px 0px 20px;
-  display: flex;
-  flex-wrap: wrap;
-}
-.flex-container > div {
-  background-color: #f1f1f1;
-  width: 45%;
-  height: 250px;
-  margin: 25px;
-  border-radius: 25px;
-}
-.k-container {
-  margin: 20px;
-  display: flex;
-  flex-wrap: wrap;
-}
-.k-profilIcon {
-  margin: 20px 0px 0px 20px;
-  width: 65px;
-  height: 50px;
-  float:left;
-}
-.k-profilIcon img{
-  width: 100%;
-  height: 100%;
-  border-radius: 50px;
-}
-.k-info {
-  margin: 20px 0px 0px 20px;
-}
-.k-info h1 {
-  margin: 0px 0px 0px 0px;
-  padding: 10px 0px 0px 0px;
-  font-size: 20px;
-}
-.k-info h2 {
-  margin: 0px 0px 0px 0px;
-  padding: 2px 0px 0px 0px;
-  font-size: 10px;
-}
-.k-inhalt {
- margin: 20px 40px 0px 40px;
- clear: both;
- display: flex;
- flex-direction: column;
-}
-.k-bewertung span{
-  margin: 0;
-}
-.checked {
-  color: orange;
-}
-.more-button button {
-  background-color: #1c8f9c;
-  width: 200px;
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  cursor: pointer;
-  display: block;
-  margin: 0 auto;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-.more-button button:hover{
-  background-color: rgb(200,200,200);
-  color: #4CAF50;
 }
 @media screen and (max-width: 800px) {
   .headertext h1 {
@@ -307,7 +227,6 @@ main {
   }
   .info-text {
     width: 100%;
-    height: 300px;
   }
   .tab button {
     width: 50%;
@@ -316,11 +235,9 @@ main {
   }
   .tabcontent {
     margin: 10px 0px 10px 15px;
-    max-height: 150px;
     padding: 6px 12px;
   }
   .tabcontent ul {
-    margin: 0px 0px 50px 0px;
     padding: 0px 50px;
   }
   .tabcontent li {
@@ -330,7 +247,7 @@ main {
   .map {
     width: 100%;
     height: 200px;
-    margin: 0px;
+    margin: 20px 0px;
     z-index: 0;
   }
 }
@@ -354,7 +271,6 @@ main {
   }
   .info-text {
     width: 100%;
-    height: 300px;
   }
   .tab button {
     width: 50%;
@@ -363,11 +279,9 @@ main {
   }
   .tabcontent {
     margin: 10px 0px 10px 15px;
-    max-height: 150px;
     padding: 6px 12px;
   }
   .tabcontent ul {
-    margin: 0px 0px 50px 0px;
     padding: 0px 50px;
   }
   .tabcontent li {
@@ -377,7 +291,7 @@ main {
   .map {
     width: 100%;
     height: 150px;
-    margin: 0px;
+    margin: 20px 0px;
     z-index: 0;
   }
 }
@@ -401,7 +315,6 @@ main {
   }
   .info-text {
     width: 100%;
-    height: 300px;
   }
   .tab button {
     width: 50%;
@@ -410,11 +323,9 @@ main {
   }
   .tabcontent {
     margin: 10px 0px 10px 15px;
-    max-height: 150px;
     padding: 6px 12px;
   }
   .tabcontent ul {
-    margin: 0px 0px 50px 0px;
     padding: 0px 50px;
   }
   .tabcontent li {
@@ -424,7 +335,7 @@ main {
   .map {
     width: 100%;
     height: 150px;
-    margin: 0px;
+    margin: 20px 0px;
     z-index: 0;
   }
 }
@@ -451,7 +362,6 @@ main {
   }
   .info-text {
     width: 100%;
-    height: 250px;
   }
   .tab button {
     width: 50%;
@@ -460,11 +370,9 @@ main {
   }
   .tabcontent {
     margin: 10px 0px 10px 15px;
-    max-height: 150px;
     padding: 6px 12px;
   }
   .tabcontent ul {
-    margin: 0px 0px 50px 0px;
     padding: 0px 20px;
   }
   .tabcontent li {
@@ -474,7 +382,7 @@ main {
   .map {
     width: 100%;
     height: 150px;
-    margin: 0px;
+    margin: 20px 0px;
     z-index: 0;
   }
 }
@@ -498,7 +406,7 @@ main {
   }
   .info-text {
     width: 100%;
-    height: 250px;
+    height: auto;
   }
   .tab button {
     width: 50%;
@@ -506,13 +414,8 @@ main {
     font-size: 16px;
   }
   .tabcontent {
-    margin: 10px 0px 10px 15px;
-    max-height: 150px;
+    margin: 10px 0px 20px 15px;
     padding: 6px 12px;
-  }
-  .tabcontent ul {
-    margin: 0px 0px 50px 0px;
-    padding: 0px 20px;
   }
   .tabcontent li {
     margin: 10px 0px 10px 0px;
@@ -521,7 +424,7 @@ main {
   .map {
     width: 100%;
     height: 150px;
-    margin: 0px;
+    margin: 20px 0px;
     z-index: 0;
   }
 }

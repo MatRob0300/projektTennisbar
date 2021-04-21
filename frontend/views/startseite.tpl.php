@@ -58,11 +58,14 @@
         </div>
 
         <div id="oeffnungszeiten" class="tabcontent">
+
           <ul>
-            <li>Mo:<span> 10:00 - 18:00Uhr</span></li>
-            <li>Di:<span> 10:00 - 18:00Uhr</span></li>
-            <li>Mi:<span> 10:00 - 18:00Uhr</span></li>
-            <li>Do:<span> 10:00 - 18:00Uhr</span></li>
+            <li><span>Mo:</span><span> 10:00 - 18:00Uhr</span></li>
+            <li><span>Di:</span><span> 10:00 - 18:00Uhr</span></li>
+            <li><span>Mi:</span><span> 10:00 - 18:00Uhr</span></li>
+            <li><span>Do:</span><span> 10:00 - 18:00Uhr</span></li>
+            <li><span>Fr:</span><span> 10:00 - 18:00Uhr</span></li>
+            <li><span>Sa:</span><span> 10:00 - 18:00Uhr</span></li>
           </ul>
         </div>
       </div>
