@@ -7,10 +7,7 @@ var btn = document.getElementById("myBtn");
 var span = document.getElementsByClassName("close")[0];
 
 // When the user clicks on the button, open the modal
-btn.onclick = function() {
-  var logged = "<?php echo if(!isset($_SESSION['loggedIn'])){ header('Location: index.php?aktion=login'); } ?>";
-  var log = "<?php echo $_SESSION['loggedIn'];?>";
-  alert(log);
+function clickBtn(){
   modal.style.display = "block";
 }
 

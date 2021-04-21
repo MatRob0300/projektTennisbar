@@ -29,12 +29,16 @@
           <p>One advanced diverted domestic sex repeated bringing you old.
              Possible procured her trifling laughter thoughts property she met way.
              Companions shy had solicitude favourable own.</p>
-          <a href="?aktion=reservierungErstellen">jetzt reservieren</a>
-          <!--<button type="button" id="myBtn">jetzt reservieren</button>-->
+          <!--<a href="?aktion=reservierungErstellen">jetzt reservieren</a>-->
+          <?php if(!isset($_SESSION["loggedIn"])){ ?>
+            <p>Zum reservieren: <a href="?aktion=login">login</a></p>
+          <?php }else { ?>
+            <button type="button" id="myBtn" onclick="clickBtn()">jetzt reservieren</button>
+          <?php } ?>
         </div>
       </div>
     </main>
-    <!--<div id="myModal" class="modal">
+    <div id="myModal" class="modal">
     <div class="modal-content">
       <span class="close">&times;</span>
       <form action="index.php?aktion=resErstellen" method="post" id="seaerchForTimes">
@@ -92,20 +96,20 @@
         </div>
       </div>
         <?php
-      //  if(isset($_SESSION["errorMessageRes"])) {
+       if(isset($_SESSION["errorMessageRes"])) {
         ?>
-        <div class="error-message"><?php // echo $_SESSION["errorMessageRes"]; ?></div>
+        <div class="error-message"><?php echo $_SESSION["errorMessageRes"]; ?></div>
         <?php
-        //unset($_SESSION["errorMessageRes"]);
-        //}
+        unset($_SESSION["errorMessageRes"]);
+        }
         ?>
       </form>
     </div>
-  </div>-->
+  </div>
     <?php require_once 'views/footer.php'; ?>
 
     <script src="scripts/navbar.js" type="text/javascript"></script>
-    <!--<script src="scripts/re.js" type="text/javascript"></script>
-    <script src="scripts/modalwindow.js" type="text/javascript"></script>-->
+    <script src="scripts/re.js" type="text/javascript"></script>
+    <script src="scripts/modalwindow.js" type="text/javascript"></script>
   </body>
 </html>
