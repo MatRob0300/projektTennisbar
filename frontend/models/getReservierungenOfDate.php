@@ -11,11 +11,14 @@ if(isset($_GET["datum"]) && isset($_GET["benutzer"])){
   echo "<th>Zeit</th>";
   echo "</thead>";
   echo "<tbody>";
-  if ($_GET['datum'] != 'mr') {
-    $res = Reservierung::findeNachDatumVonBenutzer($_GET["datum"], $_GET["benutzer"]);
-  }else {
+  if ($_GET['datum'] == 'all') {
     $res = Reservierung::findeAlleNachBenutzer(Benutzer::finde($_GET["benutzer"]));
+  }else if($_GET['datum'] == 'heu'){
+    $res = Reservierung::findeAlleHeutigenResVonBenutzer(Benutzer::finde($_GET["benutzer"]));
+  }else{
+    $res = Reservierung::findeNachDatumVonBenutzer($_GET["datum"], $_GET["benutzer"]);
   }
+
   foreach ($res as $key => $re) {
     echo "<tr>";
     echo "<td>".($key+1)."</td>";

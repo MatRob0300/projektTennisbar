@@ -14,11 +14,10 @@
       <h1>Meine Reservierungen</h1>
     </header>
     <div class="row">
-
 			     <div class="panel panel-back noti-box">
              <div class="icon-box bg-color-red set-icon"></div>
               <div class="text-box">
-                <p class="main-text">120</p>
+                <p class="main-text"></p>
                 <p class="text-muted">HEUTE</p>
               </div>
             </div>
@@ -38,11 +37,20 @@
             </div>
 		     </div>
       <div class="container">
-        <!--<button type="button" name="button" onclick="showResOfDate('mr',<?php //echo $_SESSION['userId'] ?>)">alle Reservierungen</button>-->
+        <select name="date" onchange="showResOfDate(this.value,<?php echo $_SESSION['userId'] ?>)">
+          <option value=""></option>
+          <?php foreach ($uDatums as $datum) { ?>
+            <option value="<?php echo $datum->getDatum(); ?>"><?php echo $datum->getDatum(); ?></option>
+          <?php } ?>
+        </select>
+        <button type="button" name="button" onclick="showResOfDate('all',<?php echo $_SESSION['userId'] ?>)">alle Reservierungen</button>
+        <button type="button" name="button" onclick="showResOfDate('heu',<?php echo $_SESSION['userId'] ?>)">heute</button>
         <div class="table-wrapper">
-          <table class="fl-table" id="res"></table>
+        <table class="fl-table" id="res"></table>
         </div>
       </div>
+
+
 
       <script src="scripts/mr.js" type="text/javascript"></script>
   </body>

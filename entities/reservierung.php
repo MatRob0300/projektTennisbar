@@ -158,11 +158,23 @@ public function findeAlleBenutzerUnabgelaufenDatum(Benutzer $benutzer){
   return $abfrage->fetchAll();
 }
 public function findeAlleUnabgelaufenDatumVonBenutzer(Benutzer $benutzer){
-  $sql = 'SELECT distinct reservierung.datum FROM reservierung,benutzer WHERE benutzer.benutzerid = reservierung.benutzerid AND benutzer.benutzerid = ? AND reservierung.datum >= CURRENT_DATE';
+  $sql = 'SELECT distinct reservierung.datum FROM reservierung,benutzer WHERE benutzer.benutzerid = reservierung.benutzerid AND benutzer.benutzerid = ?';
   $abfrage = DB::getDB()->prepare($sql);
   $abfrage->execute(array($benutzer->getBenutzerid()));
   $abfrage->setFetchMode(PDO::FETCH_CLASS, 'Reservierung');
   return $abfrage->fetchAll();
+}
+public function findeAlleHeutigenResVonBenutzer(Benutzer $benutzer){
+  $sql = 'SELECT reservierung.* FROM reservierung,benutzer WHERE benutzer.benutzerid = reservierung.benutzerid AND benutzer.benutzerid = ? AND reservierung.datum = CURRENT_DATE';
+  $abfrage = DB::getDB()->prepare($sql);
+  $abfrage->execute(array($benutzer->getBenutzerid()));
+  $abfrage->setFetchMode(PDO::FETCH_CLASS, 'Reservierung');
+  return $abfrage->fetchAll();
+}
+public function getAnzahlVerfuegbareZeitenHeute(){
+  $sql = 'SELECT count(reservierung.zeit) FROM reservierung WHERE reservierung.datum = CURRENT_DATE';
+  $abfrage = DB::getDB()->prepare($sql);
+  return $abfrage->fetch();
 }
 
 

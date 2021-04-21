@@ -96,11 +96,12 @@ class Controller{
         $reservierung->speichere();
         $_SESSION['errorMessageRes'] = "Erfolgreich reserviert";
         //Funktionen::send_bestaetigungsEmailRes();
-        header("Location: index.php?aktion=reservierungErstellen");
+        header("Location: index.php?aktion=platzreservierung");
     }
     public function meineReservierungen(){
       $this->addContext("reservierungen",Reservierung::findeAlleNachBenutzer(Benutzer::finde($_SESSION['userId'])));
       $this->addContext("uDatums",Reservierung::findeAlleUnabgelaufenDatumVonBenutzer(Benutzer::finde($_SESSION['userId'])));
+      $this->addContext("zeitAn",Reservierung::getAnzahlVerfuegbareZeitenHeute());
     }
     public function presetSemail(){
 
