@@ -8,7 +8,7 @@ if(isset($_GET["datum"]) && isset($_GET["benutzer"])){
   echo "<th>Nr.</th>";
   echo "<th>Platz</th>";
   echo "<th>Datum</th>";
-  echo "<th>Zeit</th>";
+  echo "<th>Zeit</th></tr>";
   echo "</thead>";
   echo "<tbody>";
   if ($_GET['datum'] == 'all') {

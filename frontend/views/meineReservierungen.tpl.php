@@ -13,11 +13,11 @@
     <header>
       <h1>Meine Reservierungen</h1>
     </header>
-    <div class="row">
+    <!--<div class="row">
 			     <div class="panel panel-back noti-box">
              <div class="icon-box bg-color-red set-icon"></div>
               <div class="text-box">
-                <p class="main-text"></p>
+                <p class="main-text">15</p>
                 <p class="text-muted">HEUTE</p>
               </div>
             </div>
@@ -35,21 +35,44 @@
                 <p class="text-muted">GESAMT</p>
               </div>
             </div>
-		     </div>
+		     </div>-->
       <div class="container">
         <select name="date" onchange="showResOfDate(this.value,<?php echo $_SESSION['userId'] ?>)">
-          <option value=""></option>
           <?php foreach ($uDatums as $datum) { ?>
             <option value="<?php echo $datum->getDatum(); ?>"><?php echo $datum->getDatum(); ?></option>
           <?php } ?>
         </select>
-        <button type="button" name="button" onclick="showResOfDate('all',<?php echo $_SESSION['userId'] ?>)">alle Reservierungen</button>
-        <button type="button" name="button" onclick="showResOfDate('heu',<?php echo $_SESSION['userId'] ?>)">heute</button>
+        <button type="button" name="button" class="btn" onclick="showResOfDate('all',<?php echo $_SESSION['userId'] ?>)">alle Reservierungen</button>
+        <button type="button" name="button" class="btn" onclick="showResOfDate('heu',<?php echo $_SESSION['userId'] ?>)">heute</button>
         <div class="table-wrapper">
-        <table class="fl-table" id="res"></table>
+        <table class="fl-table" id="res">
+          <thead>
+            <tr>
+              <th>Nr.</th>
+              <th>Platz</th>
+              <th>Datum</th>
+              <th>Zeit</th>
+            </tr>
+          </thead>
+          <tbody>
+            <?php foreach ($bDatums as $key => $dates) { ?>
+              <tr>
+                <td><?php echo ($key+1) ?></td>
+                <?php if ($dates->getPlatznummer() == 1) { ?>
+                  <td>Platz A</td>
+              <?php  } else { ?>
+                <td>Platz B</td>
+              <?php  } ?>
+                <td><?php echo $dates->getDatum() ?></td>
+                <td><?php echo $dates->getZeit() ?></td>
+                <td><a href='?aktion=loescheReservierung&reservierungid=<?php echo $dates->getReservierungid() ?>'>löschen<a></td>
+              </tr>
+          <?php  } ?>
+          </tbody>
+        </table>
         </div>
       </div>
-
+      <?php require_once 'views/footer.php'; ?>
 
 
       <script src="scripts/mr.js" type="text/javascript"></script>

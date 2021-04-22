@@ -5,6 +5,7 @@ function showResOfDate(date,user) {
      type: 'get',
      success: function(response){
         if(response != 0){
+            document.getElementById('res').innerHTML = "";
             document.getElementById('res').innerHTML = response;
         }
      },

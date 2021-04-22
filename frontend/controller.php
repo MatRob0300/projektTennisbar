@@ -101,7 +101,8 @@ class Controller{
     public function meineReservierungen(){
       $this->addContext("reservierungen",Reservierung::findeAlleNachBenutzer(Benutzer::finde($_SESSION['userId'])));
       $this->addContext("uDatums",Reservierung::findeAlleUnabgelaufenDatumVonBenutzer(Benutzer::finde($_SESSION['userId'])));
-      $this->addContext("zeitAn",Reservierung::getAnzahlVerfuegbareZeitenHeute());
+      $this->addContext("bDatums",Reservierung::findeAlleBenutzerUnabgelaufenDatum(Benutzer::finde($_SESSION['userId'])));
+
     }
     public function presetSemail(){
 

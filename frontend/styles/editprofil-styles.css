@@ -19,6 +19,29 @@ main {
 .content {
   margin: 20px 50px;
 }
+.content h1 {
+  font-weight: 400;
+	font-size: 38px;
+	color: rgba(230,166,63,0.8) /*rgba(20,148,157,0.8)*/;
+	text-transform: uppercase;
+	position: relative;
+	margin-top: 10px;
+	margin-bottom: 15px;
+	padding-bottom: 20px;
+  font-family: 'Autour One',sans-serif;
+  -webkit-filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.2));
+  filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.2));
+}
+.content h1::after {
+  position: absolute;
+	content: "";
+	background: rgba(20,148,157,0.8);
+	height: 2px;
+	width: 70px;
+	bottom: 0;
+	margin-left: -35px;
+	left: 40px;
+}
 .page-title {
     border-bottom: 1px solid #e9e9e9;
     margin: 0px 0px 30px 0px;
@@ -267,22 +290,7 @@ a {
       font: inherit;
       margin: 0;
   }
-  .btn-xs, .btn-group-xs > .btn, .detail-gallery .btn-group-xs > .owl-next, .detail-gallery .btn-group-xs > .owl-prev {
-      padding: 6px 5px;
-  }
-  .btn-primary, .fileinput-upload-button, .detail-gallery .owl-next, .detail-gallery .owl-prev {
-      background-color: #49464b;
-      display: inline-block;
-      padding: 9px 15px;
-      transition: background-color .15s linear;
-  }
-  .btn, .detail-gallery .owl-next, .detail-gallery .owl-prev {
-      border: 0px;
-      border-radius: 0px;
-      padding: 9px 15px;
-      position: relative;
-      transition: background-color .15s linear;
-  }
+
   .pull-right {
       float: right !important;
   }
@@ -293,18 +301,13 @@ a {
   .form-control[disabled] {
     background-color: rgb(220,220,220);
   }
-  .btn-xs, .btn-group-xs > .btn, .detail-gallery .btn-group-xs > .owl-next, .detail-gallery .btn-group-xs > .owl-prev {
-      padding: 1px 5px;
-      font-size: 12px;
-      line-height: 1.5;
-      border-radius: 3px;
-  }
-  .btn-primary, .fileinput-upload-button, .detail-gallery .owl-next, .detail-gallery .owl-prev {
+
+  .btn-primary {
       color: #fff;
       background-color: #337ab7;
       border-color: #2e6da4;
   }
-  .btn, .detail-gallery .owl-next, .detail-gallery .owl-prev {
+  .btn {
       display: inline-block;
       margin-bottom: 0;
       font-weight: normal;
@@ -338,7 +341,7 @@ a {
   a {
       background-color: transparent;
   }
-  .btn:after, .detail-gallery, .detail-gallery {
+  .btn:after {
       background-color: rgba(0, 0, 0, 0.15);
       bottom: 0px;
       content: '';

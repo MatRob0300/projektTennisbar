@@ -171,11 +171,6 @@ public function findeAlleHeutigenResVonBenutzer(Benutzer $benutzer){
   $abfrage->setFetchMode(PDO::FETCH_CLASS, 'Reservierung');
   return $abfrage->fetchAll();
 }
-public function getAnzahlVerfuegbareZeitenHeute(){
-  $sql = 'SELECT count(reservierung.zeit) FROM reservierung WHERE reservierung.datum = CURRENT_DATE';
-  $abfrage = DB::getDB()->prepare($sql);
-  return $abfrage->fetch();
-}
 
 
 

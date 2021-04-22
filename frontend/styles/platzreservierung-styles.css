@@ -256,10 +256,6 @@ main {
   justify-content: flex-end;
   padding: 0px 150px 20px 0px;
 }
-.res-button [type="submit"]{
-  width: 150px;
-  height: 40px;
-}
 .res-button .btn {
   margin: 0px 10px;
   width: 150px;
@@ -267,6 +263,25 @@ main {
 }
 .calendar-body {
   margin: 0px 50px;
+}
+.res-button button {
+  background-color: #1c8f9c;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  -webkit-filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.7));
+  filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.5));
+  text-decoration: none;
+  display: inline-block;
+  transition-duration: 0.4s;
+  font-size: 17px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.res-button button:hover {
+  background-color: white;
+  color: #1c8f9c;
 }
 
 .error-message {
@@ -375,7 +390,7 @@ main {
     margin: 5px 0px;
   }
   .court select{
-    width: 50vw;
+    width: 70vw;
     height: 35px;
     font-size: 11pt;
   }
@@ -386,10 +401,10 @@ main {
   .wrapper {
     width: 100%;
     height: auto;
-    padding: 0px 50px;
+    padding: 0px 0px;
   }
   .container-calendar {
-    padding: 15px;
+    padding: 15px 0px;
     width: 100%;
     margin: 0 auto;
     overflow: auto;
@@ -483,24 +498,23 @@ main {
   }
   .time {
     width: 100%;
-    height: 120px;
-    margin: 0px 0px;
+    height: 60px;
+    margin: 20px 0px;
     text-align: center;
   }
   .time select{
-    width: 50vw;
+    width: 70vw;
     height: 35px;
     font-size: 11pt;
-    padding: 0px 25px;
+    padding: 0px 20px;
   }
   .res-button {
     display: flex;
     justify-content: flex-end;
-    padding: 0px 150px 20px 0px;
+    padding: 0px 10px 20px 0px;
   }
   .res-button [type="submit"]{
     width: 150px;
-    height: 40px;
   }
   .res-button .btn {
     margin: 0px 10px;
