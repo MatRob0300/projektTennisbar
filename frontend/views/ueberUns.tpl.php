@@ -33,10 +33,11 @@
           hausgemacht, saftig und mit frischen und einheimischen Zutaten.
           Auch das Trinken soll zu diesem Konzept passen -
           deshalb versuchen wir einheimische Produzenten zu unterstützen und auf Qualität besonders zu achten.
-          Nur das Beste für unsere Gäste!</p>
+          Nur das Beste für unsere Gäste. </p><br>
+          <p>Viktoria und Klaus mit Team!</p>
       </div>
       <div class="closing">
-        <p>#wirliebenburger</p>
+        <p>#cheersmoments</p>
       </div>
       <div class="picture">
         <img src="images/bildplatzhalter.png" alt="bildTennisbar">

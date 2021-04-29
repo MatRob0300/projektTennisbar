@@ -24,7 +24,7 @@
           <div class="section-title">
             <h2>Our Specials</h2>
           </div>
-          <div class="row">
+          <div class="row bd-1">
             <div class="col-sm-4">
               <div class="features-item">
                 <h3>Lorem ipsum dolor</h3>
