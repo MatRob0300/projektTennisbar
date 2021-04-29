@@ -118,6 +118,8 @@ main {
   overflow: hidden;
   border: 1px solid #ccc;
   background-color: #f1f1f1;
+  -webkit-filter: drop-shadow(0.5px 0.5px 0.5px rgba(0,0,0,0.7));
+  filter: drop-shadow(0.5px 0.5px 0.5px rgba(0,0,0,0.5));
 
 }
 .tab button {

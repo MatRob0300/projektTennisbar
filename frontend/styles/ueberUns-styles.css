@@ -35,6 +35,8 @@ main {
 .picture img {
   width: 100%;
   height: 250px;
+  -webkit-filter: drop-shadow(0.5px 0.5px 0.5px rgba(0,0,0,0.7));
+  filter: drop-shadow(0.5px 0.5px 0.5px rgba(0,0,0,0.5));
 }
 @media screen and (max-width: 1200px) {
   header .headertext {

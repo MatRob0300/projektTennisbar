@@ -9,12 +9,17 @@ main {
   height: auto;
 }
 .zurueck {
-  width: 30px;
-  height: 30px;
+  width: 50px;
+  height: 50px;
 }
 .zurueck a,img {
   width: 100%;
-  height: auto
+  height: auto;
+  padding: 10px;
+}
+.zurueck img {
+  border: 2px solid black;
+  border-radius: 25px;
 }
 .content {
   margin: 20px 50px;

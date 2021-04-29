@@ -14,11 +14,13 @@ main {
   height: auto;
   background-color: white;
   margin: 15px 50px;
-  -webkit-filter: drop-shadow(5px 5px 5px 5px rgba(0,0,0,0.7));
-  filter: drop-shadow(5px 5px 5px 5px rgba(0,0,0,0.5));
+  -webkit-filter: drop-shadow(0.5px 0.5px 0.5px rgba(0,0,0,0.7));
+  filter: drop-shadow(0.5px 0.5px 0.5px rgba(0,0,0,0.5));
 }
 main h1, h2, h3 {
 	font-family: 'Raleway', sans-serif;
+  -webkit-filter: drop-shadow(0.5px 0.5px 0.5px rgba(0,0,0,0.7));
+  filter: drop-shadow(0.5px 0.5px 0.5px rgba(0,0,0,0.5));
 }
 main h2 {
 	font-weight: 400;
@@ -99,6 +101,8 @@ main p {
 	background: #444 url('../images/bildplatzhalter.png') center center no-repeat;
 	background-size: cover;
 	height: 570px;
+  -webkit-filter: drop-shadow(0.5px 0.5px 0.5px rgba(0,0,0,0.7));
+  filter: drop-shadow(0.5px 0.5px 0.5px rgba(0,0,0,0.5));
 }
 #about p {
 	line-height: 24px;

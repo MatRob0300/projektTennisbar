@@ -9,7 +9,6 @@ class Controller{
         $this->generatePage($aktion);
     }
     public function startseite(){
-      $this->addContext("kommentare",Kommentar::findeAlle());
     }
     public function platzreservierung(){
     }
@@ -76,15 +75,6 @@ class Controller{
         }
       }
     }
-    public function bewertungErstellen(){
-        $this->addContext("benutzer",Benutzer::finde($_SESSION['userId']));
-    }
-    public function saveBewertung(){
-      $datetime = date('d.m.Y').', '.date('H:i');
-      $kommentar = new Kommentar(array("kname"=>$_POST['name'],"datum"=>$datetime,"text"=>$_POST['b_text'],"bewertung"=>$_POST['bewertung'],"benutzerid"=>$_REQUEST['benutzerid']));
-      $kommentar->speichere();
-      header("Location: index.php?aktion=startseite");
-    }
     public function reservierungErstellen(){
       $this->addContext("reservierungen", Reservierung::findeAlle());
     }
@@ -136,10 +126,10 @@ class Controller{
             $altBenutzer = Benutzer::finde($_SESSION['userId']);
             $altBenutzer->setPasswort($_POST['pass']);
             $altBenutzer->speichere();
-            header("Location: index.php?aktion=editprofil");
+            header("Location: index.php?aktion=login");
           } else {
             $_SESSION['errorMessagePI'] = "Fehlgeschlagen, die Passwörter stimmen nicht überein!";
-            header("Location: index.php?aktion=editprofil");
+            header("Location: index.php?aktion=login");
           }
         }
       }
@@ -165,7 +155,7 @@ class Controller{
     public function loescheReservierung(){
       $reservierung = Reservierung::finde($_GET['reservierungid']);
       $reservierung->loesche();
-      header('Location: index.php?aktion=meineReservierungen');
+      header("Location: index.php?aktion=meineReservierungen");
     }
     private function generatePage($template){
         extract($this->context);

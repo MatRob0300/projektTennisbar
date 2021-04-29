@@ -10,32 +10,12 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
   <body>
+    <div class="zurueck">
+      <a href="?aktion=startseite"><img src="images/zurueck-pfeil.png" alt="zurueck-pfeil"></a>
+    </div>
     <header>
       <h1>Meine Reservierungen</h1>
     </header>
-    <!--<div class="row">
-			     <div class="panel panel-back noti-box">
-             <div class="icon-box bg-color-red set-icon"></div>
-              <div class="text-box">
-                <p class="main-text">15</p>
-                <p class="text-muted">HEUTE</p>
-              </div>
-            </div>
-			     <div class="panel panel-back noti-box">
-              <div class="icon-box bg-color-green set-icon"></div>
-              <div class="text-box" >
-                <p class="main-text">30</p>
-                <p class="text-muted">AUSSTEHEND</p>
-              </div>
-            </div>
-			      <div class="panel panel-back noti-box">
-              <div class="icon-box bg-color-blue set-icon"></div>
-              <div class="text-box" >
-                <p class="main-text">340</p>
-                <p class="text-muted">GESAMT</p>
-              </div>
-            </div>
-		     </div>-->
       <div class="container">
         <select name="date" onchange="showResOfDate(this.value,<?php echo $_SESSION['userId'] ?>)">
           <?php foreach ($uDatums as $datum) { ?>
@@ -58,8 +38,8 @@
             <?php foreach ($bDatums as $key => $dates) { ?>
               <tr>
                 <td><?php echo ($key+1) ?></td>
-                <?php if ($dates->getPlatznummer() == 1) { ?>
-                  <td>Platz A</td>
+              <?php if ($dates->getPlatznummer() == 1) { ?>
+                <td>Platz A</td>
               <?php  } else { ?>
                 <td>Platz B</td>
               <?php  } ?>
