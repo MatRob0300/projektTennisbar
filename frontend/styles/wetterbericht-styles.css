@@ -78,13 +78,21 @@ main {
 }
 .temp #temp-unit {
   font-family: 'Lato', sans-serif;
-  font-size: 4rem;
+  font-size: 15px;
   color: #ffffff;
 }
 .temp #temp-value {
   font-family: 'Lato', sans-serif;
-  font-size: 8.5rem;
+  font-size: 30px;
   color: #ffffff;
+}
+.temp #temp-value-min, .temp #temp-value-max {
+  font-family: 'Lato', sans-serif;
+  font-size: 60px;
+  color: #ffffff;
+}
+.temp span:nth-child(4){
+  margin-left: 50px;
 }
 .weather-info .extra-info {
   height: 30%;
@@ -152,10 +160,19 @@ main {
     padding: 0px;
   }
   .temp #temp-unit {
-    font-size: 2rem;
+    font-family: 'Lato', sans-serif;
+    font-size: 15px;
+    color: #ffffff;
   }
   .temp #temp-value {
-    font-size: 4.5rem;
+    font-family: 'Lato', sans-serif;
+    font-size: 30px;
+    color: #ffffff;
+  }
+  .temp #temp-value-min, .temp #temp-value-max {
+    font-family: 'Lato', sans-serif;
+    font-size: 60px;
+    color: #ffffff;
   }
   .weather-info .extra-info {
     flex-direction: column;
