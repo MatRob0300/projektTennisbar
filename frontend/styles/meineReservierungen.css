@@ -78,10 +78,8 @@ header h1::after {
     font-size: 14px;
     line-height: 1.42857;
     border-radius: 4px;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
     user-select: none;
+    text-decoration: none;
 }
 .table-wrapper{
     margin: 30px 0px;

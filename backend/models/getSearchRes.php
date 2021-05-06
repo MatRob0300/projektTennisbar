@@ -2,7 +2,7 @@
 require_once '../../entities/db.php';
 require_once '../../entities/benutzer.php';
 require_once '../../entities/reservierung.php';
-if(isset($_GET["datum"]) && isset($_GET["benutzer"])){
+if(isset($_GET["benutzer"])){
   echo "<thead>";
   echo "<tr>";
   echo "<th>Nr.</th>";
@@ -11,13 +11,8 @@ if(isset($_GET["datum"]) && isset($_GET["benutzer"])){
   echo "<th>Zeit</th></tr>";
   echo "</thead>";
   echo "<tbody>";
-  if ($_GET['datum'] == 'all') {
+
     $res = Reservierung::findeAlleNachBenutzer(Benutzer::finde($_GET["benutzer"]));
-  }else if($_GET['datum'] == 'heu'){
-    $res = Reservierung::findeAlleHeutigenResVonBenutzer(Benutzer::finde($_GET["benutzer"]));
-  }else{
-    $res = Reservierung::findeNachDatumVonBenutzer($_GET["datum"], $_GET["benutzer"]);
-  }
 
   foreach ($res as $key => $re) {
     echo "<tr>";

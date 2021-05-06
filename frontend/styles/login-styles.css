@@ -153,7 +153,7 @@ footer {
 }
 @media screen and (max-width: 440px) {
   .main {
-    margin-top: 100px;
+    margin-top: 60px;
   }
   .form-head {
       color: #191919;
@@ -189,13 +189,16 @@ footer {
       padding: 15px 10px;
   }
   .btnLogin {
-      padding: 13px;
-      background-color: #5d9cec;
-      color: #f5f7fa;
-      cursor: pointer;
-      border-radius: 4px;
-      width: 100%;
-      border: #5791da 1px solid;
-      font-size: 1.1em;
+    padding: 15px 32px;
+    background-color: #1c8f9c;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 100%;
+    border: #5791da 1px solid;
+    font-size: 1.1em;
+    -webkit-filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.7));
+    filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.5));
+    cursor: pointer;
   }
 }

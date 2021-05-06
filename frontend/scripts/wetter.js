@@ -1,4 +1,4 @@
-let url = 'https://api.openweathermap.org/data/2.5/weather?q=Bozen,it&units=metric&APPID=1d3c3cf9a55237a528ec15dafe5065a3&lang=de';
+/*let url = 'https://api.openweathermap.org/data/2.5/weather?q=Bozen,it&units=metric&APPID=1d3c3cf9a55237a528ec15dafe5065a3&lang=de';
 
    fetch(url)
    .then(res => res.json())
@@ -23,4 +23,4 @@ let url = 'https://api.openweathermap.org/data/2.5/weather?q=Bozen,it&units=metr
        document.getElementById("weather-humidity").innerHTML = humidity;
      console.log('Checkout this JSON! ', out);
    })
-   .catch(err => { throw err });
+   .catch(err => { throw err });*/

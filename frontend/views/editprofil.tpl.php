@@ -71,12 +71,12 @@
           <div class="row">
             <div class="form-group col-sm-6">
               <label>neues Passwort</label>
-              <input type="password" name="pass" id="in-p1" class="form-control" value="" placeholder="neues Passwort" required disabled>
+              <input type="password" name="pass" id="in-p1" class="form-control" pattern=".{8,}" placeholder="neues Passwort" required disabled>
             </div>
 
             <div class="form-group col-sm-6">
               <label>neues Passwort wiederholen</label>
-              <input type="password" name="pass-w" id="in-p2" class="form-control" value="" placeholder="neues Passwort wiederholen" required disabled>
+              <input type="password" name="pass-w" id="in-p2" class="form-control" pattern=".{8,}" placeholder="neues Passwort wiederholen" required disabled>
             </div>
 
           </div>

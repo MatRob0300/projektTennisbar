@@ -16,7 +16,7 @@
 
 				<a href="#"><i class="fa fa-facebook" title="Facebook"></i></a>
 				<a href="#"><i class="fa fa-instagram" title="Instagram"></i></a>
-				<a href="#"><i class="fa fa-github" title="Github"></i></a>
+				<a href="https://github.com/MatRob0300/projektTennisbar"><i class="fa fa-github" title="Github"></i></a>
 
 			</div>
 

@@ -32,10 +32,10 @@
         <div class="weather-info">
           <div class="temp">
             <p>
-              <span id="temp-unit">min</span>
+              <span id="temp-des">min</span>
               <span id="temp-value-min"></span>
               <span id="temp-unit">°C</span>
-              <span id="temp-unit">max</span>
+              <span id="temp-des">max</span>
               <span id="temp-value-max"></span>
               <span id="temp-unit">°C</span>
             </p>

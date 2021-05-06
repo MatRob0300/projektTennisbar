@@ -45,7 +45,7 @@
               <?php  } ?>
                 <td><?php echo $dates->getDatum() ?></td>
                 <td><?php echo $dates->getZeit() ?></td>
-                <td><a href='?aktion=loescheReservierung&reservierungid=<?php echo $dates->getReservierungid() ?>'>löschen<a></td>
+                <td><a href='?aktion=loescheReservierung&reservierungid=<?php echo $dates->getReservierungid() ?>' class="btn">löschen<a></td>
               </tr>
           <?php  } ?>
           </tbody>
