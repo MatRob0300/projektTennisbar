@@ -8,7 +8,7 @@ body {
     font-size: 0.95em;
 }
 .main {
-  margin-top: 10px;
+  margin: 10px 0px;
 }
 .form-head {
     color: #191919;
@@ -146,7 +146,11 @@ a.logout-button {
   text-align: center;
   margin: 10px 0px;
 }
-
+footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
 @media screen and (max-width: 440px) {
   .main {
     margin-top: 60px;
