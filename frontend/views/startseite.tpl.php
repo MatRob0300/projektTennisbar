@@ -34,7 +34,7 @@
   <div class="info">
     <div class="info-desc">
       <div class="section-title">
-        <h1>Our Story</h1>
+        <h1>Titel</h1>
       </div>
       <p>One advanced diverted domestic sex repeated bringing you old.
         Possible procured her trifling laughter thoughts property she met way.
@@ -62,9 +62,6 @@
             <li><span>Mo:</span><span> 10:00 - 18:00Uhr</span></li>
             <li><span>Di:</span><span> 10:00 - 18:00Uhr</span></li>
             <li><span>Mi:</span><span> 10:00 - 18:00Uhr</span></li>
-            <li><span>Do:</span><span> 10:00 - 18:00Uhr</span></li>
-            <li><span>Fr:</span><span> 10:00 - 18:00Uhr</span></li>
-            <li><span>Sa:</span><span> 10:00 - 18:00Uhr</span></li>
          </ul>
         </div>
       </div>
