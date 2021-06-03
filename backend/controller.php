@@ -34,9 +34,9 @@ class Controller{
     $vname = $_POST['vname'];
     $sname = $_POST['nname'];
     $mail = $_POST['mail'];
-    $pass =
+    $pass = bin2hex(random_bytes(10));
     $pho = $_POST['tel'];
-    if (isset($vname) && isset($sname) && isset($mail) && isset($pass) && isset($passw) && isset($pho)) {
+    if (isset($vname) && isset($sname) && isset($mail) && isset($pass) && isset($pho)) {
         if (is_numeric($pho) == 1) {
         $user = Benutzer::findeNachEmail($mail);
         if ($user == false) {
