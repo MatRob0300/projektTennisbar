@@ -17,6 +17,7 @@
       <?php } ?>
     </select>
     <button type="button" name="button" class="btn" onclick="showAllOfUser('all')">alle Benutzer</button>
+    <a href="?aktion=newReservierung" name="button" class="btn">neue Reservierung</a>
     <div class="table-wrapper">
       <table class="fl-table" id="ben">
         <thead>

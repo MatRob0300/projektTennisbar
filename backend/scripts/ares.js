@@ -24,3 +24,6 @@ function showAllOfUser(user) {
      },
   });
 }
+function newBenutzer(){
+  
+}

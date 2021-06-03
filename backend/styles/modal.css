@@ -1,0 +1,232 @@
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow-y: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+  -webkit-filter: drop-shadow(0.5px 0.5px 0.5px rgba(0,0,0,0.7));
+  filter: drop-shadow(0.5px 0.5px 0.5px rgba(0,0,0,0.5));
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  -webkit-filter: drop-shadow(0.5px 0.5px 0.5px rgba(0,0,0,0.7));
+  filter: drop-shadow(0.5px 0.5px 0.5px rgba(0,0,0,0.5));
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.court {
+  margin: 20px 150px;
+  padding: 20px 50px;
+  background-color: #00a2b7;
+  border: 1px solid rgb(200,200,200);
+  border-radius: 10px;
+}
+.court h2 {
+  margin: 5px 0px;
+  color: white;
+  -webkit-filter: drop-shadow(0.5px 0.5px 0.5px rgba(0,0,0,0.7));
+  filter: drop-shadow(0.5px 0.5px 0.5px rgba(0,0,0,0.5));
+}
+.court select{
+  width: 25vw;
+  height: 35px;
+  font-size: 11pt;
+  -webkit-filter: drop-shadow(0.5px 0.5px 0.5px rgba(0,0,0,0.7));
+  filter: drop-shadow(0.5px 0.5px 0.5px rgba(0,0,0,0.5));
+}
+.calendar {
+  height: auto;
+  margin: 25px 50px;
+}
+.wrapper {
+  width: 100%;
+  height: auto;
+  padding: 0px 100px;
+  -webkit-filter: drop-shadow(0.5px 0.5px 0.5px rgba(0,0,0,0.7));
+  filter: drop-shadow(0.5px 0.5px 0.5px rgba(0,0,0,0.5));
+}
+.container-calendar {
+  padding: 15px;
+  width: 100%;
+  margin: 0 auto;
+  overflow: auto;
+}
+.button-container-calendar button {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  zoom: 1.5;
+  background: #00a2b7;
+  color: #fff
+  border: 1px solid #0aa2b5;
+  border-radius: 4px;
+  padding: 5px 10px;
+  top: 10px;
+  outline: none;
+}
+.table-calendar {
+  border-collapse: collapse;
+  width: 100%;
+  padding: 0;
+  border-top: 1px solid lightblue;
+}
+.table-calendar td, .table-calendar th {
+  padding: 10px;
+  text-align: center;
+  vertical-align: top;
+}
+#monthHeader {
+  text-transform: uppercase;
+  color: #999;
+  margin: 0;
+  font-size: 24pt;
+}
+#yearHeader {
+  margin: 0 0 10px;
+  padding: 0 3px;
+  font-size: 12pt;
+  color: #999;
+}
+.date-picker {
+  cursor: pointer;
+}
+.date-picker.selected {
+  font-weight: bold;
+  outline: 1px solid #00BCD4;
+}
+.date-picker.selected span {
+  color: #00BCD4;
+}
+#monthAndYear {
+  text-align: center;
+  margin-top: 0;
+}
+.button-container-calendar {
+  position: relative;
+  margin-bottom: 1em;
+  overflow: hidden;
+  clear: both;
+  text-align: center;
+}
+#previous {
+  float: left;
+  -webkit-filter: drop-shadow(0.5px 0.5px 0.5px rgba(0,0,0,0.7));
+  filter: drop-shadow(0.5px 0.5px 0.5px rgba(0,0,0,0.5));
+}
+#next {
+  float: right;
+  -webkit-filter: drop-shadow(0.5px 0.5px 0.5px rgba(0,0,0,0.7));
+  filter: drop-shadow(0.5px 0.5px 0.5px rgba(0,0,0,0.5));
+}
+.footer-container-calendar {
+  margin-top: 1em;
+  border-top: 1px solid #dadada;
+  padding: 10px 0;
+  display: none;
+}
+.footer-container-calendar select {
+  cursor: pointer;
+  display: inline-block;
+  zoom: 1;
+  background: #ffffff;
+  color: #585858;
+  border: 1px solid #bfc5c5;
+  border-radius: 3px;
+  padding: 5px 1em;
+}
+#date-picked {
+  text-align: center;
+  color: #999;
+  border-top: 1px solid lightblue;
+  padding-top: 15px;
+  font-size: 11pt;
+  font-weight: bold;
+}
+.time {
+  width: 100%;
+  height: 120px;
+  margin: 0px 0px;
+  text-align: center;
+}
+.time select{
+  width: 50vw;
+  height: 35px;
+  font-size: 11pt;
+  padding: 0px 25px;
+  -webkit-filter: drop-shadow(0.5px 0.5px 0.5px rgba(0,0,0,0.7));
+  filter: drop-shadow(0.5px 0.5px 0.5px rgba(0,0,0,0.5));
+}
+.res-button {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0px 150px 20px 0px;
+}
+.res-button .btn {
+  margin: 0px 10px;
+  width: 150px;
+  height: 40px;
+}
+.res-button select{
+  width: 10vw;
+  height: 35px;
+  font-size: 11pt;
+  -webkit-filter: drop-shadow(0.5px 0.5px 0.5px rgba(0,0,0,0.7));
+  filter: drop-shadow(0.5px 0.5px 0.5px rgba(0,0,0,0.5));
+}
+.calendar-body {
+  margin: 0px 50px;
+}
+.res-button button {
+  background-color: #1c8f9c;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  -webkit-filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.7));
+  filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.5));
+  text-decoration: none;
+  display: inline-block;
+  transition-duration: 0.4s;
+  font-size: 17px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.res-button button:hover {
+  background-color: white;
+  color: #1c8f9c;
+}
+
+.error-message {
+    padding: 7px 10px;
+    background: #eaffdb;
+    border: #6dc72c 1px solid;
+    color: #7ce630;
+    border-radius: 4px;
+    margin: 10px 10px 10px 10px;
+}
