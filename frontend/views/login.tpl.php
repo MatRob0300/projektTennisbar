@@ -31,7 +31,7 @@
                 <label for="email">Email:</label>
               </div>
               <div>
-                <input name="email" id="email" type="email" class="demo-input-box">
+                <input name="email" id="email" type="email" value="robert-matha@hotmail.de" class="demo-input-box">
               </div>
             </div>
             <div class="field-column">
@@ -39,7 +39,7 @@
                 <label for="password">Passwort:</label>
               </div>
               <div>
-                <input name="passwort" id="password" type="password" class="demo-input-box">
+                <input name="passwort" id="password" type="password" value="123456789" class="demo-input-box">
               </div>
             </div>
             <div class=field-column>

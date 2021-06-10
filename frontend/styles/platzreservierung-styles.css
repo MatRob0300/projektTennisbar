@@ -1,3 +1,9 @@
+header {
+  background-image: url("../images/tennisplatz.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 main {
   height: auto;
   background-color: white;
@@ -15,7 +21,7 @@ main {
 .container-img img {
   width: 300px;
   height: auto;
-  border-radius: 20px;
+  border-radius: 5px;
   -webkit-filter: drop-shadow(0.5px 0.5px 0.5px rgba(0,0,0,0.7));
   filter: drop-shadow(0.5px 0.5px 0.5px rgba(0,0,0,0.5));
 }

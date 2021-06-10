@@ -10,6 +10,12 @@
      -moz-box-sizing: border-box;
           box-sizing: border-box;
 }
+header {
+  background-image: url("../images/barInnen.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 main {
   height: auto;
   background-color: white;
@@ -62,6 +68,7 @@ main p {
   -webkit-filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.2));
   filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.2));
 }
+
 /* Features Section */
 #features {
 	padding: 120px 0;
@@ -98,7 +105,7 @@ main p {
 	padding: 80px 10px;
 }
 #about .about-img {
-	background: #444 url('../images/bildplatzhalter.png') center center no-repeat;
+	background: #444 url('../images/makeBurger1.jpeg') center center no-repeat;
 	background-size: cover;
 	height: 570px;
   -webkit-filter: drop-shadow(0.5px 0.5px 0.5px rgba(0,0,0,0.7));
@@ -167,6 +174,10 @@ main p {
 }
 .col-xs-12 {
   width: 50%;
+}
+.features-item img {
+  width: 200px;
+  height: auto;
 }
 @media screen and (max-width: 440px) {
   main {

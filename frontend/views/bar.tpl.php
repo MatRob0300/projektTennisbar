@@ -28,21 +28,21 @@
             <div class="col-sm-4">
               <div class="features-item">
                 <h3>Lorem ipsum dolor</h3>
-                <img src="images/bildplatzhalter.png" class="img-responsive" alt="">
+                <img src="images/burger1.jpeg" class="img-responsive" alt="">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sed commodo.</p>
               </div>
             </div>
             <div class="col-sm-4">
               <div class="features-item">
                 <h3>Consectetur adipiscing</h3>
-                <img src="images/bildplatzhalter.png" class="img-responsive" alt="">
+                <img src="images/burger2.jpeg" class="img-responsive" alt="">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sed commodo.</p>
               </div>
             </div>
             <div class="col-sm-4">
               <div class="features-item">
                 <h3>Duis sed dapibus</h3>
-                <img src="images/bildplatzhalter.png" class="img-responsive" alt="">
+                <img src="images/burger3.jpeg" class="img-responsive" alt="">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sed commodo.</p>
               </div>
             </div>
@@ -81,7 +81,7 @@
               </div>
             </div>
             <div class="col-md-6">
-              <div class="team-img"><img src="images/bildplatzhalter.png" alt="..."></div>
+              <div class="team-img"><img src="images/beet.jpeg" alt="..."></div>
             </div>
           </div>
         </div>

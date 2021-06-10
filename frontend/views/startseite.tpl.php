@@ -59,9 +59,8 @@
         <div id="oeffnungszeiten" class="tabcontent">
 
           <ul>
-            <li><span>Mo:</span><span> 10:00 - 18:00Uhr</span></li>
-            <li><span>Di:</span><span> 10:00 - 18:00Uhr</span></li>
-            <li><span>Mi:</span><span> 10:00 - 18:00Uhr</span></li>
+            <li><span>Montag - Samstag:</span><span>  15:00 bis 22:00 Uhr</span></li>
+            <li><span>Feier- und Sonntage:</span><span>Geschlossen</span></li>
          </ul>
         </div>
       </div>

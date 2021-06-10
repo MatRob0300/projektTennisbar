@@ -22,7 +22,7 @@
     <main>
       <div class="container">
         <div class="container-img">
-          <img src="images/bildplatzhalter.png" alt="">
+          <img src="images/schlaeger.jpeg" alt="">
         </div>
         <div class="container-text">
           <h1>Tennisplatz</h1>

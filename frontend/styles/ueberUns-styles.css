@@ -1,3 +1,9 @@
+header {
+  background-image: url("../images/barHinten1.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 main {
   background-color: white;
   margin: 15px 50px;
