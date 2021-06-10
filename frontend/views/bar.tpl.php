@@ -22,28 +22,28 @@
       <div id="features" class="text-center">
         <div class="container">
           <div class="section-title">
-            <h2>Our Specials</h2>
+            <h2>Unsere Spezialitäten</h2>
           </div>
           <div class="row bd-1">
             <div class="col-sm-4">
               <div class="features-item">
-                <h3>Lorem ipsum dolor</h3>
-                <img src="images/burger1.jpeg" class="img-responsive" alt="">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sed commodo.</p>
+                <h3>Chee®se Burger</h3>
+                <img src="images/burger1.jpeg" class="img-responsive" alt="burger1">
+                <p>Der klassische Burger, aber mit regionalen und selbstgemachten Zutaten.</p>
               </div>
             </div>
             <div class="col-sm-4">
               <div class="features-item">
-                <h3>Consectetur adipiscing</h3>
-                <img src="images/burger2.jpeg" class="img-responsive" alt="">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sed commodo.</p>
+                <h3>Der Scharfe</h3>
+                <img src="images/burger2.jpeg" class="img-responsive" alt="burger2">
+                <p>Für denjenigen, der gerne auch ein wenig Schärfe mag! Mit hausgebackenen Kohlebrötchen.</p>
               </div>
             </div>
             <div class="col-sm-4">
               <div class="features-item">
-                <h3>Duis sed dapibus</h3>
-                <img src="images/burger3.jpeg" class="img-responsive" alt="">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sed commodo.</p>
+                <h3>Dor Gsunde</h3>
+                <img src="images/burger3.jpeg" class="img-responsive" alt="burger3">
+                <p>Cheers bietet auch veganen Kunden eine kulinarische Spezialität an!</p>
               </div>
             </div>
           </div>
@@ -57,10 +57,14 @@
             <div class="col-xs-12 col-md-3 col-md-offset-1">
               <div class="about-text">
                 <div class="section-title">
-                  <h2>Our Story</h2>
+                  <h2>Zubereitung</h2>
                 </div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante facilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare diam commodo nibh.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante facilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare.</p>
+                <p>Bei uns können Sie zwischen <strong>sechs</strong> Burgerarten wählen. Dazu gibt es noch einige Zubehöre aus der Fritteuse.
+                  Für Ihren Durst bieten wir ein breites Sortiment von Getränken an.
+                  Für den Heißhunger bietet unsere Küche auch einen hausgemachen Bauerntoast an.</p>
+                <p>Unser verarbeitetes Fleisch kommt von der Qualitätsmetzgerei Mair in Terlan.
+                  Das Rind wird auf heimischen Höfen und grünen Almwiesen herangezogen.
+                  Die frischen Wiesenkräuter und die gesunde Bergluft, bildet den herzlichen und leckeren Geschmack der hauszubereiteten Burger.</p>
                 <a href="?aktion=speisekarte" target="karten">unsere Karten</a>
               </div>
             </div>
@@ -72,12 +76,12 @@
         <div class="container">
           <div id="row">
             <div class="col-md-6">
-              <div class="col-md-10 col-md-offset-1">
+              <div class="col-md-10 col-md-offset-1 st">
                 <div class="section-title">
-                  <h2>Meet Our Chef</h2>
+                  <h2>Eingenanbau</h2>
                 </div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante facilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare diam commodo nibh.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante facilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare.</p>
+                <p>Für die Zubereitung der Burger verwenden wir Zutaten aus unserem selbst angelegten kleinen Garten.</p>
+                <p>Die restlichen Zutaten werden von regionalen Biobauern angekauft.</p>
               </div>
             </div>
             <div class="col-md-6">

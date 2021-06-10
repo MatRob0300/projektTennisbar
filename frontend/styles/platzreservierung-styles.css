@@ -271,7 +271,7 @@ main {
 .time select{
   width: 50vw;
   height: 35px;
-  font-size: 11pt;
+  font-size: 16px;
   padding: 0px 25px;
   -webkit-filter: drop-shadow(0.5px 0.5px 0.5px rgba(0,0,0,0.7));
   filter: drop-shadow(0.5px 0.5px 0.5px rgba(0,0,0,0.5));

@@ -31,7 +31,7 @@
                 <label for="email">Email:</label>
               </div>
               <div>
-                <input name="email" id="email" type="email" value="robert-matha@hotmail.de" class="demo-input-box">
+                <input name="email" id="email" type="email" value="martin.matha@gmail.com" class="demo-input-box">
               </div>
             </div>
             <div class="field-column">

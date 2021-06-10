@@ -26,12 +26,13 @@
         </div>
         <div class="container-text">
           <h1>Tennisplatz</h1>
-          <p>One advanced diverted domestic sex repeated bringing you old.
-             Possible procured her trifling laughter thoughts property she met way.
-             Companions shy had solicitude favourable own.</p>
+          <p>Wir bieten Tennisspielern <strong>zwei</strong> Tennisplätze mit Kunstrasen und einen wunderschönen Ausblick auf das Etschtal.
+             Dazu kommen noch Schläger- und Ballausleihe, spannende Tuniere an Wochentagen und Tenniskurse für Anfänger und Fortgeschrittene.
+             Die Reservierung für die Plätze findet online oder telefonisch statt.
+           </p>
           <!--<a href="?aktion=reservierungErstellen">jetzt reservieren</a>-->
           <?php if(!isset($_SESSION["loggedIn"])){ ?>
-            <p>Zum reservieren: <a href="?aktion=login">login</a></p>
+            <p>Zum Reservierung: <a href="?aktion=login">login</a></p>
           <?php }else { ?>
             <button type="button" id="myBtn" onclick="clickBtn()">jetzt reservieren</button>
           <?php } ?>

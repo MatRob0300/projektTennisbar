@@ -34,12 +34,14 @@
   <div class="info">
     <div class="info-desc">
       <div class="section-title">
-        <h1>Titel</h1>
+        <h1>Info</h1>
       </div>
-      <p>One advanced diverted domestic sex repeated bringing you old.
-        Possible procured her trifling laughter thoughts property she met way.
-        Companions shy had solicitude favourable own. Which could saw guest man now heard but.
-        Lasted my coming uneasy marked so should. Gravity letters it amongst herself dearest an windows by.</p>
+      <p>Im Sommer 2019 übernahmen wir die Tennisbar Andrian. Um das Image der Tennisbar zu erhöhen,
+        benötigte diese eine gründliche Renovation und eine neue Einrichtung.
+        Nach ungefähr einem Monat war es so weit und sie konnte für die Öffentlichkeit zugänglich gemacht werden.
+        Wir bieten unseren Gästen gute und regionale Gerichte an und versprechen einen atemberaubenden Ausblick über die Umgebung.
+
+       </p>
     </div>
     <div class="container">
       <div class="info-text">
@@ -52,7 +54,7 @@
         <div id="kontakt" class="tabcontent">
           <ul>
             <li>Schwimmbadstraße 1, 39010 Andrian, Südtirol</li>
-            <li>Tel. +39 123456789</li>
+            <li>Tel. +39 345 182 7917 (Viktoria)</li>
           </ul>
         </div>
 

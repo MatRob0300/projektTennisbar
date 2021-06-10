@@ -52,7 +52,7 @@ main h2::after {
 	left: 50%;
 }
 main h3 {
-	font-size: 24px;
+	font-size: 26px;
 	font-weight: 400;
 	color: #333;
   font-family: 'Autour One',sans-serif;
@@ -61,10 +61,9 @@ main h3 {
 }
 main p {
   color: rgba(32,42,44,0.8);
-  font-size: 16px;
+  font-size: 20px;
   font-family: 'Autour One', sans-serif;
-  line-height: 25px;
-  font-family: 'Autour One',sans-serif;
+  line-height: 30px;
   -webkit-filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.2));
   filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.2));
 }
@@ -144,6 +143,9 @@ main p {
   display: table;
   content: " ";
 }
+.st {
+  padding: 0px 10px;
+}
 .container:after,
 .container-fluid:after,
 .row:after {
@@ -178,6 +180,9 @@ main p {
 .features-item img {
   width: 200px;
   height: auto;
+}
+.features-item p {
+  padding: 0px 10px;
 }
 @media screen and (max-width: 440px) {
   main {
