@@ -1,7 +1,7 @@
 <?php
-require_once '../../entities/db.php';
-require_once '../../entities/benutzer.php';
-require_once '../../entities/reservierung.php';
+require_once '../entities/db.php';
+require_once '../entities/benutzer.php';
+require_once '../entities/reservierung.php';
 if(isset($_GET["datum"]) && isset($_GET["benutzer"])){
   echo "<thead>";
   echo "<tr>";
