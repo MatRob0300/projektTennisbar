@@ -151,6 +151,9 @@ main p {
 .row:after {
   clear: both;
 }
+.about-text p{
+  padding-right: 50px;
+}
 .about-text a {
   background-color: #1c8f9c;
   border: none;
