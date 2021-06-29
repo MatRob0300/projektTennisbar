@@ -13,7 +13,7 @@ var datePicked = document.getElementById("date-picked");
 
 var months = "";
 var days = "";
-var monthsArr = ["Januar", "Februar", "März", "April", "Mai", "Juny", "July", "August", "September", "Oktober", "November", "Dezember"];
+var monthsArr = ["Januar", "Februar", "März", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Dezember"];
 var daysArr = ["So", "Mo", "Di", "Mi", "Do", "Fr", "Sa"];
 
 

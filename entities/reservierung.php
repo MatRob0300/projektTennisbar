@@ -115,6 +115,17 @@ public static function findeAlle()
     return $abfrage->fetchAll();
 }
 
+public function getFormatedDate(){
+    $jahr = substr($this->getDatum(), 0, 4);
+    $monat = substr($this->getDatum(), 5, 2);
+    $tag = substr($this->getDatum(), 8, 2);
+
+
+    $datum = $tag.'.'.$monat.'.'.$jahr;
+    return $datum;
+
+  }
+
 public static function finde($reservierungid){
   $sql = 'SELECT * FROM reservierung WHERE reservierungid=?';
   $abfrage = DB::getDB()->prepare($sql);

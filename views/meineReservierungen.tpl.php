@@ -19,7 +19,7 @@
       <div class="container">
         <select name="date" onchange="showResOfDate(this.value,<?php echo $_SESSION['userId'] ?>)">
           <?php foreach ($uDatums as $datum) { ?>
-            <option value="<?php echo $datum->getDatum(); ?>"><?php echo $datum->getDatum(); ?></option>
+            <option value="<?php echo $datum->getDatum(); ?>"><?php echo $datum->getFormatedDate(); ?></option>
           <?php } ?>
         </select>
         <button type="button" name="button" class="btn" onclick="showResOfDate('all',<?php echo $_SESSION['userId'] ?>)">alle Reservierungen</button>
@@ -43,7 +43,7 @@
               <?php  } else { ?>
                 <td>Platz B</td>
               <?php  } ?>
-                <td><?php echo $dates->getDatum() ?></td>
+                <td><?php echo $dates->getFormatedDate() ?></td>
                 <td><?php echo $dates->getZeit() ?></td>
                 <td><a href='?aktion=loescheReservierung&reservierungid=<?php echo $dates->getReservierungid() ?>' class="btn">löschen<a></td>
               </tr>

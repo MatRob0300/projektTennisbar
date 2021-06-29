@@ -27,7 +27,7 @@ if(isset($_GET["datum"]) && isset($_GET["benutzer"])){
     } else {
       echo "<td>Platz B</td>";
     }
-    echo "<td>".$re->getDatum()."</td>";
+    echo "<td>".$re->getFormatedDate()."</td>";
     echo "<td>".$re->getZeit()."</td>";
     echo "<td><a href='?aktion=loescheReservierung&reservierungid=".$re->getReservierungid()."' class='btn'>löschen<a></td>";
     echo "</tr>";
